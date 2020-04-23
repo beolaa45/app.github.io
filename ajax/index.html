@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>HIgsfsdfdf</p>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript">
+
+var url = 'http://localhost:3000/posts/2';
+var url2 = 'http://localhost:3000/profile/1'
+// axois.get(url)
+// .then(function(e){console.log(e)})
+var oldObj = {
+   	title: "post-test",
+   	author: "pasestars"
+ };
+
+axios.get(url)
+  .then(function (response) {
+    // handle success
+    
+    console.log(response);
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+  .finally(function () {
+    // always executed
+  });
+
+// axios.post(url2, {
+//     firstName: 'Fred',
+//     lastName: 'Flintstone'
+//   })
+//   .then(function (response) {
+//     console.log(response);
+//   })
+//   .catch(function (error) {
+//     console.log(error);
+//   });
+axios.delete(url)
+	.then(function(res) {
+ 		console.log(res.data);
+ 	})
+ 	.catch(function(err) {
+		console.log('Loi o dau roi');
+	});
+
+
+    </script>
+</body>
+</html>
+

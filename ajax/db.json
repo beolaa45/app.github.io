@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "firstName": "Fred",
+      "lastName": "Flintstone",
+      "id": 3
+    }
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": {
+    "firstName": "Fred",
+    "lastName": "Flintstone"
+  }
+}
