@@ -1,0 +1,31 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+        
+        
+    }
+}
+
+@mixin respond-phone {
+    @media (max-width: 600px) {@content};
+    
+}
+
+
+@mixin respond($breakpiont) {
+    @if $breakpiont == phone {
+        @media (max-width: 37.5em) {@content};
+    }
+    @if $breakpiont == tab-port {
+        @media (max-width: 56.25em) {@content};
+    }
+    @if $breakpiont == tab-land {
+        @media (max-width: 75em) {@content};
+    }
+    @if $breakpiont == big-desktop {
+        @media (min-width: 112.5em) {@content};
+    }
+}
+    

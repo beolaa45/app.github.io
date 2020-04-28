@@ -1,4 +1,4 @@
-.tutorial {
+/* .tutorial {
   width: 600px;
   text-align: center;
   margin: auto;
@@ -40,4 +40,20 @@ figure .image img {
 .dropdown-item img {
   height: 50px;
   margin-right: 10px;
+} */
+
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+
