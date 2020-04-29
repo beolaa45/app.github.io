@@ -1,0 +1,93 @@
+
+header {
+    background: #000 url(http://www.phimmoi.net/styles/vtlai/movie/img/header-bg.jpg)
+    repeat-x;
+}
+
+.header {
+    max-width: 100rem;
+    height: 7.5rem;
+    margin: 0 auto;
+   
+
+    display: flex;
+    justify-content: start;
+    align-items: stretch;
+    
+
+    &__logo-box {
+       padding-right: 1rem;
+       
+       display: flex;
+       align-items: center;
+    }
+
+    &__logo {
+        fill: $color-white;
+        height: 4rem;
+        width: 4rem;
+    }
+
+    &__text-box {
+      display: flex;
+      align-items: stretch;
+    }
+}
+
+.search {
+    flex: 0 0 30%;
+
+    display: flex;
+    align-items: center;
+    
+    &__form {
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__input {
+        font-family: inherit;
+        background-color: $color-grey-linght;
+        color: #9f9f9f;
+        border: 2px;
+        box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.4), 1px 1px 0 rgba(255, 255, 255, 0.15);
+
+        padding: 0.75rem 1.5rem;
+        width: 90%;
+        margin-right: -2.4rem;
+        border-radius: 50px;
+        outline: none;
+        transition: width .3s ease;
+
+       &:focus {
+           width: 100%;
+       }
+    }
+
+    &__button {
+        height: 100%;
+        width: 2.4rem;
+        background-color: #405cfa;
+          
+          
+        border: none;
+        border-radius: 100px;
+     
+
+        &:focus {
+            outline: none;
+            
+        }
+    }
+
+    &__icon {
+        fill: $color-white;
+        width: 2rem;
+        height: 2rem;
+
+        
+    }
+}

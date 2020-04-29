@@ -1,0 +1,100 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777; }
+
+.heading-primary {
+  padding-right: 3rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; }
+  .heading-primary--main {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 600; }
+  .heading-primary--sub {
+    font-size: 1rem; }
+
+header {
+  background: #000 url(http://www.phimmoi.net/styles/vtlai/movie/img/header-bg.jpg) repeat-x; }
+
+.header {
+  max-width: 100rem;
+  height: 7.5rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: start;
+  align-items: stretch; }
+  .header__logo-box {
+    padding-right: 1rem;
+    display: flex;
+    align-items: center; }
+  .header__logo {
+    fill: #fff;
+    height: 4rem;
+    width: 4rem; }
+  .header__text-box {
+    display: flex;
+    align-items: stretch; }
+
+.search {
+  flex: 0 0 30%;
+  display: flex;
+  align-items: center; }
+  .search__form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .search__input {
+    font-family: inherit;
+    background-color: #303137;
+    color: #9f9f9f;
+    border: 2px;
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.4), 1px 1px 0 rgba(255, 255, 255, 0.15);
+    padding: 0.75rem 1.5rem;
+    width: 90%;
+    margin-right: -2.4rem;
+    border-radius: 50px;
+    outline: none;
+    transition: width .3s ease; }
+    .search__input:focus {
+      width: 100%; }
+  .search__button {
+    height: 100%;
+    width: 2.4rem;
+    background-color: #405cfa;
+    border: none;
+    border-radius: 100px; }
+    .search__button:focus {
+      outline: none; }
+  .search__icon {
+    fill: #fff;
+    width: 2rem;
+    height: 2rem; }
+
+.container {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 100rem; }
+  .container::after, .container::before {
+    display: table;
+    content: ''; }
+  .container::after {
+    clear: both; }
