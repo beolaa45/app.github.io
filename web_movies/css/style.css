@@ -15,7 +15,8 @@ body {
   font-family: Arial, sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  color: #777; }
+  color: #777;
+  background-color: #323031; }
 
 .heading-primary {
   padding-right: 3rem;
@@ -108,16 +109,45 @@ nav {
 
 .navigation {
   max-width: 100rem;
+  width: 100rem;
   margin: 0 auto;
   display: flex;
   align-items: stretch; }
   .navigation__list {
     list-style-type: none;
-    display: flex; }
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    position: relative; }
+  .navigation__item {
+    display: flex;
+    align-items: stretch; }
   .navigation__link:visited, .navigation__link:link {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    padding-right: 2rem;
     font-size: 1.5rem;
     font-weight: 600;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase; }
+  .navigation__link:hover, .navigation__link:active {
+    color: #fceb08; }
+  .navigation__sub-container {
+    width: 70%;
+    display: inline;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #272727; }
+  .navigation__sub {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; }
+  .navigation__sub-item {
+    width: 25%; }
+  .navigation__sub-link:link, .navigation__sub-link:visited {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #fff;
+    padding: 1rem 0; }

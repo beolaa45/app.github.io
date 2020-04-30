@@ -13,49 +13,82 @@ nav {
 .navigation {
    
     max-width: 100rem;
+    width: 100rem;
     margin: 0 auto;
     
     display: flex;
     align-items: stretch;
-
-   
-
     &__list {
        
        list-style-type: none;
+       width: 100%;
       
-    
+       display: flex;  
+       align-items: stretch;
 
-       display: flex;
-       
-       
-       
-       
-       
+       position: relative;
           
     }
 
     &__item {
         
-        
-       
-        
+        display: flex;
+        align-items: stretch; 
     }
 
     &__link:visited,
     &__link:link {
         
-        
+        display: flex;
+        align-items: center;
+        padding-right: 2rem;
        
-        
-        
-        display: inline-block;
-        
-        
         font-size: 1.5rem;
         font-weight: 600;
         color: $color-white;
         text-decoration: none;
         text-transform: uppercase;
+    }
+
+    &__link:hover,
+    &__link:active {
+
+        color: $color-yellow;
+    }
+
+    &__sub-container {
+        width: 70%;
+        display: inline;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: $color-grey-dark-1;
+
+        
+    }
+
+    &__sub {
+        
+
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+
+    &__sub-item {
+        width: 25%;
+        
+        
+    }
+
+    &__sub-link:link,
+    &__sub-link:visited {
+        text-decoration: none;
+        font-size: 1.3rem;
+        color: $color-white;
+        padding: 1rem 0;
+        
     }
 }
