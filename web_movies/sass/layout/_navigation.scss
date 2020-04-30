@@ -1,0 +1,61 @@
+//////////////////////////////////////////
+//NAVIGITION
+nav {
+    // background-image: url(http://www.phimmoi.net/styles/vtlai/movie/img/nav-bg.jpg);
+    // background-repeat: repeat-x;
+    background-color: $color-grey-dark-1;
+    height: 4rem;
+    border-top: .5rem solid $color-yellow;
+    display: flex;
+    align-items: stretch;
+    
+}
+.navigation {
+   
+    max-width: 100rem;
+    margin: 0 auto;
+    
+    display: flex;
+    align-items: stretch;
+
+   
+
+    &__list {
+       
+       list-style-type: none;
+      
+    
+
+       display: flex;
+       
+       
+       
+       
+       
+          
+    }
+
+    &__item {
+        
+        
+       
+        
+    }
+
+    &__link:visited,
+    &__link:link {
+        
+        
+       
+        
+        
+        display: inline-block;
+        
+        
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $color-white;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}
