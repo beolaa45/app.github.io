@@ -21,7 +21,7 @@ var controller = (function(moviCtrl, UICtrl){
     var setup = function(){
 
         document.getElementById(DOM.nav).addEventListener('mouseover', addActive);
-        document.querySelector(".navigation__sub-container").addEventListener('mouseout', removeActive)
+        document.getElementById(DOM.nav).addEventListener('mouseout', removeActive)
     }
 
     var addActive = function(e){
@@ -29,15 +29,14 @@ var controller = (function(moviCtrl, UICtrl){
 
         if(parent && parent.className === 'navigation__item'){
             parent.classList.add('active');
+            console.log(parent)
         }
         
-        console.log(parent)
+       
     }
 
     var removeActive = function(e){
-        console.log('hi')
-        var parent = e.target.parentElement;
-        parent.classList.remove('active')
+        console.log(e.target)  
     }
     return {
         init: function(){

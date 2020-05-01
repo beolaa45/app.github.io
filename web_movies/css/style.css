@@ -135,7 +135,7 @@ nav {
     color: #fceb08; }
   .navigation__sub-container {
     width: 70%;
-    display: inline;
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
