@@ -109,7 +109,7 @@ nav {
 
 .navigation {
   max-width: 100rem;
-  width: 100rem;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   align-items: stretch; }
@@ -117,9 +117,9 @@ nav {
     list-style-type: none;
     width: 100%;
     display: flex;
-    align-items: stretch;
-    position: relative; }
+    align-items: stretch; }
   .navigation__item {
+    position: relative;
     display: flex;
     align-items: stretch; }
   .navigation__link:visited, .navigation__link:link {
@@ -134,12 +134,14 @@ nav {
   .navigation__link:hover, .navigation__link:active {
     color: #fceb08; }
   .navigation__sub-container {
-    width: 70%;
+    width: 50rem;
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
     background-color: #272727; }
+  .navigation__link:hover + .navigation__sub-container {
+    display: block; }
   .navigation__sub {
     list-style: none;
     display: flex;
