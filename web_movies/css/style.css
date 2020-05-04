@@ -32,6 +32,15 @@ body {
   .heading-primary--sub {
     font-size: 1rem; }
 
+.heading-tertiary {
+  font-size: 1.4rem;
+  color: #FF8040;
+  text-transform: uppercase; }
+
+.heading-fourth {
+  font-size: 1.2rem;
+  color: #fff; }
+
 .top-movie {
   max-width: 100rem;
   width: 100%;
@@ -50,6 +59,8 @@ body {
   .top-movie__list-carousel {
     height: 100%;
     list-style: none;
+    position: relative;
+    left: 0;
     display: flex; }
   .top-movie__item-carousel {
     min-width: calc((100% - 3*1.7rem)/4);
@@ -85,12 +96,17 @@ body {
       position: absolute;
       top: 0;
       left: 84%;
+      z-index: 10;
       width: 0;
       height: 0;
       border-color: transparent transparent transparent #A21D0A;
       border-style: solid;
       border-width: 1.25rem 0 1.25rem 1.25rem;
       margin-left: 1rem; }
+  .top-movie__title {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem 1rem;
+    margin-bottom: 1.5rem; }
 
 header {
   background: #000 url(http://www.phimmoi.net/styles/vtlai/movie/img/header-bg.jpg) repeat-x; }
@@ -199,7 +215,8 @@ nav {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #373730; }
+    background-color: #373730;
+    z-index: 100; }
   .navigation__item-active > .navigation__sub-container {
     display: block; }
   .navigation__sub {

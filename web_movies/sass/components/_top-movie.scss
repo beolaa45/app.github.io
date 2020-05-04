@@ -29,6 +29,8 @@
     &__list-carousel {
         height: 100%;
         list-style: none;
+        position: relative;
+        left: 0;
         
         display: flex;
 
@@ -84,6 +86,7 @@
             position: absolute;
             top: 0;
             left: 84%;
+            z-index: 10;
 
             width: 0;
             height: 0;
@@ -94,6 +97,13 @@
             
         }
     }
+    
+    &__title {
+        background-color: rgba($color-black, $alpha: .8);
+        padding: 1rem 1rem;
+        margin-bottom: 1.5rem;
+    }
 
+    
 
 }
