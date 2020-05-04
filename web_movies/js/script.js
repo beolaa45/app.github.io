@@ -52,14 +52,33 @@
 (function($) {    
     // other code here    
   $(document).ready(function() {  
-       
-    $( ".navigation__item" ).hover(
+
+      ////NAVIGATION 
+      let DOM = {
+          navItem:  ".navigation__item" ,
+          boxCarousel: '.js-caroucel-box',
+          contentCarousel: '.js-carousel-content',
+
+          navItemActive: 'navigation__item-active'
+      }
+    $(DOM.navItem).hover(
         function() {
             console.log('hi')
-          $( this ).addClass( "navigation__item-active" );
+          $( this ).addClass( DOM.navItemActive );
         }, function() {
-          $( this ).removeClass( "navigation__item-active" );
+          $( this ).removeClass(DOM.navItemActive);
         }
-      );   
+      ); 
+      
+    ////TOP-MOVIE-BOX-CAROUSEL
+
+
+    $(window).on('load resize', function() {
+    let widthBoxCarousel = $(DOM.boxCarousel).width();
+    let heightBoxCaroucel = widthBoxCarousel/3.16;
+    $(DOM.contentCarousel).height(heightBoxCaroucel);
+    })
+
+  
    });    
  })(jQuery);

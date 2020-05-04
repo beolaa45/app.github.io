@@ -18,6 +18,7 @@ nav {
     
     display: flex;
     align-items: stretch;
+    
     &__list {
        
        list-style-type: none;
@@ -25,9 +26,7 @@ nav {
       
        display: flex;  
        align-items: stretch;
-
-      
-          
+    
     }
 
     &__item {
@@ -56,44 +55,35 @@ nav {
         color: $color-yellow;
     }
   
-
-
-
     &__sub-container {
-        width: 50rem;
+        width: 60rem;
         
         display: none;
         position: absolute;
         top: 100%;
         left: 0;
-        background-color: $color-grey-dark-1;
-
-        
+        background-color: $color-grey-linght;
+  
     }
-    &__link:hover + &__sub-container {
+    // &__item:hover > &__sub-container {
 
-        display: block;
-    }
-
-    // &__item-active > &__sub-container {
     //     display: block;
     // }
 
-  
+    &__item-active > &__sub-container {
+        display: block;
+    }
 
     &__sub {
         
-
         list-style: none;
         display: flex;
-        flex-wrap: wrap;
-        
+        flex-wrap: wrap;   
     }
 
     &__sub-item {
         width: 25%;
-        
-        
+            
     }
 
     &__sub-link:link,
@@ -101,6 +91,12 @@ nav {
         text-decoration: none;
         font-size: 1.3rem;
         color: $color-white;
-        padding: 1rem 0;
+        display: block;
+        padding: 1rem 1rem;
+        background-color: $color-grey-linght;
+    }
+
+    &__sub-link:hover {
+        background-color: $color-grey-dark-1;
     }
 }
