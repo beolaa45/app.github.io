@@ -1,22 +1,10 @@
 
 ///HEADER   //////////////////////////////////////
 
-header {
-    background: #000 url(http://www.phimmoi.net/styles/vtlai/movie/img/header-bg.jpg)
-    repeat-x;
-}
+
 
 .header {
-    max-width: 100rem;
-    height: 7.5rem;
-    margin: 0 auto;
-   
-
-    display: flex;
-    justify-content: start;
-    align-items: stretch;
     
-
     &__logo-box {
        padding-right: 1rem;
        

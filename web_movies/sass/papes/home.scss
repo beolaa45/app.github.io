@@ -1,0 +1,28 @@
+header {
+    background: #000 url(/asset/img/header-bg.jpg)
+    repeat-x;
+}
+
+.header {
+    max-width: 100rem;
+    height: 7.5rem;
+    margin: 0 auto;
+   
+
+    display: flex;
+    justify-content: start;
+    align-items: stretch;
+}
+
+.top-movie {
+    max-width: 100rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.bottom-movie {
+    display: flex;
+
+ 
+}
