@@ -68,6 +68,9 @@ header {
   padding: 1rem; }
 
 .bottom-movie {
+  max-width: 100rem;
+  width: 100%;
+  margin: 0 auto;
   display: flex; }
 
 .top-movie__box {
@@ -114,13 +117,13 @@ header {
   left: auto; }
 
 .top-movie__content-btn--left::after {
-  transform: rotate(225deg); }
+  transform: rotate(225deg);
+  margin-left: -0.5rem; }
 
 .top-movie__list-carousel {
   height: 100%;
   list-style: none;
   position: relative;
-  left: 0;
   display: flex; }
 
 .top-movie__item-carousel {
@@ -172,6 +175,97 @@ header {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 1rem 1rem;
   margin-bottom: 1.5rem; }
+
+.bottom-movie__home {
+  flex: 0 0 68%;
+  background-color: green;
+  padding: 0 1rem;
+  display: flex; }
+
+.bottom-movie__billboard {
+  background-color: red;
+  flex: 1;
+  height: 60rem; }
+
+.bottom-movie__update {
+  background-color: #1a1a1a;
+  flex: 0 0 54.54%;
+  margin-left: 1rem; }
+
+.bottom-movie__tabs-block {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.bottom-movie__tabs-title {
+  background-color: #2E2E2E;
+  font-size: 1.4rem;
+  width: 100%; }
+
+.bottom-movie__tabs-link:link, .bottom-movie__tabs-link:visited {
+  width: 100%;
+  text-decoration: none;
+  padding: 1rem;
+  color: #b9b9b9;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.bottom-movie__tabs-link:hover {
+  color: #fff; }
+
+.bottom-movie__tabs-title--active .bottom-movie__tabs-link {
+  background-color: #1a1a1a;
+  color: #46E1FF; }
+
+.bottom-movie__tabs-title--active .bottom-movie__tabs-link:hover {
+  color: #46E1FF; }
+
+.bottom-movie__tabs-content {
+  padding: 1rem 1rem; }
+
+.bottom-movie__movie {
+  padding-bottom: .4rem;
+  border-bottom: 1px dashed #555555; }
+
+.bottom-movie__link:link, .bottom-movie__link:visited {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.bottom-movie__link:hover .bottom-movie__name-vn {
+  color: #fceb08; }
+
+.bottom-movie__thumb {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-image: url(/asset/img/thumb-1.jpg);
+  background-size: cover;
+  border: 2px solid #fceb08; }
+
+.bottom-movie__box {
+  margin-left: 1rem; }
+
+.bottom-movie__name-vn {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-top: .5rem; }
+
+.bottom-movie__name-en, .bottom-movie__time {
+  margin-top: .1rem;
+  font-size: 1.1rem;
+  color: #666666; }
+
+.bottom-movie__time {
+  margin-left: auto; }
+
+.bottom-movie__sidebar {
+  flex: 1;
+  background-color: green;
+  margin-left: 1rem; }
 
 .header__logo-box {
   padding-right: 1rem;

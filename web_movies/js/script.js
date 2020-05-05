@@ -4,7 +4,7 @@
   $(document).ready(function() {  
 
       ////NAVIGATION 
-      let DOM = {
+      const DOM = {
           navItem:  ".navigation__item" ,
           boxCarousel: '.js-caroucel-box',
           contentCarousel: '.js-carousel-content',

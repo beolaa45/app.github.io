@@ -1,0 +1,130 @@
+
+.bottom-movie {
+
+    &__home {
+        flex: 0 0 68%;
+        background-color: green;
+        padding: 0 1rem;
+
+        display: flex;
+    }
+
+    &__billboard {
+        background-color: red;
+        flex: 1;
+        height: 60rem;
+    }
+
+    &__update {
+        background-color: $color-black-1;
+        flex: 0 0 54.54%;
+        margin-left: 1rem;
+    }
+
+    &__tabs-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    &__tabs-title {
+        
+        background-color: $color-grey-dark-5;
+        
+        font-size: 1.4rem;
+        width: 100%;   
+    }
+    &__tabs-link:link,
+    &__tabs-link:visited {
+        width: 100%;
+        text-decoration: none;
+        padding: 1rem;
+        color: $color-grey-dark-4;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__tabs-link:hover {
+        color: $color-white;
+    }
+    
+    &__tabs-title--active &__tabs-link {
+        background-color: $color-black-1;
+        color: $color-green;
+    }
+
+    &__tabs-title--active &__tabs-link:hover {
+        color: $color-green;
+    }
+
+    &__tabs-content {
+        padding: 1rem 1rem;
+    }
+
+    &__movie {
+        padding-bottom: .4rem;
+        border-bottom: 1px dashed $color-grey-dark-7;
+    }
+
+    &__link:link,
+    &__link:visited {
+        text-decoration: none;
+        color: $color-white;
+        font-size: 1.2rem;
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__link:hover &__name-vn {
+        color: $color-yellow;
+    }
+
+    &__link:hover &__thumb {
+        
+    }
+
+    &__thumb {
+        width: 3.5rem;
+        height: 3.5rem;
+        background-image: url(/asset/img/thumb-1.jpg);
+        background-size: cover;
+        border: 2px solid $color-yellow;
+    }
+
+    &__box {
+        margin-left: 1rem;
+
+
+      
+    }
+
+    &__name-vn {
+        font-size: 1.2rem;
+        color: $color-white;
+        margin-top: .5rem;
+    }
+
+    &__name-en,
+    &__time {
+        margin-top: .1rem;
+        font-size: 1.1rem;
+        color: $color-grey-dark-6;
+    }
+
+    &__time {
+        margin-left: auto;
+        
+    }
+    &__sidebar {
+        flex: 1;
+        background-color: green;
+        margin-left: 1rem;
+    }
+
+
+}

@@ -70,6 +70,7 @@
 
     &__content-btn--left::after {
         transform: rotate(225deg);
+        margin-left: -0.5rem;
       
     }
 
@@ -77,7 +78,7 @@
         height: 100%;
         list-style: none;
         position: relative;
-        left: 0;
+        
         
         display: flex;
 
