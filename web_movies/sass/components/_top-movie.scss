@@ -24,6 +24,56 @@
 
     &__content-carousel {
         overflow: hidden;
+        position: relative;
+    }
+
+    &__content-btn {
+        width: 3rem;
+        height: 5rem;
+        background-color: rgba($color-black, $alpha: .5);
+        
+    
+        position: absolute;
+        top: 50%;
+        left: 0;
+        z-index: 30;
+        transform: translateY(-50%);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+       
+     
+    }
+
+   
+
+    &__content-btn::after {
+        content: '';
+        width: 2rem;
+        height: 2rem;
+        margin-left: .5rem;
+        background-color: transparent;
+        transform: rotate(45deg);
+
+        border-width: 0 0 .5rem .5rem;
+        border-color: transparent transparent $color-white $color-white;
+        border-style: solid;
+
+     
+    }
+
+    &__content-btn--left {
+        margin-left: -0.8rem;
+        right: 0;
+        left: auto;
+        
+    }
+
+    &__content-btn--left::after {
+        transform: rotate(225deg);
+      
     }
 
     &__list-carousel {
