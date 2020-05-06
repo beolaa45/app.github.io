@@ -31,6 +31,24 @@ header {
 
     display: flex;
 
-    
+    &__box {
+        flex: 0 0 68%;
+    }
 
+    &__home {
+        width: 100%;
+        background-color: green;
+        
+        border-bottom: 1px solid #868489;
+        max-height: 600px;
+        overflow: hidden;
+
+        display: flex;
+    }
+
+    &__list-1 {
+    margin-top: 2rem;
+    }
 }
+
+

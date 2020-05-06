@@ -64,11 +64,34 @@ body {
     font-size: 1.4rem;
     color: $color-red-2;
     text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
+}
+
+.heading-tertiary--green {
+    color: $color-green;
+    font-size: 1.2rem;
+}
+
+.heading-tertiary--green:hover {
+    color: $color-yellow;
 }
 
 .heading-fourth {
     font-size: 1.2rem;
     color: $color-white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
+}
+
+.heading-fourth--grey{
+    color: $color-grey-dark-4;
+}
+
+.heading-fourth--grey:hover {
+    color: $color-white;
 }
