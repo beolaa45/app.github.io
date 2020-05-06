@@ -1,10 +1,15 @@
 
 .bottom-movie {
-
-    &__home {
+    &__box {
         flex: 0 0 68%;
+    }
+    &__home {
+        width: 100%;
         background-color: green;
-        padding: 0 1rem;
+        
+        border-bottom: 1px solid #868489;
+        max-height: 600px;
+        overflow: hidden;
 
         display: flex;
     }
@@ -62,6 +67,11 @@
 
     &__tabs-content {
         padding: 1rem 1rem;
+        display: none;
+    }
+
+    &__tabs-content--active {
+        display: block;
     }
 
     &__movie {
@@ -122,9 +132,16 @@
     }
     &__sidebar {
         flex: 1;
+        
         background-color: green;
         margin-left: 1rem;
+        max-height: 600px;
+        overflow: hidden;
     }
 
 
+}
+
+.bottom-movie__list-1 {
+    display: block;
 }

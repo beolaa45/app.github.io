@@ -22,13 +22,15 @@ header {
 }
 
 .bottom-movie {
-    
+    display: block;
     max-width: 100rem;
     width: 100%;
     margin: 0 auto;
-    
+    height: 100rem;
     
 
     display: flex;
+
+    
 
 }

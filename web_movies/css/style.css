@@ -39,7 +39,14 @@ body {
   color: #fceb08;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: inset 0 -0.2rem 0 rgba(0, 0, 0, 0.2);
-  margin-bottom: .5rem; }
+  margin-bottom: .5rem;
+  display: flex;
+  justify-content: space-between; }
+  .heading-secondary--sub-link:link, .heading-secondary--sub-link:visited {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #555555;
+    text-transform: none; }
 
 .heading-tertiary {
   font-size: 1.4rem;
@@ -68,9 +75,11 @@ header {
   padding: 1rem; }
 
 .bottom-movie {
+  display: block;
   max-width: 100rem;
   width: 100%;
   margin: 0 auto;
+  height: 100rem;
   display: flex; }
 
 .top-movie__box {
@@ -146,7 +155,7 @@ header {
   color: white; }
 
 .top-movie__quality {
-  width: 7rem;
+  align-self: start;
   height: 2.5rem;
   padding: 0.5rem;
   margin: .4rem 0 auto .5rem;
@@ -162,7 +171,7 @@ header {
     content: '';
     position: absolute;
     top: 0;
-    left: 84%;
+    right: -12px;
     z-index: 10;
     width: 0;
     height: 0;
@@ -176,10 +185,15 @@ header {
   padding: 1rem 1rem;
   margin-bottom: 1.5rem; }
 
+.bottom-movie__box {
+  flex: 0 0 68%; }
+
 .bottom-movie__home {
-  flex: 0 0 68%;
+  width: 100%;
   background-color: green;
-  padding: 0 1rem;
+  border-bottom: 1px solid #868489;
+  max-height: 600px;
+  overflow: hidden;
   display: flex; }
 
 .bottom-movie__billboard {
@@ -222,7 +236,11 @@ header {
   color: #46E1FF; }
 
 .bottom-movie__tabs-content {
-  padding: 1rem 1rem; }
+  padding: 1rem 1rem;
+  display: none; }
+
+.bottom-movie__tabs-content--active {
+  display: block; }
 
 .bottom-movie__movie {
   padding-bottom: .4rem;
@@ -265,7 +283,12 @@ header {
 .bottom-movie__sidebar {
   flex: 1;
   background-color: green;
-  margin-left: 1rem; }
+  margin-left: 1rem;
+  max-height: 600px;
+  overflow: hidden; }
+
+.bottom-movie__list-1 {
+  display: block; }
 
 .header__logo-box {
   padding-right: 1rem;

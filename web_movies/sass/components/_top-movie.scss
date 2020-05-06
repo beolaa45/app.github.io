@@ -113,7 +113,7 @@
 
     &__quality {
 
-        width: 7rem;
+        align-self: start;
         height: 2.5rem;
         padding: 0.5rem;
         margin:.4rem 0 auto .5rem;
@@ -133,7 +133,7 @@
             content: '';
             position: absolute;
             top: 0;
-            left: 84%;
+            right: -12px;
             z-index: 10;
 
             width: 0;

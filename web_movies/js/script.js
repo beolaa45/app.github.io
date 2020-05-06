@@ -12,7 +12,11 @@
           btnCarouselLeft: 'top-movie__content-btn--left',
           listCarousel: '.top-movie__list-carousel',
           itemCarousel: '.top-movie__item-carousel',
+          tabs: '.js-tabs',
+          tabsContent: '.js-tabs-content',
 
+          tabsContentActive: 'bottom-movie__tabs-content--active',
+          tabsActive: 'bottom-movie__tabs-title--active',
           navItemActive: 'navigation__item-active'
       }
     $(DOM.navItem).hover(
@@ -56,8 +60,23 @@
      
 
       // BOTTOM-MOVIE-UPDATE
-      $(window).on('load resize', function(){
-        console.log($(window).width())
+      $(DOM.tabs).click(function(){
+        if($(this).hasClass(DOM.tabsActive)){
+          console.log('ok')
+          return;
+          
+        }else {
+          $(DOM.tabs).removeClass(DOM.tabsActive);
+          $(this).addClass(DOM.tabsActive);
+          let index = $(DOM.tabs).index(this);
+           let tabsContent = $(DOM.tabsContent +'[data-index='+index+']');
+           
+          $(DOM.tabsContent).removeClass(DOM.tabsContentActive);
+          tabsContent.addClass(DOM.tabsContentActive)
+          console.log(tabsContent)
+
+
+        }
       })
      
 

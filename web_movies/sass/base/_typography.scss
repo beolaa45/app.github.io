@@ -40,6 +40,25 @@ body {
     border-bottom: 1px solid rgba($color-white, $alpha: .2);
     box-shadow: inset 0 -.2rem 0 rgba($color-black, $alpha: .2);
     margin-bottom: .5rem;
+
+    display: flex;
+    justify-content: space-between;
+    
+    &--main {
+
+    }
+
+    &--sub {
+        
+    }
+
+    &--sub-link:link,
+    &--sub-link:visited {
+        text-decoration: none;
+        font-size: 1.4rem;
+        color: $color-grey-dark-7;
+        text-transform: none;
+    }
 }
 .heading-tertiary {
     font-size: 1.4rem;
