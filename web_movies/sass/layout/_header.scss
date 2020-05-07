@@ -4,7 +4,10 @@
 
 
 .header {
-    
+    position: sticky;
+  position: -webkit-sticky;
+  top: 0; /* required */
+
     &__logo-box {
        padding-right: 1rem;
        

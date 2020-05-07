@@ -1,8 +1,4 @@
 
-header {
-    background: #000 url(/asset/img/header-bg.jpg)
-    repeat-x;
-}
 
 .header {
     max-width: 100rem;
@@ -42,7 +38,7 @@ header {
 
     &__home {
         width: 100%;
-        background-color: green;
+        background-color: #323031;
         
         border-bottom: 1px solid #868489;
         max-height: 600px;
@@ -63,7 +59,15 @@ header {
         
         
         margin-left: 1rem;
-        background-color: $color-grey-dark-2;
+        
+
+        display: flex;
+        flex-direction: column;
+
+
+        &__box-film {
+            margin-top: 2rem;
+        }
         
     }
 
