@@ -1,3 +1,4 @@
+
 header {
     background: #000 url(/asset/img/header-bg.jpg)
     repeat-x;
@@ -26,13 +27,17 @@ header {
     max-width: 100rem;
     width: 100%;
     margin: 0 auto;
-    height: 100rem;
+    
     
     margin-top: 1rem;
     display: flex;
+    
 
+
+    /////START BOX 1////////////////////////
     &__box {
         flex: 0 0 68%;
+        height: 100%;
     }
 
     &__home {
@@ -47,8 +52,21 @@ header {
     }
 
     &__list-1 {
-    margin-top: 2rem;
+         margin-top: 2rem;
     }
+///////////END BOX 1/////////////////////////////////////////
+
+
+
+    &__sidebar {
+        flex: 1;
+        
+        
+        margin-left: 1rem;
+        background-color: $color-grey-dark-2;
+        
+    }
+
 }
 
 
