@@ -11,7 +11,7 @@ body {
 
 .heading-primary {
     
-    padding-right: 3rem;
+    
     color: $color-white;
     
 
@@ -29,6 +29,7 @@ body {
 
     &--sub {
         font-size: 1rem;
+        color: $color-green;
     }
 }
 
@@ -107,6 +108,13 @@ body {
 
 .heading-tertiary--green:hover {
     color: $color-yellow;
+}
+
+.heading-tertiary--footer {
+    color: $color-green;
+    font-size: 1.6rem;
+    padding: .5rem;
+    margin-bottom: 2rem;
 }
 
 .heading-fourth {

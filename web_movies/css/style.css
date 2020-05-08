@@ -25,7 +25,6 @@ body {
   background-color: #323031; }
 
 .heading-primary {
-  padding-right: 3rem;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -36,7 +35,8 @@ body {
     text-transform: uppercase;
     font-weight: 600; }
   .heading-primary--sub {
-    font-size: 1rem; }
+    font-size: 1rem;
+    color: #46E1FF; }
 
 .heading-secondary {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -83,6 +83,12 @@ body {
 
 .heading-tertiary--green:hover {
   color: #fceb08; }
+
+.heading-tertiary--footer {
+  color: #46E1FF;
+  font-size: 1.6rem;
+  padding: .5rem;
+  margin-bottom: 2rem; }
 
 .heading-fourth {
   font-size: 1.2rem;
@@ -600,12 +606,14 @@ body {
     width: 4rem; }
   .header__text-box {
     display: flex;
-    align-items: stretch; }
+    align-items: stretch;
+    justify-content: center; }
 
 .search {
   flex: 0 0 30%;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  margin-left: 1rem; }
   .search__form {
     width: 100%;
     display: flex;
@@ -699,27 +707,44 @@ nav {
 
 .footer {
   margin-top: 2rem;
-  border-top: 2px solid rgba(252, 235, 8, 0.7); }
+  border-top: 2px solid rgba(252, 235, 8, 0.7);
+  background-color: #151515; }
   .footer__container {
     max-width: 100rem;
     width: 100%;
     margin: 1rem auto;
-    background-color: red;
     height: 50rem;
     display: flex;
     align-items: flex-start;
     justify-content: center; }
   .footer__container > * {
-    width: 100%;
     margin-top: 2rem; }
     .footer__container > *:not(:first-child) {
-      margin-left: 1rem; }
+      padding: 0 .5rem; }
   .footer__logo {
-    background-color: rosybrown;
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    flex: 0 0 25%; }
   .footer__box-film {
-    background-color: seagreen;
-    flex: 0 0 50%; }
+    margin-top: 5rem;
+    flex: 0 0 50%;
+    display: flex;
+    padding: 0 2rem; }
+    .footer__box-film > * {
+      width: 100%; }
+  .footer__film-new, .footer__film-one, .footer__film-full, .footer__contac {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; }
+  .footer__link:link, .footer__link:visited {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #fff;
+    padding: .5rem; }
   .footer__contac {
-    background-color: tomato; }
+    font-size: 1.3rem;
+    color: #fff;
+    flex: 0 0 25%; }
+    .footer__contac > * {
+      padding: .5rem; }
