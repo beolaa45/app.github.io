@@ -60,7 +60,8 @@
      
 
       // BOTTOM-MOVIE-UPDATE
-      $(DOM.tabs).click(function(){
+      $(DOM.tabs).click(function(e){
+        e.preventDefault();
         if($(this).hasClass(DOM.tabsActive)){
           console.log('ok')
           return;

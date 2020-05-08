@@ -65,12 +65,29 @@
         flex-direction: column;
 
 
-        &__box-film {
-            margin-top: 2rem;
-        }
+       
         
     }
 
 }
 
+.sidebar {
+    
+    &__box-film {
+        margin-top: 2rem;
+        
+    }
+
+    &__box-word-key {
+        margin-top: 2rem;
+    }
+}
+
+.footer {
+
+    display: block;
+    height: 50rem;
+
+   
+}
 

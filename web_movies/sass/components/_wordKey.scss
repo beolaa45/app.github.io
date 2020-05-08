@@ -1,0 +1,51 @@
+.word-key {
+
+    &__list {
+        list-style: none;
+        background-color: $color-grey-dark-10
+    }
+
+    &__item {
+        margin: 1rem 1rem;
+        display: inline-block;
+    }
+
+    &__link:link,
+    &__link:visited {
+        text-decoration: none;
+        font-size: 1.4rem;
+        color: $color-grey-dark-4;
+        
+        
+       
+    }
+
+    &__title {
+        
+        height: 3rem;
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: $color-grey-dark-11;
+        border-top: 1px solid rgba($color-white, $alpha: .3);
+        border-bottom: 1px solid rgba($color-white, $alpha: .3);
+        border-left: 1px solid rgba($color-white, $alpha: .3);
+
+        box-shadow: inset 0 0 0rem rgba($color-black, $alpha: .8);
+    }
+    &__title::after {
+        content: '';
+        position: absolute;
+        right: -15px;
+        top: 0;
+        height: 0;
+        width: 0;
+
+        border-color: transparent transparent transparent $color-grey-dark-11;
+        border-style: solid;
+        border-width: 1.5rem 0 1.5rem 1.5rem;
+       
+    }
+}

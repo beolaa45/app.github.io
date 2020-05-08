@@ -135,8 +135,16 @@ body {
     margin-left: 1rem;
     display: flex;
     flex-direction: column; }
-    .bottom-movie__sidebar__box-film {
-      margin-top: 2rem; }
+
+.sidebar__box-film {
+  margin-top: 2rem; }
+
+.sidebar__box-word-key {
+  margin-top: 2rem; }
+
+.footer {
+  display: block;
+  height: 50rem; }
 
 .top-movie__box {
   border-bottom: 1px solid #868489;
@@ -468,7 +476,7 @@ body {
     color: #fceb08; }
 
 .scrollbar {
-  height: 200px;
+  height: 55rem;
   width: 100%;
   background: #1c1c1c;
   overflow-y: scroll; }
@@ -538,8 +546,44 @@ body {
 
 .box-film__view {
   font-size: 1.1rem;
-  color: #2E2E2E;
+  color: #b9b9b9;
   line-height: 4; }
+
+.word-key__list {
+  list-style: none;
+  background-color: #191919; }
+
+.word-key__item {
+  margin: 1rem 1rem;
+  display: inline-block; }
+
+.word-key__link:link, .word-key__link:visited {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #b9b9b9; }
+
+.word-key__title {
+  height: 3rem;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #515b69;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 0 0rem rgba(0, 0, 0, 0.8); }
+
+.word-key__title::after {
+  content: '';
+  position: absolute;
+  right: -15px;
+  top: 0;
+  height: 0;
+  width: 0;
+  border-color: transparent transparent transparent #515b69;
+  border-style: solid;
+  border-width: 1.5rem 0 1.5rem 1.5rem; }
 
 .header {
   position: sticky;
@@ -652,3 +696,30 @@ nav {
     background-color: #373730; }
   .navigation__sub-link:hover {
     background-color: #272727; }
+
+.footer {
+  margin-top: 2rem;
+  border-top: 2px solid rgba(252, 235, 8, 0.7); }
+  .footer__container {
+    max-width: 100rem;
+    width: 100%;
+    margin: 1rem auto;
+    background-color: red;
+    height: 50rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center; }
+  .footer__container > * {
+    width: 100%;
+    margin-top: 2rem; }
+    .footer__container > *:not(:first-child) {
+      margin-left: 1rem; }
+  .footer__logo {
+    background-color: rosybrown;
+    display: flex;
+    justify-content: center; }
+  .footer__box-film {
+    background-color: seagreen;
+    flex: 0 0 50%; }
+  .footer__contac {
+    background-color: tomato; }

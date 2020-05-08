@@ -1,0 +1,43 @@
+
+.footer {
+    margin-top: 2rem;
+    border-top: 2px solid rgba($color-yellow, $alpha: .7);
+
+    &__container {
+        max-width: 100rem;
+        width: 100%;
+        margin: 1rem auto;
+        background-color: red;
+
+        height: 50rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+
+
+    }
+
+    &__container > * {
+        width: 100%;
+        &:not(:first-child){
+            margin-left: 1rem;
+        }
+        margin-top: 2rem;
+    }
+
+    &__logo {
+        background-color: rosybrown;
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    &__box-film {
+        background-color: seagreen;
+        flex: 0 0 50%;
+    }
+
+    &__contac {
+        background-color: tomato;
+    }
+}
