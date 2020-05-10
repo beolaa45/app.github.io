@@ -116,6 +116,32 @@
         window.addEventListener('mouseup', carouselStop)
       })
 
+      //infility
+
+      function setup(){
+        let realitem = $(DOM.itemCarousel).first()
+        let itemfist = realitem.clone();
+        let itemfistIndex = $(DOM.itemCarousel).length + 1;
+        itemfist.removeClass('js-item-1')
+        itemfist.addClass('js-item-' + itemfistIndex);
+        itemfist.addClass('clone');
+        console.log(itemfist);
+
+        let itemLast = $(DOM.listCarousel).find(DOM.itemCarousel).last().clone();
+        let itemLastIndex = 0;
+
+        itemLast.removeClass('js-item-' + $(DOM.itemCarousel).length )
+        itemLast.addClass('js-item-' + itemLastIndex);
+        itemLast.addClass('clone');
+        console.log(itemLast);
+
+        $(DOM.listCarousel).append(itemfist);
+        $(DOM.listCarousel).prepend(itemLast)
+        $(DOM.listCarousel).css('left', 0 - realitem.position().left)
+      }
+      setup()
+
+
 
       // BOTTOM-MOVIE-UPDATE
       $(DOM.tabs).click(function(e){
