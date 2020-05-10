@@ -37,6 +37,7 @@
     $(DOM.contentCarousel).height(heightBoxCaroucel);
     })
 
+
     let current = 1;
       $(DOM.btnCarousel).click(function(){
         if($(this).hasClass(DOM.btnCarouselLeft)){
@@ -44,20 +45,77 @@
         }else {
           current--;
         }
-
         if(current < 1){
-          current = $(DOM.itemCarousel).length -4;
-        }else if(current > $(DOM.itemCarousel).length -4){
+          current = $(DOM.itemCarousel).length - 4;
+        }else if(current > $(DOM.itemCarousel).length - 4){
           current = 1
         }
-        let casouselItem = $('.js-item-' + current)
+       
+        carousel(current);
+
+      
+      })
+
+      function carousel(index, len = 4){
+        let casouselItem = $('.js-item-' + index)
         $(DOM.listCarousel).animate({
           'left': 0 - casouselItem.position().left
         }, 300)
+      }
 
+      /////////////////////////////////////////////////////////
+
+      let currentX = 0;
+      let startPoit;
+      function removeEventl(){
+        window.removeEventListener('mousemove', carouselGrabbing)
+        window.removeEventListener('mouseup', carouselStop)
+      }
+      function carouselGrabbing(e){
+       
+        let distanceX = e.pageX - currentX;
+            currentX = e.pageX;
+       
+        $(DOM.listCarousel).css({
+          left: $(DOM.listCarousel).position().left + distanceX
+        })
+
+        if(startPoit - e.pageX > 50){
+          removeEventl();
+          current++;
+          if(current > $(DOM.itemCarousel).length - 4){
+            current = 1;
+
+          }
+          carousel(current);
+          console.log('a')
+        }else if(e.pageX - startPoit > 50){
+          removeEventl();
+          current--;
+          if(current < 1){
+            current = $(DOM.itemCarousel).length - 4;
+          }
+          carousel(current);
+          console.log('b')
+        }
+      }
+      function carouselStop(e){
+        
+        removeEventl()
+      }
+      $(DOM.itemCarousel).on('mousedown', function(e){
+        e.preventDefault();
        
       })
-     
+      //action grabbing
+      $(DOM.listCarousel).on('mousedown', function(e){
+        currentX = startPoit = e.pageX;
+        
+        // $(window).on('mousemove', carouselGrabbing)
+        window.addEventListener('mousemove', carouselGrabbing)
+        window.addEventListener('mouseup', carouselStop)
+      })
+
 
       // BOTTOM-MOVIE-UPDATE
       $(DOM.tabs).click(function(e){
