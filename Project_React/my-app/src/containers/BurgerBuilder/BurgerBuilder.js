@@ -21,17 +21,19 @@ class BurgerBuider extends Component {
         totalPrice: 4,
         purchaseble: false,
         purchasing: false,
-        loading: false
+        loading: false,
+        error: false
     }
 
     componentDidMount() {
-        axios.get('ingredients.json')
+    
+        axios.get('/ingredients.json')
         .then(res => {
             this.setState({ingredients: res.data});
-            console.log(res);
-            console.log(this.state)
         })
-        .catch(error => error)
+        .catch(error => {
+            this.setState({error: true})
+        })
     };
     
     updatePurchaseState (ingredient) {
@@ -96,6 +98,7 @@ class BurgerBuider extends Component {
 
     purchaseContinueHandler = () => {
         // alert('You continue!')
+        console.log('sen')
         this.setState({loading: true})
         const order = {
             ingredients: this.state.ingredients,
@@ -109,7 +112,9 @@ class BurgerBuider extends Component {
             this.setState({loading: false,  purchasing: false})
             console.log(error)
         })
-    }
+    };
+
+  
     render() {
         const disabledInfo = {
             ...this.state.ingredients
@@ -119,9 +124,9 @@ class BurgerBuider extends Component {
             disabledInfo[key] = disabledInfo[key] <= 0
         };
         let orderSummary = null;
-      
+  
 
-        let burger = <Spinner />;
+        let burger = this.state.error ?  "error" :<Spinner />;
         if(this.state.ingredients){
             burger = (
                 <Aux>
