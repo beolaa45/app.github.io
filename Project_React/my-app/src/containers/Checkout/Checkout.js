@@ -33,7 +33,7 @@ class Checkout extends Component {
     }
 
     checkoutContinueHandler = () => {
-        this.props.history.replace('/checkout/contact-data');
+        this.props.history.push('/checkout/contact-data');
     }
 
     render(){
@@ -43,7 +43,9 @@ class Checkout extends Component {
                 checkoutCancel={this.checkoutCancelHandler}
                 checkoutContinue={this.checkoutContinueHandler}/>
                 <Route path={this.props.match.path + '/contact-data'} 
-                render={() => <ContacData ingredients={this.state.ingredients} price={this.state.totalPrice} />}/>
+                render={(props) => <ContacData ingredients={this.state.ingredients} 
+                price={this.state.totalPrice} 
+                {...props}/>}/>
             </div>
         )
     }

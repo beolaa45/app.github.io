@@ -25,8 +25,10 @@ class BurgerBuider extends Component {
         error: false
     }
 
+ 
+
     componentDidMount() {
-    
+        
         axios.get('/ingredients.json')
         .then(res => {
             this.setState({ingredients: res.data});
@@ -103,7 +105,7 @@ class BurgerBuider extends Component {
         for(let i in this.state.ingredients){
             qureyParams.push(encodeURIComponent(i) + '=' + encodeURIComponent(this.state.ingredients[i]))
         };
-        qureyParams.push('price'+ '=' + this.state.totalPrice);
+        qureyParams.push('price' + '=' + this.state.totalPrice);
         const queryString = qureyParams.join('&');
         this.props.history.push({
             pathname: '/checkout',
