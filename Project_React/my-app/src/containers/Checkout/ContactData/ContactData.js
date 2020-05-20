@@ -6,7 +6,7 @@ import axios from '../../../axios-oriders';
 import Input from '../../../components/UI/Input/Input';
 import { connect } from 'react-redux';
 import withErrorHandler from '../../../hoc/withErrorHandler/withErrorHandler';
-
+import * as action from '../../../Store/actions/index'; 
 class ContactData extends Component {
     state = {
         orderFrom: {
@@ -78,6 +78,8 @@ class ContactData extends Component {
             price: this.props.price,
             orderData: formData
         }
+
+        this.props.onOrderBurger(order)
         // axios.post('/orders.json', order)
         // .then(response =>{
         //     this.setState({loading: false});
@@ -144,4 +146,11 @@ const mapStatetoProps = state => {
         
     }
 }
-export default connect(mapStatetoProps)(withErrorHandler(ContactData));
+
+const mapDispatchProps = dispatch => {
+    return {
+        onOrderBurger: orderData => dispatch(action.purchaseBurgerStart(orderData))
+    }
+}
+
+export default connect(mapStatetoProps, mapDispatchProps)(withErrorHandler(ContactData, axios));

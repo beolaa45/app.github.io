@@ -11,24 +11,24 @@ class Orders extends Component {
     }
 
     componentDidMount (){
-        this.setState({loading: true})
-        axios.get('/orders.json')
-        .then(res => {
-            console.log(res.data);
+        // this.setState({loading: true})
+        // axios.get('/orders.json')
+        // .then(res => {
+        //     console.log(res.data);
             
-            const fetcheOrders = [];
-            for(let key in res.data){
-                fetcheOrders.push({
-                    ...res.data[key],
-                    id: key
-                })
-            };
-            this.setState({oriders: fetcheOrders, loading: false})
-        })
-        .catch(error => {
-            this.setState({loading: false})
-        });
-        setTimeout(() => {console.log(this.state)}, 1000)
+        //     const fetcheOrders = [];
+        //     for(let key in res.data){
+        //         fetcheOrders.push({
+        //             ...res.data[key],
+        //             id: key
+        //         })
+        //     };
+        //     this.setState({oriders: fetcheOrders, loading: false})
+        // })
+        // .catch(error => {
+        //     this.setState({loading: false})
+        // });
+        // setTimeout(() => {console.log(this.state)}, 1000)
     }
     render(){
 
