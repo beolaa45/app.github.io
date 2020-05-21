@@ -54,12 +54,12 @@ class ContactData extends Component {
                 elementType: 'select',
                 elementConfig: {
                     option:[{value: 'fastest', displayValue: 'Fastest'},
-                            {value: 'chepeas', displayValue: 'Chepeas'}]
+                             {value: 'chepeas', displayValue: 'Chepeas'}
+                        ]
                 },
-                value: ''
+                value: 'fastest'
             }
-        },
-        loading: false
+        }
     }
     componentDidMount() {
         console.log(this.props)
@@ -67,7 +67,7 @@ class ContactData extends Component {
     orderHandler = (e) => {
         e.preventDefault();
         
-        this.setState({loading: true})
+        // this.setState({loading: true})
 
         const formData = {};
         for(let formElement in this.state.orderFrom){
@@ -80,6 +80,7 @@ class ContactData extends Component {
         }
 
         this.props.onOrderBurger(order)
+        // this.props.history.push('/');
         // axios.post('/orders.json', order)
         // .then(response =>{
         //     this.setState({loading: false});
@@ -87,10 +88,10 @@ class ContactData extends Component {
         //     console.log(this.props)
             
         // })
-        .catch(error => {
-            this.setState({loading: false})
-            console.log(error)
-        })
+        // .catch(error => {
+        //     this.setState({loading: false})
+        //     console.log(error)
+        // })
     }
 
    
@@ -128,7 +129,7 @@ class ContactData extends Component {
             </form>
         )
 
-        if(this.state.loading){
+        if(this.props.loading){
             form = <Spinner />
         }
         return (
@@ -141,8 +142,9 @@ class ContactData extends Component {
 }
 const mapStatetoProps = state => {
     return {
-        ings: state.ingredients,
-        price: state.totalPrice
+        ings: state.burgerBuilder.ingredients,
+        price: state.burgerBuilder.totalPrice,
+        loading: state.order.loading
         
     }
 }
