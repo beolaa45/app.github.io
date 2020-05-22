@@ -11,7 +11,7 @@ const toolbar = (props) => (
         </div>
         
         <nav className='OnlyMobile'>
-            <NavigationItems />
+            <NavigationItems isAuthenticated={props.isAuth} />
         </nav>
     </header>
 );
