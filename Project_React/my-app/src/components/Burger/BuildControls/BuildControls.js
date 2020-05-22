@@ -28,7 +28,7 @@ const buidControls = (props) => (
        })}
        <button className='OrderButton'
                 disabled={!props.purchasable}
-                onClick={props.ordered}>ORDER NOW</button>
+                onClick={props.ordered}>{props.authu ?  "ORDER NOW" : "SIGNIN NOW"}</button>
    </div>
 )
 
