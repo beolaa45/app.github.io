@@ -22,8 +22,6 @@ class BurgerBuider extends Component {
    
     }
 
- 
-
     componentDidMount() {
         this.props.onInitIngredients()
        
@@ -43,44 +41,6 @@ class BurgerBuider extends Component {
 
     }
 
-    // addIngredientHandler = (type) => {
-        
-    //     const oldCount = this.state.ingredients[type];
-    //     const updateCount = oldCount + 1;
-    //     const updateIngedients = {
-    //         ...this.state.ingredients
-    //     };
-    //     updateIngedients[type] = updateCount;
-
-    //     const priceAddition = INGREDIENT_PRICES[type];
-    //     const oldPrice = this.state.totalPrice;
-    //     const newPrice = oldPrice + priceAddition;
-    //     this.setState({totalPrice: newPrice, ingredients: updateIngedients});
-    //     this.updatePurchaseState(updateIngedients);
-    //     setTimeout(()=>{ console.log(this.state.purchaseble) },100)
-
-
-    // };
-
-    // removeIngredientHandler = (type) => {
-    //     const oldCount = this.state.ingredients[type];
-    //     if(oldCount <= 0){
-    //         return;
-    //     }
-    //     const updateCount = oldCount - 1;
-    //     const updateIngedients = {
-    //         ...this.state.ingredients
-    //     };
-    //     updateIngedients[type] = updateCount;
-
-    //     const priceDeduction = INGREDIENT_PRICES[type];
-    //     const oldPrice = this.state.totalPrice;
-    //     const newPrice = oldPrice - priceDeduction;
-    //     this.setState({totalPrice: newPrice, ingredients: updateIngedients});
-    //     this.updatePurchaseState(updateIngedients);
-   
-    // };
-
     purchaseHandler = () => {
         if(this.props.isAuthenticated){
             this.setState({purchasing: !this.state.purchasing})
@@ -96,34 +56,10 @@ class BurgerBuider extends Component {
     }
 
     purchaseContinueHandler = () => {
-        // alert('You continue!')
-       
-        // const qureyParams = [];
-        // for(let i in this.state.ingredients){
-        //     qureyParams.push(encodeURIComponent(i) + '=' + encodeURIComponent(this.state.ingredients[i]))
-        // };
-        // qureyParams.push('price' + '=' + this.state.totalPrice);
-        // const queryString = qureyParams.join('&');
-        // this.props.history.push({
-        //     pathname: '/checkout',
-        //     search: '?' + queryString
-        // });
+    
         this.props.onPurchase();
         this.props.history.push('/checkout')
-        // console.log('sen')
-        // this.setState({loading: true})
-        // const order = {
-        //     ingredients: this.state.ingredients,
-        //     price: this.state.price
-        // }
-        // axios.post('/orders.json', order)
-        // .then(response =>{
-        //     this.setState({loading: false, purchasing: false})
-        // })
-        // .catch(error => {
-        //     this.setState({loading: false,  purchasing: false})
-        //     console.log(error)
-        // })
+
     };
 
   
@@ -161,9 +97,6 @@ class BurgerBuider extends Component {
                     />;
             
         }
-        // if(this.state.loading){
-        //     orderSummary = <Spinner />
-        // }
  
         return (
             <Aux>
