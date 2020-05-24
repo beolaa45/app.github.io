@@ -7,35 +7,14 @@ import { connect } from 'react-redux';
 import Spinner from '../../components/UI/Spinner/Spinner'
 class Orders extends Component {
 
-    // state = {
-    //     oriders: [],
-    //     loading: false
-    // }
-  
     componentDidMount (){
-        this.props.onFetchOrders();
-        // this.setState({loading: true})
-        // axios.get('/orders.json')
-        // .then(res => {
-        //     console.log(res.data);
-            
-        //     const fetcheOrders = [];
-        //     for(let key in res.data){
-        //         fetcheOrders.push({
-        //             ...res.data[key],
-        //             id: key
-        //         })
-        //     };
-        //     this.setState({oriders: fetcheOrders, loading: false})
-        // })
-        // .catch(error => {
-        //     this.setState({loading: false})
-        // });
-        // setTimeout(() => {console.log(this.state)}, 1000)
+        this.props.onFetchOrders(this.props.token, this.props.userId);
+       
     }
     render(){
-        console.log(this.props.or)
-        let orders = this.props.loading ?  <Spinner /> : null;
+        console.log(this.props.loading)
+        let orders = this.props.loading ? <Spinner /> : null;
+        
         if(this.props.or){
             orders = (
                 <div>
@@ -45,20 +24,24 @@ class Orders extends Component {
             </div>
             )
         }
+        console.log(this.props.or)
         return orders
     }
+   
 }
 const mapStateToProps = state => {
     return {
        
         loading: state.order.loading,
-        or: state.order.orders
+        or: state.order.orders,
+        token: state.auth.token,
+        userId: state.auth.userId
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        onFetchOrders: () => dispatch(action.fetchOrders()),
+        onFetchOrders: (token, userId) => dispatch(action.fetchOrders(token, userId)),
         onFetchOrdersStart: () => dispatch(action.fetchOrderStart())
     }
 }
