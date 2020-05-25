@@ -1,5 +1,5 @@
 import * as actionTypes from './actionTypes';
-import axios from '../../axios-oriders';
+
 export const addIngredient = (name) => {
     return {
         type: actionTypes.ADD_INGREDIENT,
@@ -14,26 +14,20 @@ export const removeIngredient = (name) => {
     }
 }
 
-const setIngredients = (ingredients) => {
+export const setIngredients = (ingredients) => {
     return {
         type: actionTypes.SET_INGREDIENT,
         ingredients: ingredients
     }
 }
 
-const fetchIngredientFailed = () => {
+export const fetchIngredientFailed = () => {
     return {
         type: actionTypes.FETCH_INGREDIENT_FALED
     }
 }
 export const initIngredients = () => {
-    return dispatch => {
-         axios.get('https://my-app-e884b.firebaseio.com/ingredients.json')
-        .then(res => {
-            dispatch(setIngredients(res.data))
-        })
-        .catch(error => {
-            dispatch(fetchIngredientFailed())
-        })
+    return {
+        type: actionTypes.INIT_INGREDIENT
     }
 }

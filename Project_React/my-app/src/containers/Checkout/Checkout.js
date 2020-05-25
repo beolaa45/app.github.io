@@ -6,32 +6,7 @@ import { connect } from 'react-redux';
 
 
 class Checkout extends Component {
-    // state = {
-    //     ingredients: null,
-    //     totalPrice: 0
-    // }
-
-    // componentWillMount(){
-    //     console.log(this.props)
-    //     const query = new URLSearchParams(this.props.location.search);
-    //     const ingredients = {};
-    //     let price = 0;
-    //     console.log(query.entries());
-    //     for(let param of query.entries()){
-    //         //['salad', '1']
-    //         if(param[0] === 'price'){
-    //             price = param[1]
-    //         }else{
-    //             ingredients[param[0]] = +param[1];
-    //         }
-            
-    //     };
-    //     this.setState({ingredients: ingredients, totalPrice: price})
-        
-    // }
-    // componentWillMount() {
-    //     this.props.onPurchase()
-    // }
+   
 
     checkoutCancelHandler = () => {
         this.props.history.goBack()
