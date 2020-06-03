@@ -56,7 +56,7 @@ const Banner = (props) => {
             <img src={item.src} alt={item.altText} />
             <div>
                 <h1>If You Are Looking <br />
-                    For Great Taste </h1>
+                    For Great Taste </h1> <br />
                     <span className={item.white}>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor .  
                 sollicitudin,<br /> lorem quis bibendum auctor, nisi elit consequat ipsum, nec <br />↵sagittis sem nibh id elit.</span> <br />
                 <Button>Click Here</Button>
@@ -73,7 +73,7 @@ const Banner = (props) => {
           next={next}
           previous={previous}
         >
-          <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
+          <CarouselIndicators className='Indicators' items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
           {slides}
           <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
           <CarouselControl className='carousel-control-next' direction="next" directionText="Next" onClickHandler={next} />

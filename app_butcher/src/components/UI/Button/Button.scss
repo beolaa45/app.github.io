@@ -17,6 +17,12 @@
         color: black;
     }
 
+    @media (max-width: 900px) {
+        padding: .6rem 1.6rem;
+        font-size: 1rem;
+         
+      }
+
     @media (max-width: 600px) {
      padding: 0rem 1rem;
      font-size: .3rem;       
