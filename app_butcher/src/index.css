@@ -13,7 +13,7 @@ html {
 }
 body {
   margin: 0;
-  font-family: 'Montserrat', 'Audiowide', sans-serif;
+  font-family: 'Montserrat','Poppins','Lato', 'Audiowide', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 

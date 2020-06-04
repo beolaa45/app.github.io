@@ -17,14 +17,14 @@
      }
  }
 
- .Indicators.carousel-indicators {
+.Indicators.carousel-indicators {
      & > li {
        display: none;
      }
  }
 
  .box-carousel {
-     height: 100vh;
+     height: 100%;
 
      @media (max-width: 1200px) {
         height: 100%;
@@ -126,7 +126,7 @@
     }
  }
 
- @keyframes show {
+@keyframes show {
      0% {
         opacity: 0;
         transform: scale(.5);

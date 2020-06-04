@@ -21,7 +21,7 @@ const items = [
     {
     src: slider2,
     white: '',
-    key: 1
+    key: 2
       
     }
   ];
@@ -51,7 +51,7 @@ const Banner = (props) => {
           <CarouselItem className='item'
             onExiting={() => setAnimating(true)}
             onExited={() => setAnimating(false)}
-            key={item.altText}
+            key={item.key}
           >
             <img src={item.src} alt={item.altText} />
             <div>
