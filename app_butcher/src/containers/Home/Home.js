@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Banner from '../../components/Banner/Banner';
 import HeadingSecondary from '../../components/UI/HeadingSecondary/HeadingSecondary';
-import Img from '../../asset/img/list-card-1.jpg'
+import Button from '../../components/UI/Button/Button'
 
 import './Home.scss'
 import BesProducts from '../../components/BestProducts/BesProducts';
@@ -15,7 +15,21 @@ class Home extends Component {
         BesProducts: [
             {
                 key: 1,
-                img: Img,
+                img: 'http://demoapus-wp.com/butcher/butcher-food/wp-content/uploads/2016/10/8-400x400.jpg',
+                title: 'Ground Lamb',
+                des: 'Lorem ipsum dolor sit',
+                dola: 22
+            },
+            {
+                key: 2,
+                img: 'http://demoapus-wp.com/butcher/butcher-food/wp-content/uploads/2016/10/8-400x400.jpg',
+                title: 'Ground Lamb',
+                des: 'Lorem ipsum dolor sit',
+                dola: 22
+            },
+            {
+                key: 3,
+                img: 'http://demoapus-wp.com/butcher/butcher-food/wp-content/uploads/2016/10/8-400x400.jpg',
                 title: 'Ground Lamb',
                 des: 'Lorem ipsum dolor sit',
                 dola: 22
@@ -34,8 +48,13 @@ class Home extends Component {
                             </div>
                         </div>
                         <div className='row'>
-                            <div className='col-lg-4'>
-                                <BesProducts img={this.state.BesProducts} />
+                            
+                                <BesProducts data={this.state.BesProducts} />
+                                
+                        </div>
+                        <div className='row'>
+                            <div className='col'>
+                            <Button view='view'><a href='#'>Well all</a></Button>
                             </div>
                         </div>
                     </div>

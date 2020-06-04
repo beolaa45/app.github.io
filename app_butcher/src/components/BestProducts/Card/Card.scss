@@ -1,0 +1,70 @@
+@import '../../style/varible.scss';
+.Card {
+    padding: 1rem;
+    background-color: $color-white;
+    box-shadow: $box-shadow;
+    transition: box-shadow .3s linear;
+    cursor: pointer;
+    figure {
+        width: 100%;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            border: $border;
+            opacity: .3;
+            transition: opacity .3s linear;
+        }
+    }
+    &:hover figure::after {
+        opacity: 1;
+    }
+    &:hover h3{
+        color: $color-red;
+    }
+    &:hover {
+        box-shadow: $box-shadow-hover;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .caption {
+        padding: 3rem 2.5rem;
+    }
+
+    h3 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        font-family: "Poppins";
+        font-weight: 500;
+        font-size: 2.2rem;
+        text-transform: capitalize;
+        color: $color-black-2;
+    }
+
+    .des {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin: 0 0 1rem;
+        color: $color-black-3;
+        
+    }
+
+    .dola {
+        font-weight: 500;
+        font-size: 1.8rem;
+    }
+
+    
+
+}
