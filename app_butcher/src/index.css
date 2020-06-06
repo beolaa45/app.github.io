@@ -30,17 +30,13 @@ code {
     }  
 }
 
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
   html {
     font-size: 50%; 
   }  
-}
+} */
 
-@media (max-width: 600px) {
-  html {
-    font-size: 35%; 
-  }  
-}
+
 
 
 

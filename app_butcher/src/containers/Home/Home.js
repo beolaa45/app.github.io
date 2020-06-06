@@ -53,8 +53,11 @@ class Home extends Component {
                                 
                         </div>
                         <div className='row'>
-                            <div className='col'>
-                            <Button view='view'><a href='#'>Well all</a></Button>
+                            <div className='col-'>
+                                <div>
+                                <Button view='view'><a href='#'>View all</a></Button>
+                                </div>
+                           
                             </div>
                         </div>
                     </div>
