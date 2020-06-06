@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+
 import './Button.scss'
 const Button = (props) => {
     
@@ -17,8 +18,9 @@ const Button = (props) => {
         }
     }
     return (
-    <button className={btn.join(' ')}>{props.children}</button>
+    <button onClick={props.clicked} className={btn.join(' ')}>{props.children}</button>
     );
 };
 
 export default Button;
+

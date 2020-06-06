@@ -5,6 +5,7 @@ import Button from '../../components/UI/Button/Button'
 
 import './Home.scss'
 import BesProducts from '../../components/BestProducts/BesProducts';
+import Toolbar from '../../components/Navigation/Toolbar/Toolbar'
 
 class Home extends Component {
     state = {
@@ -39,6 +40,8 @@ class Home extends Component {
     render() {
         return (
             <React.Fragment>
+                
+                <main>
                 <section className='Banner'><Banner /></section>
                 <section>
                     <div className='container'>
@@ -53,17 +56,16 @@ class Home extends Component {
                                 
                         </div>
                         <div className='row'>
-                            <div className='col-'>
+                            <div className='col'>
                                 <div>
-                                <Button view='view'><a href='#'>View all</a></Button>
+                                <Button view='view'>View all</Button>
                                 </div>
                            
                             </div>
                         </div>
                     </div>
-                   
-                
                 </section>
+                </main>
             </React.Fragment>
         );
     }

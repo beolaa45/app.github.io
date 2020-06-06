@@ -1,12 +1,12 @@
 import React from 'react';
 import Card from './Card/Card';
 import Button  from '../UI/Button/Button';
-const BesProducts = (props) => {
+const besProducts = (props) => {
 
     let butcherBest = props.data.map(item => (
         <div className='col-lg-4 col-md-6 col-sm-12'>
             <div className='list-item' key='listitem'>
-                <Card {...item} />
+                <Card {...item}  />
             </div>
             
         </div>
@@ -20,4 +20,5 @@ const BesProducts = (props) => {
     );
 };
 
-export default BesProducts;
+export default besProducts;
+

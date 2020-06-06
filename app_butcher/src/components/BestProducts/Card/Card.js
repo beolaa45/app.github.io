@@ -16,7 +16,7 @@ const Card = (props) => {
                 <h3>{props.title}</h3>
                 <p className='des'>{props.des}</p>
                 <p className='dola'>£{props.dola.toFixed(2)}</p>
-                <Button card='card1' ><a href='#'>Add To Cart</a></Button>
+                <Button card='card1' >Add To Cart</Button>
             </div>
         </div>
 

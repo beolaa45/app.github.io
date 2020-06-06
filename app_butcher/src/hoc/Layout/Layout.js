@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import Toolbar from '../../components/Navigation/Toolbar/Toolbar'
 const Layout = props => {
     return (
         <React.Fragment>
-            <header>Toolbar, Siderbar, Backdrop</header>
+            <Toolbar />
             <main>
                 {props.children}
             </main>

@@ -1,0 +1,15 @@
+.Toolbar {
+    position: fixed;
+    width: 100%;
+    
+    top: 0;
+    left: 0;
+    background: transparent;
+    z-index: 10;
+
+    & > .main-bar {
+        background: rgba(12, 20, 29, .3);
+    }
+
+}
+
