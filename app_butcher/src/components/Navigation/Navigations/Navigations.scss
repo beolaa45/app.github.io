@@ -1,0 +1,14 @@
+.Navigation {
+    list-style: none;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+
+    margin-bottom: 0;
+
+    @media (max-width:576px){
+        display: none;
+    }
+
+}
