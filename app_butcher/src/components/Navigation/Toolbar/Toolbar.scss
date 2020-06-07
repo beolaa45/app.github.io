@@ -6,28 +6,17 @@
     left: 0;
     background: transparent;
     z-index: 10;
-    
 
     & > .main-bar {
-        background: rgba(12, 20, 29, .3);
-
+       background: rgba(12, 20, 29, .3);
     }
-
 }
 
 .main-bar {
     &__box {
         padding: 2rem 0;
     }
-
-    
-   
 }
-
-.main-bar__nav {
-   
-}
-
 .logo {
     @media (max-width: 576px) {
         width: 13rem;
@@ -36,12 +25,26 @@
     }
     
 }
-
+.icon {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    
+    @media (min-width: 576px){
+        display: none;
+    }
+ }
 
 nav {
     display: flex;
     align-items: stretch;
 
-    
+}
+
+@media (max-width: 576px){
+
+    .DesktopOnly {
+        display: none;
+    }
     
 }

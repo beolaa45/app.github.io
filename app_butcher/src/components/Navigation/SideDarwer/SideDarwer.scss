@@ -5,13 +5,14 @@
     left: 0;
     top: 0;
 
-    background-color: #fff;
+    background-color: rgb(134, 134, 134);
     padding: 2rem 1rem;
     transition: all .3s ease-out;
     z-index: 100;
 
     & .box-logo {
         width: 50%;
+        margin-bottom: 1rem;
     }
 
 
