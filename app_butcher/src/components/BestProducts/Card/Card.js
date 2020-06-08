@@ -3,8 +3,9 @@ import './Card.scss'
 import  Button  from '../../UI/Button/Button';
 
 const Card = (props) => {
+    console.log(props)
     return (
-        <div className='Card' key={props.key}>
+        <div className='Card' key={props.keyCard}>
             <figure>
                 <a href='#' alt='img'>
                     <img src={props.img}/>

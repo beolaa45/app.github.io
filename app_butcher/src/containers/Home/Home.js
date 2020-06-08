@@ -5,7 +5,7 @@ import Button from '../../components/UI/Button/Button'
 
 import './Home.scss'
 import BesProducts from '../../components/BestProducts/BesProducts';
-import Toolbar from '../../components/Navigation/Toolbar/Toolbar'
+import axios from '../../axios-orders';
 
 class Home extends Component {
     state = {
@@ -36,6 +36,11 @@ class Home extends Component {
                 dola: 22
             }
         ]
+    }
+
+    componentDidMount() {
+        axios.get('./home.json')
+        .then(res => {console.log(res)})
     }
     render() {
         return (
@@ -72,3 +77,4 @@ class Home extends Component {
 }
 
 export default Home;
+

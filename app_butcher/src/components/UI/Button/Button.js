@@ -4,7 +4,7 @@ import './Button.scss'
 const Button = (props) => {
     
     const btn = ['Button'];
-    console.log(props)
+    
     if(props) {
         for(const key in props){
             if(props[key] === props.children){
