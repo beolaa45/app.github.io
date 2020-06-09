@@ -13,29 +13,31 @@ class Home extends Component {
             title: 'Our Best Products',
             des: 'We call it ultimate because we simply believe every website We call it ultimate because we simply believe every website needs to be well presented at the'
         },
-        BesProducts: [
-            {
+        BesProducts: {
+            GroundLamb:{
                 key: 1,
                 img: 'http://demoapus-wp.com/butcher/butcher-food/wp-content/uploads/2016/10/8-400x400.jpg',
                 title: 'Ground Lamb',
                 des: 'Lorem ipsum dolor sit',
                 dola: 22
             },
-            {
+            GroundLamb1:{
                 key: 2,
                 img: 'http://demoapus-wp.com/butcher/butcher-food/wp-content/uploads/2016/10/8-400x400.jpg',
                 title: 'Ground Lamb',
                 des: 'Lorem ipsum dolor sit',
                 dola: 22
             },
-            {
+            GroundLamb2:{
                 key: 3,
                 img: 'http://demoapus-wp.com/butcher/butcher-food/wp-content/uploads/2016/10/8-400x400.jpg',
                 title: 'Ground Lamb',
                 des: 'Lorem ipsum dolor sit',
                 dola: 22
             }
-        ]
+
+        }
+        
     }
 
     componentDidMount() {

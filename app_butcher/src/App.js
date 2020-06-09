@@ -5,9 +5,8 @@ import Home from './containers/Home/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FiMenu } from '@fortawesome/free-solid-svg-icons';
-
+import { Route, Switch } from 'react-router-dom';
+import Cheackout from './containers/Checkout/Checkout'
 
 
 
@@ -17,7 +16,11 @@ function App() {
        
        
      <Layout>
-       <Home />
+       <Switch>
+          <Route path="/" exact component={Home}/>
+          <Route path="/checkout" component={Cheackout}/>
+       </Switch>
+      
      </Layout>
      
     </div>
