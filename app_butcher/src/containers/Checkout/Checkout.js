@@ -3,7 +3,7 @@ import { Formik , Form , Field, ErrorMessage} from 'formik';
 import * as Yup from 'yup';
 const Checkout = () => {
     const initValues = {
-        name: ''
+        name: 'helo'
     }
 
     const onSubmit = value => {
@@ -24,4 +24,4 @@ const Checkout = () => {
     );
 };
 
-export default Checkout
+export default Checkout;
