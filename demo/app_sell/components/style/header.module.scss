@@ -1,0 +1,54 @@
+$font-size: 50px;
+.Header {
+  color: green;
+  font-size: 2rem;
+  margin: auto;
+  
+  
+  
+  &__bar {
+    border-bottom: 10px solid var(--color-black);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+
+    @media only screen and (max-width: 1300px) {
+      flex-direction: column;
+
+    }
+    
+   
+  }
+
+  &__logo {
+    font-size: 4rem;
+    margin-left: 2rem;
+    position: relative;
+    z-index: 2;
+    transform: skew(-7deg);
+    margin: .5rem 0;
+  }
+
+  &__nav {
+    
+    align-self: stretch
+  }  
+
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    padding: .5rem 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-transform: uppercase;
+
+  }
+
+ 
+
+  @media only screen and (max-width: 1300px) {
+    margin: 0;
+    text-align: center;
+  }
+} 

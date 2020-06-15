@@ -1,0 +1,22 @@
+webpackHotUpdate("static\\development\\pages\\_app.js",{
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./style/app.scss":
+/*!****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--5-oneOf-6-1!./node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!./node_modules/resolve-url-loader??ref--5-oneOf-6-3!./node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-6-4!./style/app.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(true);
+// Module
+exports.push([module.i, "*,\n::after,\n::before {\n  margin: 0;\n  padding: 0; }\n\nhtml {\n  font-size: 62.5%; }\n\nbody {\n  color: #999898;\n  box-sizing: border-box;\n  font-weight: 300;\n  line-height: 1.6; }\n", "",{"version":3,"sources":["C:/Users/B350M/Desktop/App/app_sell/style/app.scss"],"names":[],"mappings":"AAAA;;;EAGI,SAAS;EACT,UAAU,EAAA;;AAGd;EACI,gBAAgB,EAAA;;AAEpB;EACI,cAAyB;EACzB,sBAAsB;EACtB,gBAAgB;EAChB,gBAAgB,EAAA","file":"app.scss","sourcesContent":["*,\r\n::after,\r\n::before {\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n\r\nhtml {\r\n    font-size: 62.5%;\r\n}\r\nbody {\r\n    color: rgb(153, 152, 152);\r\n    box-sizing: border-box;\r\n    font-weight: 300;\r\n    line-height: 1.6;\r\n}"]}]);
+// Exports
+module.exports = exports;
+
+
+/***/ })
+
+})
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zdHlsZS9hcHAuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7QUFBQTtBQUNBLGtDQUFrQyxtQkFBTyxDQUFDLHFHQUFnRDtBQUMxRjtBQUNBO0FBQ0EsY0FBYyxRQUFTLDJCQUEyQixjQUFjLGVBQWUsRUFBRSxVQUFVLHFCQUFxQixFQUFFLFVBQVUsbUJBQW1CLDJCQUEyQixxQkFBcUIscUJBQXFCLEVBQUUsU0FBUywyR0FBMkcsVUFBVSxnQkFBZ0IsS0FBSyxrQkFBa0IsTUFBTSxXQUFXLGFBQWEsYUFBYSxvRkFBb0Ysa0JBQWtCLG1CQUFtQixLQUFLLGNBQWMseUJBQXlCLEtBQUssVUFBVSxrQ0FBa0MsK0JBQStCLHlCQUF5Qix5QkFBeUIsS0FBSyxHQUFHO0FBQ3J0QjtBQUNBIiwiZmlsZSI6InN0YXRpYy93ZWJwYWNrL3N0YXRpY1xcZGV2ZWxvcG1lbnRcXHBhZ2VzXFxfYXBwLmpzLjZlOWIxYzBmYWQ5ZWY2MDkwYzRmLmhvdC11cGRhdGUuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvLyBJbXBvcnRzXG52YXIgX19fQ1NTX0xPQURFUl9BUElfSU1QT1JUX19fID0gcmVxdWlyZShcIi4uL25vZGVfbW9kdWxlcy9jc3MtbG9hZGVyL2Rpc3QvcnVudGltZS9hcGkuanNcIik7XG5leHBvcnRzID0gX19fQ1NTX0xPQURFUl9BUElfSU1QT1JUX19fKHRydWUpO1xuLy8gTW9kdWxlXG5leHBvcnRzLnB1c2goW21vZHVsZS5pZCwgXCIqLFxcbjo6YWZ0ZXIsXFxuOjpiZWZvcmUge1xcbiAgbWFyZ2luOiAwO1xcbiAgcGFkZGluZzogMDsgfVxcblxcbmh0bWwge1xcbiAgZm9udC1zaXplOiA2Mi41JTsgfVxcblxcbmJvZHkge1xcbiAgY29sb3I6ICM5OTk4OTg7XFxuICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xcbiAgZm9udC13ZWlnaHQ6IDMwMDtcXG4gIGxpbmUtaGVpZ2h0OiAxLjY7IH1cXG5cIiwgXCJcIix7XCJ2ZXJzaW9uXCI6MyxcInNvdXJjZXNcIjpbXCJDOi9Vc2Vycy9CMzUwTS9EZXNrdG9wL0FwcC9hcHBfc2VsbC9zdHlsZS9hcHAuc2Nzc1wiXSxcIm5hbWVzXCI6W10sXCJtYXBwaW5nc1wiOlwiQUFBQTs7O0VBR0ksU0FBUztFQUNULFVBQVUsRUFBQTs7QUFHZDtFQUNJLGdCQUFnQixFQUFBOztBQUVwQjtFQUNJLGNBQXlCO0VBQ3pCLHNCQUFzQjtFQUN0QixnQkFBZ0I7RUFDaEIsZ0JBQWdCLEVBQUFcIixcImZpbGVcIjpcImFwcC5zY3NzXCIsXCJzb3VyY2VzQ29udGVudFwiOltcIiosXFxyXFxuOjphZnRlcixcXHJcXG46OmJlZm9yZSB7XFxyXFxuICAgIG1hcmdpbjogMDtcXHJcXG4gICAgcGFkZGluZzogMDtcXHJcXG59XFxyXFxuXFxyXFxuaHRtbCB7XFxyXFxuICAgIGZvbnQtc2l6ZTogNjIuNSU7XFxyXFxufVxcclxcbmJvZHkge1xcclxcbiAgICBjb2xvcjogcmdiKDE1MywgMTUyLCAxNTIpO1xcclxcbiAgICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xcclxcbiAgICBmb250LXdlaWdodDogMzAwO1xcclxcbiAgICBsaW5lLWhlaWdodDogMS42O1xcclxcbn1cIl19XSk7XG4vLyBFeHBvcnRzXG5tb2R1bGUuZXhwb3J0cyA9IGV4cG9ydHM7XG4iXSwic291cmNlUm9vdCI6IiJ9
