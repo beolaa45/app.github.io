@@ -1,0 +1,9 @@
+endpoint: ${env:PRISMA_ENPOINT}
+datamodel: datamodel.graphql
+# secret: ${env:PRISMA_SECRET}
+hooks: 
+  post-deploy: 
+      - graphql get-schema -p prisma
+
+# secret khoa database
+# https://us1.prisma.sh/vu-duy-khanh-01e27e/siccc-fits/dev
