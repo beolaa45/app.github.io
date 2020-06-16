@@ -1,4 +1,4 @@
-const { GraphQLServer } = require('graphql-yoga');
+const { GraphQLServer } = require('graphql-yoga')
 const Mutation = require('./resolvers/Mutation');
 const Query = require('./resolvers/Query');
 const db = require('./db');
@@ -13,10 +13,15 @@ function createServer() {
       Query,
     },
     resolverValidationOptions: {
+      //nhan loi tu resolver
       requireResolversForResolveType: false,
     },
+    //Contains custom data being passed through your resolver chain. 
+    //This can be passed in as an object,
+    // or as a Function with the signature (req: ContextParameters) => any **
     context: req => ({ ...req, db }),
   });
 }
 
 module.exports = createServer;
+  
