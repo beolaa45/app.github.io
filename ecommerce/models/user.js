@@ -4,7 +4,7 @@ const crypto = require('crypto');
 //unique email
 const uuid = require('uuid');
 // const { v1: uuidv1 } = require('uuid')
-const router = require('../routes/user');
+const router = require('../routes/auth');
 
 const userSchema = new mongoose.Schema({
     name: {
@@ -51,6 +51,9 @@ userSchema.virtual('password')
 });
 
 userSchema.methods = {
+    authenticate: function(plainText){
+        return this.encryptPassword(plainText) === this.hashed_password;
+    },
     encryptPassword: function(password) {
         if(!password) return '';
 

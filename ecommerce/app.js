@@ -3,11 +3,15 @@ const mongoose = require('mongoose');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
+const expressValidator = require("express-validator")
 require("dotenv").config();
 
 
 //import routes 
-const  userRoute = require('./routes/user')
+const  authRouter = require('./routes/auth')
+const  userRouter = require('./routes/user')
+const  categoryRouter = require('./routes/category')
+const  productRouter = require('./routes/product')
 
 //app
 const app = express();
@@ -21,11 +25,16 @@ mongoose.connect(process.env.DATABASE, {
 
 // middleware
 app.use(morgan('dev'));
+//doc duoc req.body
 app.use(bodyParser.json());
-app.use(cookieParser())
+app.use(cookieParser());
+app.use(expressValidator())
 
 //routes middleware
-app.use(userRoute)
+app.use(authRouter);
+app.use(userRouter);
+app.use(categoryRouter);
+app.use(productRouter);
 
 const port = process.env.PORT || 8000;
 
