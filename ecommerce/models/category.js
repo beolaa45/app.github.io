@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const router = require('../routes/auth');
+
 
 const categorySchema = new mongoose.Schema({
     name: {

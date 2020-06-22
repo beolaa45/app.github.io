@@ -3,7 +3,7 @@ const router = express.Router();
 
 const { create } = require('../controllers/category');
 const { requireSignin, isAuth, isAdmin } = require('../controllers/auth');
-const { userById } = require('../controllers/product');
+const { userById } = require('../controllers/user');
 
 
 
