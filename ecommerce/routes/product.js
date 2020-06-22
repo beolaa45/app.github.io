@@ -10,4 +10,4 @@ const { userById } = require('../controllers/user');
 
 router.post('/product/create/:userId', requireSignin, isAuth, isAdmin ,create);
 router.param("userId", userById)
-module.exports = router;
+module.exports = router
