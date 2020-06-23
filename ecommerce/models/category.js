@@ -12,7 +12,7 @@ const categorySchema = new mongoose.Schema({
         //thoi gian update sp
 }, {timestamps: true})
 
-//Virtual firld
+
 
 
 
