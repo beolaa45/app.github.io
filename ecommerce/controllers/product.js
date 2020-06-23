@@ -6,6 +6,27 @@ const fs = require("fs");
 const { errorHandler } = require('../helpers/dbErrorHandler')
 
 
+exports.read = (req, res) => {
+    //no want size img
+    req.product.photo = undefined;
+    return res.json(req.product)
+}
+
+// find Id user to into product
+exports.productById = (req, res, next, id) => {
+    Product.findById(id).exec((err, product) => {
+        if(err) {
+            return res.status(400).json({
+                error: "Product not found"
+            })
+        }
+
+        req.product = product;
+        next()
+    })
+} 
+
+//create product thought category
 exports.create = (req, res) => {
     let form = new formidable.IncomingForm();
     form.keepExtensions = true;
