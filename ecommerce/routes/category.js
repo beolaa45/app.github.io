@@ -12,6 +12,7 @@ router.delete("/category/:categoryId/:userId" , requireSignin, isAuth, isAdmin, 
 router.post('/category/create/:userId', requireSignin, isAuth, isAdmin ,create);
 router.get('/category/:categoryId', read);
 
+
 router.param("userId", userById);
 router.param("categoryId", categoryId);
 //list categoryes

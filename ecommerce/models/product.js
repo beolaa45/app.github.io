@@ -36,9 +36,9 @@ const productSchema = new mongoose.Schema({
         type:Number,
         default: 0
     },
-    shipping: {
-        
-        type: Boolean
+    shippings: {
+        type: Boolean,
+        required: true
     }
     }, {timestamps: true})
 

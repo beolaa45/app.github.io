@@ -60,9 +60,7 @@ exports.create = (req, res) => {
             product.photo.data = fs.readFileSync(files.photo.path);
             product.photo.contentType = files.photo.type;
         }
-        if(fields.shipping) {
-            product.shipping = fields.shipping === 'true' ? true : false
-        }
+        
 
         product.save((err, result) => {
             if(err) {
@@ -126,9 +124,7 @@ exports.update = (req, res) => {
             product.photo.data = fs.readFileSync(files.photo.path);
             product.photo.contentType = files.photo.type;
         }
-        if(fields.shipping) {
-            product.shipping = fields.shipping === 'true' ? true : false;
-        }
+        
         product.save((err, result) => {
             if(err) {
                 return res.status(400).json({
@@ -142,6 +138,74 @@ exports.update = (req, res) => {
 } 
 
 //////////// SELL / ARRIVAL
+// by sell = /products?sortBy=sold&order=des&limit=4
 
 
+exports.list = (req, res) => {
+    //asc tu thap len cao
+    //desc tu cao xuong thap
+    let order = req.query.order ? req.query.order : 'asc';
+    let sortBy = req.query.sortBy ? req.query.sortBy : "_id";
+    let limit = req.query.limit ? parseInt(req.query.limit) : 6;
 
+    Product.find()
+    //no seclect photo because image grow and very slow
+    .select("-photo")  
+    .populate("category")   
+    .sort([[sortBy, order]]) 
+    .limit(limit)
+    .exec((err, products) => {
+        if(err) {
+            return res.status(400).json({
+                error: "products not found"
+            })
+        }
+
+        res.json(products)
+    })       
+};
+
+//PRODUCT RELATED
+// it will find the products based on the req product category
+// other products that has the same category, will be returned
+exports.litsRelated = (req, res) => {
+        let limit = req.query.limit ? parseInt(req.query.limit) : 6;
+        //find product tru req.product => _id: {$ne: req.product}
+        //
+        Product.find({_id: {$ne: req.product}, category: req.product.category})
+        .limit(limit)
+        //find category voi id va name xuat hien nhieu nhat
+        .populate("category", "_id name")
+        .exec((er, products) => {
+            if(er) {
+                return res.status(400).json({
+                 error: "Products not found"
+                })
+            }
+
+            res.json(products)
+        })
+};
+
+exports.listCategories = (req, res) => {
+    Product.distinct("category", {}, (err, categories) => {
+        if(err) {
+            return res.status(400).json({
+                error: "Category not found"
+            })
+        }
+
+        res.json(categories)
+    })
+}
+
+//list products by search 
+exports.listBySearch = (req, res) => {
+    let order = req.body.order ? req.body.order : 'desc';
+    let sortBy = req.body.sortBy ? req.body.sortBy : '_id';
+    let limit = req.body.limit ? parseInt(req.body.limit) : 100;
+    let skip = parseInt(req.body.skip);
+    let findArgs = {};
+
+}
+   
