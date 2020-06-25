@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { Formik, Form, FastField } from 'formik';
 
 import InputField from './customField/InputField';
+import { FormGroup, Button } from 'reactstrap';
 const Signup = () => {
 
     const initialValues = {
@@ -12,6 +13,7 @@ const Signup = () => {
     return (
         <Formik
             initialValues={initialValues}
+            onSubmit={values => console.log("values", values)}
         >
             {formikProps => {
                 const {values, errors, touched} = formikProps;
@@ -40,6 +42,10 @@ const Signup = () => {
                        label='password'
                        placeholder='password'
                        /> 
+
+                       <FormGroup>
+                           <Button type='submit' color="primary">SIGNUP</Button>
+                       </FormGroup>
                     </Form>
                 )
             }}
