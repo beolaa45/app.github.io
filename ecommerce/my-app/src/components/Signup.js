@@ -8,7 +8,8 @@ const Signup = () => {
     const initialValues = {
         name: "",
         email: '',
-        password: ''
+        password: '',
+        color: ''
     }
     return (
         <Formik
@@ -42,7 +43,7 @@ const Signup = () => {
                        label='password'
                        placeholder='password'
                        /> 
-
+                        
                        <FormGroup>
                            <Button type='submit' color="primary">SIGNUP</Button>
                        </FormGroup>
