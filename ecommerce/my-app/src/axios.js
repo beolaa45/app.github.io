@@ -1,7 +1,8 @@
 import axios from 'axios';
-
+import env from 'dotenv';
+env.config();
 const instance = axios.create({
-    baseURL: 'https://my-app-e884b.firebaseio.com'
+    baseURL: process.env.REACT_APP_API_URL
 });
 
 export default instance;
