@@ -3,15 +3,22 @@ const { errorHandler } = require('../helpers/dbErrorHandler')
 const jwt =require("jsonwebtoken"); // to generate signed token
 const expressJwt = require("express-jwt"); //for authorization check
 exports.signup = (req, res) => {
-    console.log("req body: ", req.body)
+    console.log("req body: ", req.body);
+
+    
     const user = new User(req.body);
     user.save((err, user) => {
         if(err) {
-            return res.status(400).json({err: errorHandler(err)})
+            return res.status(400).json(errorHandler(err))
         }
+        const token = jwt.sign({_id: user._id}, process.env.JWT_SECRET);
+        res.cookie("t", token, {expire: new Date() + 9999});
+
         user.salt = undefined;
         user.hashed_password = undefined;
-        res.json({user})
+        const {_id, name, email, role} = user;
+        return res.json({token, user: {_id, email, name, role, expire: 9999} })
+        // res.json({user})
     })
     
 }
@@ -51,7 +58,7 @@ exports.signout = (req, res) => {
     res.clearCookie("t");
     res.json({ message: "Signout succsess"})
 }
-
+// check vs expressJwt 
 exports.requireSignin = expressJwt({
     secret: process.env.JWT_SECRET,
     userProperty: "auth"
@@ -68,6 +75,14 @@ exports.isAuth = (req, res, next) => {
     next()
 }
 
+// exports.isUser = (req, res, next) => {
+//     if(req.profile.role !== 0) {
+//         return res.status(403).json({
+//             error: "No is User"
+//         })
+//     }
+//     next()
+// }
 exports.isAdmin = (req, res, next) => {
     if(req.profile.role === 0) {
         return res.status(403).json({

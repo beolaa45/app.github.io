@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
-const expressValidator = require("express-validator")
+const expressValidator = require("express-validator");
+const cors = require("cors")
 require("dotenv").config();
 
 
@@ -28,7 +29,9 @@ app.use(morgan('dev'));
 //doc duoc req.body
 app.use(bodyParser.json());
 app.use(cookieParser());
-app.use(expressValidator())
+app.use(expressValidator());
+// handle the request are coming from different origin. 
+app.use(cors());
 
 //routes middleware
 app.use(authRouter);

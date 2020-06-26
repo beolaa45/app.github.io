@@ -5,13 +5,24 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
-require('dotenv').config();
+
+import { Provider } from 'react-redux';
+import store, {sagaMiddleware} from './Store/reducer/root'
+import {watchAuth} from './Store/saga/index';
+
+//saga run
+sagaMiddleware.run(watchAuth)
+
+
 ReactDOM.render(
+  <Provider store={store}>
   <BrowserRouter>
   <React.StrictMode>
     <App />
   </React.StrictMode>
-  </BrowserRouter>,
+  </BrowserRouter>
+  </Provider>,
+  
   document.getElementById('root')
 );
 
