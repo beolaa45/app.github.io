@@ -22,24 +22,28 @@ export function* authStartUserSaga(action) {
         name: action.name,
         email: action.email,
         password: action.password
-    }
+    };
+    
 
-    let url = "/signup"
+    let url = "/signup";
+    console.log(action)
+    const authDataSigin = {
+        email: action.email,
+        password: action.password
+    }
     if(!action.isSignup){
+        
         url = "/signin";
-        authData = {
-            email: action.email,
-            password: action.password
-        }
+       
     }
 
     try{
         const res = yield axios.request({
             url: `${process.env.REACT_APP_API_URL}${url}`,
-            method: 'post',
+            method: "post",
             headers: {Accept: 'application/json',
                         "Content-Type": 'application/json'},
-            data: authData
+            data: action.isSignup ? authData : authDataSigin
         }); 
         console.log(res)
 

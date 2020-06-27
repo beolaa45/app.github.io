@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
 import Toobar from '../../components/Navigation/Toobar';
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
+import { connect } from "react-redux";
+import PropTypes from 'prop-types';
 
 const theme = {
     red: '#FF0000',
@@ -21,7 +23,7 @@ const theme = {
   }
   html {
     box-sizing: border-box;
-    font-size: 10px;
+    font-size: 62.5%;
   }
   *, *:before, *:after {
     box-sizing: inherit;
@@ -44,12 +46,24 @@ const Layout = (props) => {
         <ThemeProvider theme={theme}>
         <Fragment>
             <GlobalStyle />
-            <Toobar />
+            <Toobar isAuth={props.token} />
             <main>{props.children}</main>
             <footer>footer</footer>
         </Fragment>
         </ThemeProvider>
     );
 };
+const mapStateToProps = state => {
+ return { 
+   token: state.auth.token  != null
+ }
+}
+export default connect(mapStateToProps)(Layout);
 
-export default Layout;
+Layout.propTypes = {
+  token: PropTypes.bool
+}
+
+Layout.defaultProps = {
+  token: null
+}

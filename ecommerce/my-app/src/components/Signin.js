@@ -3,7 +3,7 @@ import { Formik, Form, FastField } from 'formik';
 import * as Yup from 'yup'
 
 import { connect } from 'react-redux';
-import * as signUp from '../Store/actions/index'
+import * as signin from '../Store/actions/index'
 
 import InputField from './customField/InputField';
 import { FormGroup, Button } from 'reactstrap';
@@ -13,14 +13,14 @@ import Spinner from './UI/Spinner';
 const Signin = (props) => {
 
     const initialValues = {
-        name: "",
+        
         email: '',
         password: '',
         
     }
 
     const validationSchema = Yup.object().shape({
-        name: Yup.string().trim().min(2, "limit 2").required("This field is required"),
+       
 
         email: Yup.string().trim().email("No is Email").required("This field is required"),
 
@@ -32,7 +32,7 @@ const Signin = (props) => {
             initialValues={initialValues}
             validationSchema={validationSchema}
             onSubmit={values => {console.log("values", values);
-            props.onAuthStart(values.name, values.email, values.password, true);
+            props.onAuthStart(null, values.email, values.password);
             return
         }}
             
@@ -43,13 +43,7 @@ const Signin = (props) => {
                 return (
                     <Form>
                         {/*fasFied truyen vao input field props field form */}
-                       <FastField 
-                       name='name'
-                       component={InputField}
-
-                       label='Name'
-                       
-                       /> 
+                     
                        <FastField 
                        name='email'
                        component={InputField}
@@ -80,4 +74,9 @@ const Signin = (props) => {
     );
 };
 
-export default Signin
+const mapDispatchToProps = dispatch => {
+   return {
+    onAuthStart: (name,email, password) => dispatch(signin.authStartUser(name, email, password))
+   }
+}
+export default connect(null, mapDispatchToProps)(Signin)

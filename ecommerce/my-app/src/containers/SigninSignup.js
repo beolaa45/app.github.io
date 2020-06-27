@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Signup from '../components/Signup';
 import Signin from '../components/Signin';
-const SigninSignup = () => {
+import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
+const SigninSignup = (props) => {
+
+
     return (
+        <Fragment>
+        {props.isAuth ? <Redirect to="/" /> : null}
         <div className='container'>
             <div className='row'>
                 <div className='col-6'>
@@ -13,7 +19,13 @@ const SigninSignup = () => {
                 </div>
             </div>
         </div>
+        </Fragment>
     );
 };
 
-export default SigninSignup;
+const mapStateToProps = state => {
+    return {
+        isAuth: state.auth.token
+    }
+}
+export default connect(mapStateToProps)(SigninSignup);

@@ -18,6 +18,8 @@ export const authStartUser = (name, email, password, isSignup) => {
 }
 
 
+
+
 export const authSuccessUser = (name, email, userId, token) => {
     return {
         type: actionTypes.AUTH_SUCCESS_USER,
