@@ -3,6 +3,7 @@ export {
     authStartUser,
     authSuccessUser,
     checkAuthTimeout,
-    logoutUser,
+    initlogoutUser,
+    logoutSuccessUser,
     authFailUser
 } from './auth'

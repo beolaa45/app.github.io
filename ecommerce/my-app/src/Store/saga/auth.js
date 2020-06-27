@@ -4,9 +4,16 @@ import * as actions from '../actions/index';
 import env from 'dotenv';
 env.config();
 
+
+export function* authLogoutSaga(){
+    yield localStorage.removeItem("token");
+    yield localStorage.removeItem("userId");
+    yield localStorage.removeItem("expirationDate");
+    yield put(actions.logoutSuccessUser())
+}
 export function* authCheckTimeoutSaga(action){
     yield delay(action.expirationTime);
-    yield put(actions.logoutUser())
+    yield put(actions.initlogoutUser())
 }
 
 export function* authStartUserSaga(action) {

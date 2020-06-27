@@ -34,7 +34,7 @@ const reducer = (state = initalSate, action) => {
             return authInitUser(state, action)
         case actionTypes.AUTH_SUCCESS_USER:
             return authSuccessUser(state, action)
-        case actionTypes.AUTH_LOGOUT_USER:
+        case actionTypes.AUTH_LOGOUTSUCCESS_USER:
             return authLogoutUser(state, action)
         case actionTypes.AUTH_FAIL_USER:
             return authFailtUser(state, action)

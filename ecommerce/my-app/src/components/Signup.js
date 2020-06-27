@@ -7,12 +7,16 @@ import * as signUp from '../Store/actions/index'
 
 import InputField from './customField/InputField';
 import { FormGroup, Button } from 'reactstrap';
+import Spinner from './UI/Spinner';
+
+
 const Signup = (props) => {
 
     const initialValues = {
         name: "",
         email: '',
-        password: ''
+        password: '',
+        confirmPassword: ''
     }
 
     const validationSchema = Yup.object().shape({
@@ -20,7 +24,12 @@ const Signup = (props) => {
 
         email: Yup.string().trim().email("No is Email").required("This field is required"),
 
-        password: Yup.string().matches(/^[a-z]+\d+$/, "no correct").min(6, "limit 6").max(32, "max 32").required('This field is required')
+        password: Yup.string().matches(/[0-9]+/, "Password shounld container number").matches(/[a-zA-Z]+/, "Password shounld contaner character").min(6, "limit 6").max(32, "max 32").required('This field is required'),
+
+        confirmPassword: Yup.string().oneOf(
+            [Yup.ref('password')],
+            'Passwords do not match',
+          ).required("This field is required")
     })
     return (
         <Formik
@@ -42,36 +51,56 @@ const Signup = (props) => {
                        component={InputField}
 
                        label='Name'
-                       placeholder='Name'
+                       
                        /> 
                        <FastField 
                        name='email'
                        component={InputField}
 
-                       label='email'
-                       placeholder='email'
+                       label='Email'
+                      
                        /> 
                        <FastField 
                        name='password'
                        component={InputField}
 
-                       label='password'
-                       placeholder='password'
+                       label='Password'
+                       
+                       type='password'
+                       />
+                        <FastField 
+                       name='confirmPassword'
+                       component={InputField}
+
+                       label='ConfirmPassword'
+                      
                        type='password'
                        /> 
                         
                        <FormGroup>
                            <Button type='submit' color="primary">SIGNUP</Button>
                        </FormGroup>
+                       <Spinner />
                     </Form>
                 )
             }}
         </Formik>
+
+            
     );
 };
+
+const mapStateToProps = state => {
+    return {
+        isAuth: state.auth.token,
+        loading: state.auth.loading,
+        error: state.auth.error
+        
+    }
+}
 const mapDispatchToProps = dispatch => {
     return {
         onAuthStart: (name, email, password, isSignup) => dispatch(signUp.authStartUser(name, email, password, isSignup))
     }
 }
-export default connect(null, mapDispatchToProps)(Signup);
+export default connect(mapStateToProps, mapDispatchToProps)(Signup);
