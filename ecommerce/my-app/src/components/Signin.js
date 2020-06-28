@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react';
-import { Formik, Form, FastField } from 'formik';
+import { Formik, Form, FastField, ErrorMessage } from 'formik';
 import * as Yup from 'yup'
 
 import { connect } from 'react-redux';
 import * as signin from '../Store/actions/index'
 
 import InputField from './customField/InputField';
-import { FormGroup, Button } from 'reactstrap';
+import { FormGroup, Button, Alert } from 'reactstrap';
 import Spinner from './UI/Spinner';
 
 
@@ -28,6 +28,7 @@ const Signin = (props) => {
 
     })
     return (
+        
         <Formik
             initialValues={initialValues}
             validationSchema={validationSchema}
@@ -62,21 +63,29 @@ const Signin = (props) => {
                       
                         
                        <FormGroup>
-                           <Button type='submit' color="primary">Signin</Button>
-                       </FormGroup>
-                       <Spinner />
+                           <Button type='submit' color="primary"
+                           >Signin</Button>
+                          {props.error ? <Alert color="danger">
+                                {props.error}
+                                </Alert> : null}
+                       </FormGroup> 
                     </Form>
                 )
             }}
-        </Formik>
-
             
+        </Formik>  
     );
 };
+const mapStateToProps = state => {
+    return {
+        error: state.auth.error
+    }
+}
 
 const mapDispatchToProps = dispatch => {
    return {
-    onAuthStart: (name,email, password) => dispatch(signin.authStartUser(name, email, password))
+    onAuthStart: (name,email, password) => dispatch(signin.authStartUser(name, email, password)),
+   
    }
 }
-export default connect(null, mapDispatchToProps)(Signin)
+export default connect(mapStateToProps, mapDispatchToProps)(Signin)

@@ -17,7 +17,8 @@ const authSuccessUser = (state, action) => {
    return updateObject(state, {token: action.token, userId: action.userId, 
                                 userName: action.name,
                                 userEmail: action.email,
-                                loading: false})
+                                loading: false,
+                                error: null})
 }
 
 const authLogoutUser = (state, action) => {
@@ -25,7 +26,7 @@ const authLogoutUser = (state, action) => {
 }
 
 const authFailtUser = (state, action) => {
-   return updateObject(state, {error: action.error, loading: false});
+   return updateObject(state, {error: action.error.error, loading: false});
 }
 
 const reducer = (state = initalSate, action) => {
