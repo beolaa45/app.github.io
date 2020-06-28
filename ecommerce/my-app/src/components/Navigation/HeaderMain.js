@@ -4,6 +4,7 @@ import Logo from '../Logo';
 import { NavLink } from 'react-router-dom';
 import HeaderMai from '../style/Header/HeaderMain';
 import PermIdentityIcon from '@material-ui/icons/PermIdentity';
+import { ReactComponent as Phone } from '../../asset/svg/phone.svg';
 const HeaderMain = props => {
     const [active, setActive] = useState(false)
 
@@ -14,7 +15,9 @@ const HeaderMain = props => {
        
             <HeaderMai className='container'>
                 <div className='row'>
-                    <div className='col'>1</div>
+                    <div className='col'>
+                        
+                    </div>
                     <div className='col'><NavLink exact to='/'><Logo /></NavLink></div>
                     <div className='col'>
                        {props.isAuth ? <div className="user-icon" onClick={userSelect}><PermIdentityIcon style={{ fontSize: 40 }}/>

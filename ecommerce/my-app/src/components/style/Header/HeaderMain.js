@@ -2,6 +2,8 @@ import styled  from 'styled-components';
 
 const  HeaderMai = styled.div`
    font-size: 3rem;
+   font-family: "Karla";
+   font-weight: 700;
     .user-icon {
         
         position: relative
