@@ -16,7 +16,7 @@ const HeaderMain = props => {
             <HeaderMai className='container'>
                 <div className='row'>
                     <div className='col'>
-                        
+                        <Phone />
                     </div>
                     <div className='col'><NavLink exact to='/'><Logo /></NavLink></div>
                     <div className='col'>
