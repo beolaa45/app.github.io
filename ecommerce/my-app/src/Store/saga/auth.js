@@ -32,9 +32,7 @@ export function* authStartUserSaga(action) {
         password: action.password
     }
     if(!action.isSignup){
-        
-        url = "/signin";
-       
+        url = "/signin"
     }
 
     try{
