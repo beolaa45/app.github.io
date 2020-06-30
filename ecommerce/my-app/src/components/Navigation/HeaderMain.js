@@ -16,9 +16,9 @@ const HeaderMain = props => {
             <HeaderMai className='container'>
                 <div className='row'>
                     <div className='col'>
-                        <Phone />
+                    <NavLink exact to='/'><Logo /></NavLink>
                     </div>
-                    <div className='col'><NavLink exact to='/'><Logo /></NavLink></div>
+                    <div className='col'></div>
                     <div className='col'>
                        {props.isAuth ? <div className="user-icon" onClick={userSelect}><PermIdentityIcon style={{ fontSize: 40 }}/>
                                 <div className={active ? "active user-box" : "user-box"}>
