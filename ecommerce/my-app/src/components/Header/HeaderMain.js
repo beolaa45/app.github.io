@@ -5,6 +5,8 @@ import { NavLink } from 'react-router-dom';
 import HeaderMai from '../style/Header/HeaderMain';
 import PermIdentityIcon from '@material-ui/icons/PermIdentity';
 import { ReactComponent as Phone } from '../../asset/svg/phone.svg';
+import Search from '../Search';
+import {Col, Row} from "reactstrap"
 const HeaderMain = props => {
     const [active, setActive] = useState(false)
 
@@ -12,14 +14,16 @@ const HeaderMain = props => {
         setActive(!active)
     }
     return (
-       
-            <HeaderMai className='container'>
-                <div className='row'>
-                    <div className='col'>
-                    <NavLink exact to='/'><Logo /></NavLink>
-                    </div>
-                    <div className='col'></div>
-                    <div className='col'>
+       <HeaderMai>
+            <div className='container-main'>
+                <Row className='row'>
+                    <Col xs="auto">
+                        <NavLink exact to='/'><Logo /></NavLink>
+                    </Col >
+                    <Col >
+                        <Search />
+                    </Col>
+                    <Col >
                        {props.isAuth ? <div className="user-icon" onClick={userSelect}><PermIdentityIcon style={{ fontSize: 40 }}/>
                                 <div className={active ? "active user-box" : "user-box"}>
                                     <NavLink exact to='/user'>User</NavLink>
@@ -27,9 +31,10 @@ const HeaderMain = props => {
                                 </div>
                        </div>
                         : <NavLink exact to='/siginsignup'>Login/Register</NavLink>}
-                    </div>
-                </div>
-            </HeaderMai>
+                    </Col>
+                </Row>
+            </div>
+        </HeaderMai>
         
     );
 };

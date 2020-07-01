@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'reactstrap';
 import NavigationItems from './NavigationItems';
-import HeaderMain from './HeaderMain';
+import HeaderMain from '../Header/HeaderMain';
 const Toobar = (props) => {
     return (
         <header>
