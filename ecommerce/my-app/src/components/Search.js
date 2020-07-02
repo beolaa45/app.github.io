@@ -24,6 +24,7 @@ const Search = (props) => {
                        <FastField 
                             name="search"
                             component={InputField}
+                            
                             placeholder='Search'
                             type='search'
 
