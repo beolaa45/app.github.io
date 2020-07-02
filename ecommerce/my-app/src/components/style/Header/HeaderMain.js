@@ -11,7 +11,6 @@ const  HeaderMai = styled.div`
    font-family: "Karla";
    font-weight: 700;
     .user-icon {
-        
         position: relative
     }
     .user-box {
@@ -20,10 +19,8 @@ const  HeaderMai = styled.div`
         left: 0;
         display: none
     }
-
     .user-box.active {
         display: block
     }
 `
-
 export default HeaderMai
