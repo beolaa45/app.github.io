@@ -4,7 +4,7 @@ import Logo from '../Logo';
 import { NavLink } from 'react-router-dom';
 import HeaderMai from '../style/Header/HeaderMain';
 import PermIdentityIcon from '@material-ui/icons/PermIdentity';
-import { ReactComponent as Phone } from '../../asset/svg/phone.svg';
+
 import Search from '../Search';
 import {Col, Row} from "reactstrap"
 const HeaderMain = props => {
