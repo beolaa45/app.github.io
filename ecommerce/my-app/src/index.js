@@ -8,10 +8,11 @@ import { BrowserRouter } from 'react-router-dom';
 
 import { Provider } from 'react-redux';
 import store, {sagaMiddleware} from './Store/reducer/root'
-import {watchAuth} from './Store/saga/index';
+import {watchAuth, watchProduct} from './Store/saga/index';
 
 //saga run
 sagaMiddleware.run(watchAuth)
+sagaMiddleware.run(watchProduct)
 
 
 ReactDOM.render(

@@ -1,20 +1,24 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux'
-
-class Shop extends Component {
-
-    componentDidMount() {
-
-    }
-    render() {
+import * as actions from '../Store/actions/index';
+const Shop = (props) => {
+    
+    useEffect(() => {
+        props.product()
+        
+    }, [])
+    
+    
         return (
             <div>
                 Shop
             </div>
         );
-    }
+    
 }
 const mapDispaccthToProps = dispatch => {
-    // product: () => dispatch()
+    return {
+        product: () => dispatch(actions.productStart())
+    } 
 }
 export default connect(null, mapDispaccthToProps)(Shop);

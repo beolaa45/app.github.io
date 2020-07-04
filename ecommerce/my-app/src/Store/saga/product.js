@@ -3,5 +3,15 @@ import productApi from '../../api/axiosProduct';
 import * as actions from '../actions/index';
 
 export function* productSaga(action) {
-    yield 
+    try{
+
+        console.log("ok")
+        const res = yield productApi.getAll();
+        console.log(res)
+    }   
+    catch(error) {
+        console.log(error)
+    }
+    
+
 }

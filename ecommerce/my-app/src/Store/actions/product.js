@@ -2,8 +2,9 @@ import * as actionTypes from './actionsTypes';
 
 export const productStart = (param) => {
   return  {
-      sortBy: param.sortBy,
-      order: param.order,
-      limit: param.limit
+      type: actionTypes.PRODUCT_START
+      // sortBy: param.sortBy,
+      // order: param.order,
+      // limit: param.limit
   }
 }
