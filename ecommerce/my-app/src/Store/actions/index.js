@@ -7,3 +7,7 @@ export {
     logoutSuccessUser,
     authFailUser
 } from './auth'
+
+export {
+    productStart
+} from './product'

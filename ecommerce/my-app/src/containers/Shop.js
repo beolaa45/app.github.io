@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 
 class Shop extends Component {
+
+    componentDidMount() {
+
+    }
     render() {
         return (
             <div>
@@ -9,5 +14,7 @@ class Shop extends Component {
         );
     }
 }
-
-export default Shop;
+const mapDispaccthToProps = dispatch => {
+    // product: () => dispatch()
+}
+export default connect(null, mapDispaccthToProps)(Shop);
