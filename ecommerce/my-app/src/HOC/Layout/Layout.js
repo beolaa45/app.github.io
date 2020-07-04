@@ -5,7 +5,11 @@ import { connect } from "react-redux";
 import PropTypes from 'prop-types';
 
 const theme = {
-    red: '#FF0000',
+    green: "#092143",
+    white: "#ffffff",
+    white_2: "#00D2D5",
+    oranges: "#E0A31C",
+    oranges_2: "#E07819",
     black: '#393939',
     grey: '#3A3A3A',
     balck_1: '#3f3f3f',
@@ -16,6 +20,8 @@ const theme = {
 
   const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
   html {
     box-sizing: border-box;
     font-size: 62.5%;

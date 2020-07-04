@@ -6,7 +6,9 @@ import HeaderMai from '../style/Header/HeaderMain';
 import PermIdentityIcon from '@material-ui/icons/PermIdentity';
 
 import Search from '../Search';
-import {Col, Row} from "reactstrap"
+
+import FavoriteBorderOutlinedIcon from '@material-ui/icons/FavoriteBorderOutlined';
+import LocalMallOutlinedIcon from '@material-ui/icons/LocalMallOutlined';
 const HeaderMain = props => {
     const [active, setActive] = useState(false)
 
@@ -15,25 +17,38 @@ const HeaderMain = props => {
     }
     return (
        <HeaderMai>
-            <div className='container-main'>
-                <Row className='row'>
-                    <Col xs="auto">
-                        <NavLink exact to='/'><Logo /></NavLink>
-                    </Col >
-                    <Col >
+            
+                <div>
+                    <div >
+                        <NavLink className='link' 
+                        activeClassName='active-logo' 
+                        exact to='/'><Logo /></NavLink>
+                    </div >
+                    <div className="search" >
                         <Search />
-                    </Col>
-                    <Col >
+                    </div>
+                    <div className="infor" >
                        {props.isAuth ? <div className="user-icon" onClick={userSelect}><PermIdentityIcon style={{ fontSize: 40 }}/>
                                 <div className={active ? "active user-box" : "user-box"}>
                                     <NavLink exact to='/user'>User</NavLink>
                                     <NavLink exact to='/logout'>Logout</NavLink>
                                 </div>
                        </div>
-                        : <NavLink exact to='/siginsignup'>Login/Register</NavLink>}
-                    </Col>
-                </Row>
-            </div>
+                        : <NavLink className="nav-link" 
+                        activeClassName="activeRoute"
+                        exact to='/siginsignup'>Login / Register
+                        </NavLink>}
+                        <NavLink className="nav-link" 
+                        activeClassName="activeRoute" exact to='/user/:id/favorite'> <FavoriteBorderOutlinedIcon /></NavLink>
+                        <div>
+                        
+                       <NavLink className="nav-link" 
+                        activeClassName="activeRoute" exact to='/user/:id/carts'> <LocalMallOutlinedIcon /></NavLink>
+                       </div>
+                        
+                    </div>
+                </div>
+            
         </HeaderMai>
         
     );

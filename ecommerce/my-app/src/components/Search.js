@@ -2,6 +2,8 @@ import React from 'react';
 import { Formik, Form, FastField, Field } from 'formik';
 import InputField from './customField/InputField';
 import SearchIcon from '@material-ui/icons/Search';
+import Formbox from './style/Search';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 const Search = (props) => {
     const initalValues = {
         search: '',
@@ -10,6 +12,7 @@ const Search = (props) => {
 
 
     return (
+        <Formbox>
        <Formik
        initialValues={initalValues}
        onSubmit={value => {
@@ -25,20 +28,22 @@ const Search = (props) => {
                             name="search"
                             component={InputField}
                             
-                            placeholder='Search'
+                            placeholder='Search for products'
                             type='search'
 
                        />
                         <Field as="select" name="select">
-                            <option value="red">Red</option>
-                            <option value="green">Green</option>
-                            <option value="blue">Blue</option>
+                            <option value="Accessories">Accessories</option>
+                            <option value="clocks">Clocks</option>
+                            <option value="cooking">Cooking</option>
                         </Field>
+                        <ExpandMoreIcon />
                             <button type="submit"><SearchIcon /></button>
                    </Form>
                )
            }}
        </Formik>
+    </Formbox>
     );
 };
 

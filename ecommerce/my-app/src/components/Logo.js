@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { NavLink } from 'react-router-dom';
 
 
 const Logo = () => {
     return (
-        <div>
+        <Fragment>
             Room
-        </div>
+        </Fragment>
     );
 };
 

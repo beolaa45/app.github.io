@@ -8,9 +8,9 @@ const Toobar = (props) => {
             <div>
                 top-main
             </div>
-            <div>
+            
                 <HeaderMain isAuth={props.isAuth} />
-            </div>
+            
             <div>
                 <NavigationItems />
             </div>
