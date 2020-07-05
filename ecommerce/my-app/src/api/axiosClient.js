@@ -5,8 +5,8 @@ env.config();
 const axiosClient = axios.create({
         baseURL: process.env.REACT_APP_API_URL,
         headers: {Accept: 'application/json',
-                        "Content-Type": 'application/json'},
-        paramsSerializer: params => queryString.stringify(params)
+                        "Content-Type": 'application/json'}
+        // paramsSerializer: params => queryString.stringify({ sortBy: 'asc', order: 'price', limit: 3})
 });
 
 axiosClient.interceptors.request.use((config) => {

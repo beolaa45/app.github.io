@@ -12,7 +12,8 @@ export function* authLogoutSaga(){
     yield put(actions.logoutSuccessUser())
 }
 export function* authCheckTimeoutSaga(action){
-    yield delay(action.expirationTime * 20);
+    console.log(action.expirationTime)
+    yield delay(action.expirationTime * 20000);
     yield put(actions.initlogoutUser())
 }
 
@@ -44,12 +45,12 @@ export function* authStartUserSaga(action) {
             data: action.isSignup ? authData : authDataSigin
         }); 
         
-
+        console.log(res.data)
         const expirationDate = yield new Date().getTime() + res.data.user.expire;
         yield localStorage.setItem('expirationDate', expirationDate);
         yield localStorage.setItem('token', res.data.token);
         yield localStorage.setItem('userId', res.data.user._id)
-        yield put(actions.authSuccessUser(res.data.user.name, res.data.user.email, res.data.user._id, res.data.token));
+        yield put(actions.authSuccessUser(res.data.user.name, res.data.user.email, res.data.user._id, res.data.token, res.data.user.role));
         yield put(actions.checkAuthTimeout(res.data.user.expire))
     } catch(err) {
         console.log({...err})

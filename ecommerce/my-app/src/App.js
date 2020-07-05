@@ -8,6 +8,7 @@ import Shop from './containers/Shop';
 import SigninSignup from './containers/SigninSignup';
 import Logout from './containers/Logout'
 import NotFound from './components/NotFound';
+import User from './containers/Auth/User';
 function App() {
 
   let routes = (
@@ -15,6 +16,8 @@ function App() {
       <Route path='/shop' component={Shop}/>
       <Route path='/logout' component={Logout}/>
       <Route path='/siginsignup' component={SigninSignup}/>
+      <Route path='/user' component={User}/>
+
       <Route path='/' exact component={Home}/>
       <Route component={NotFound}/>
 

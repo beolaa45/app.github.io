@@ -5,24 +5,26 @@ const initalSate = {
     userEmail: null,
     token: null,
     userId: null,
+    role: null,
     error: null,
     loading: false,
 
 }
 
 const authInitUser = (state, action) => {
-  return  updateObject(state, {token: null, userId: null, loading: true, userName: null, userEmail: null, userId: null, error: null});
+  return  updateObject(state, {token: null, userId: null, loading: true, userName: null, userEmail: null, userId: null, error: null, role: null});
 }
 const authSuccessUser = (state, action) => {
    return updateObject(state, {token: action.token, userId: action.userId, 
                                 userName: action.name,
                                 userEmail: action.email,
+                                role: action.role,
                                 loading: false,
                                 error: null})
 }
 
 const authLogoutUser = (state, action) => {
-  return  updateObject(state, {token: null, userId: null, loading: false, userName: null, userEmail: null, userId: null, error: null});
+  return  updateObject(state, {token: null, userId: null, loading: false, userName: null, userEmail: null, userId: null, error: null, role: null});
 }
 
 const authFailtUser = (state, action) => {

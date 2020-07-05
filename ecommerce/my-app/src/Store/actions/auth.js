@@ -20,13 +20,14 @@ export const authStartUser = (name, email, password, isSignup) => {
 
 
 
-export const authSuccessUser = (name, email, userId, token) => {
+export const authSuccessUser = (name, email, userId, token, role) => {
     return {
         type: actionTypes.AUTH_SUCCESS_USER,
         name,
         email,
         token,
-        userId
+        userId,
+        role
     }
 }
 
