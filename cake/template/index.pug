@@ -1,0 +1,73 @@
+extends template-part/layout.pug
+
+block style
+    
+    //- link(rel='stylesheet' type='text/css' href='./assets/style/slick.css')
+    link(rel="stylesheet", href="./css/home.css")
+
+block title
+            title Cak
+block content
+    main.content
+        .banner
+            .bamner-carousell
+                .bamner-carousell__item
+                    img(src="./img/banner1.png", alt="Giảm 50% khi đặt trên 2 loại bánh")
+                    .banner-carousell__content
+                        h1.heading-primary Giảm 
+                            span 50%
+                            br
+                            | khi đặt trên 2 loại bánh
+                        button.btn.btn--red.btn--transtion-1 Mua ngay
+                .bamner-carousell__item 
+                    img(src="./img/banner2.jpg", alt="Giảm 70% khi đặt trên 3 loại bánh")
+                    .banner-carousell__content.banner-carousell__content--modify
+                        h1.heading-primary Giảm 
+                            span 70%
+                            br
+                            | khi đặt trên 3 loại bánh
+                        button.btn.btn--red.btn--transtion Mua ngay
+        .banner-list
+            .container-custom
+                .row
+                    .col-xl-6.col-lg-6.col-md-6.col-sm-12
+                        a(href="")
+                            .banner-list__photo.js-photo-1
+                                .banner-list__title-box
+                                span.banner-list__title Bánh đặt nhiều nhất
+                    .col-xl-6.col-lg-6.col-md-6.col-sm-12
+                        a(href="")
+                            .banner-list__photo-box
+                                .row
+                                    .col-xl-12.col-lg-12.col-md-12.col-sm-12.photo-3-4
+                                        a(href="")
+                                            .banner-list__photo-2.js-photo-2
+                                                .banner-list__box-2
+                                                    span.title Bánh Cake
+                                                    span.quaty 50%
+                                .col-xl-12.col-lg-12.col-md-12.col-sm-12
+                                    .banner-list__photo-box-2
+                                        .row.banner-photo-3
+                                            .col-xl-6.col-lg-6.col-md-6.col-sm-6.col-12
+                                                a(href="")
+                                                    .banner-list__photo-3.js-photo-3
+                                            .col-xl-6.col-lg-6.col-md-6.col-sm-6.col-12
+                                                a(href="")
+                                                    .banner-list__photo-4.js-photo-3
+        .best-slice
+            .container-custom
+                .row
+                    .col
+                        h2.heading-secondery Bánh Ngon Hôm Nay
+                        .best-slice__list
+                            .row
+                                .col-xl-3
+                                    include template-part/card.pug
+                                        block photo
+                                            a(href="")
+                                                img(src="img/logo.png", alt="")
+
+
+block script
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js' integrity='sha512-eP8DK17a+MOcKHXC5Yrqzd8WI5WKh6F1TIk5QZ/8Lbv+8ssblcz7oGC8ZmQ/ZSAPa7ZmsCU4e/hcovqR8jfJqA==' crossorigin='anonymous')
+    script(src='./js/home.js')
