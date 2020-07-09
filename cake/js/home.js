@@ -14,16 +14,10 @@ $(document).ready(function(){
 
     $(window).on("load resize", function(){
         
-       let widthPhoto = $(".js-photo-1").width();
-       let heightPhoto = widthPhoto;
-       $(".js-photo-1").height(heightPhoto)
-       
-       let widthPhoto2 = $(".js-photo-2").width();
-       let heightPhoto2 = widthPhoto2/2;
-       $(".js-photo-2").height(heightPhoto2)
-    
-       let widthPhoto3 = $(".js-photo-3").width();
-       let heightPhoto3 = widthPhoto3;
-       $(".js-photo-3").height(heightPhoto3)
+    //   let widthCard =  $('.best-slice__card').width()
+    //   let heightCard = widthCard * 1.95;
+    //   $('.best-slice__card').height(heightCard)
+    //   console.log(widthCard)
+    //   console.log(heightCard)
     })
   });

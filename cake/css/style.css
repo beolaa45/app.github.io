@@ -48,9 +48,11 @@
 
 :root {
     --color-red: #ED4F4F;
+    --color-red-2: #FC1D1D;
     --color-grey: #333333;
     --color-grey-2: #666666;
-    --color-white: #FFFFFF
+    --color-white: #FFFFFF;
+    --color-yellow: #EABE12;
 }
 
 *,
