@@ -486,6 +486,7 @@ button.slick-prev {
     margin-bottom: 5rem;
     position: relative;
     padding-bottom: .6rem;
+    width: 100%;
 
 }
 
@@ -500,6 +501,10 @@ button.slick-prev {
 
     transform: translateX(-50%);
     
+}
+
+.heading-secondery--white {
+    color: var(--color-white);
 }
 
 .best-slice a:link,
@@ -611,3 +616,126 @@ button.slick-prev {
         padding: 1rem .8rem;
     }
 }
+
+
+/************* ORDER ***********/
+
+.order {
+    padding-top: 5rem;
+    background-image: url(../img/bg-order.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 41rem;
+}
+
+@media (max-width: 576px) {
+    .order{
+      height: 105rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .order {
+        padding-top: 3rem;
+    }
+}
+
+.order-continer {
+    height: 100%;
+}
+.order__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+
+@media (max-width: 576px) {
+    .order__list {
+       flex-direction: column;
+    }
+}
+.order__content {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin-right: 12.8rem;
+    width: 16rem;
+}
+
+.order__content:last-child {
+    margin-right: 0;
+}
+@media (max-width: 767px) {
+    .order__content {
+        width: 20rem;
+        margin-right: 8rem;
+    }   
+}
+
+@media (max-width: 576px) {
+    .order__content {
+       margin-right: 0;
+       margin-bottom: 5rem;
+    }
+}
+.order__box-icon {
+    margin-bottom: 1.6rem;
+    width: 100%;
+    
+}
+
+
+
+.order__box-icon img {
+    width: 100%;
+}
+
+
+
+.order__box-icon i {
+    outline-style: solid;
+    border: 3rem;
+}
+
+.order__title {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    color: var(--color-white);
+}
+
+/************* FEATURE **********/
+
+.feature {
+    padding-top: 7rem;
+    height: 100rem;
+    overflow: hidden;
+}
+.feature-carousell button {
+    background-color:var(--color-grey-3);
+}
+.feature-carousell:hover button {
+    color: var(--color-red);
+    background-color: var(--color-grey-4);
+}
+/* the slides */
+.slick-slider {
+    overflow: hidden;
+}
+ /* the slides */
+ .slick-slide {
+    margin-left:27px;
+  }
+
+  /* the parent */
+  .slick-list {
+    margin-left:-27px;
+  }
