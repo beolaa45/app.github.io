@@ -76,6 +76,25 @@ body {
     font-size: 1.6rem;
     line-height: 2.4rem;
     padding: .6rem .8rem .5rem .8rem;
+
+    transition: backrgound-color .3s ease-in-out;
+}
+
+.btn--form {
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: var(--color-white);
+    background-color: var(--color-red);
+
+    letter-spacing: 0.21em;
+    padding: 1.6rem 3.3rem 1.5rem 3.3rem;
+    width: 100%;
+}
+
+.btn--form:hover {
+    color: var(--color-white);
+    background-color: var(--color-red-2);
 }
 
 @media (max-width: 991px) {
@@ -958,13 +977,15 @@ button.slick-prev {
  /* the slides */
  .slick-slide-company {
      margin-left: 0;
-    margin-right:70px;
+    margin-right:35px;
+    margin-left: 35px;
   }
 
   /* the parent */
   .slick-list-company {
     margin-left: 0;
-    margin-right: -70px;
+    margin-right: -35px;
+    margin-left: -35px;
   }
 
   .company {
@@ -993,4 +1014,5 @@ button.slick-prev {
     display: inline-block;
 
 }
+
 

@@ -1,6 +1,6 @@
 $(document).ready(function(){
     
-    /////// BNANER
+    ////////////// BNANER //////////////////////
     $('.bamner-carousell').slick({
         dots: true,
         infinite: true,
@@ -29,7 +29,7 @@ $(document).ready(function(){
 
     $('.slick-dots li button').text('');
 
-    //// FEATURE
+    ////////////// FEATURE ///////////////
 
     $('.feature-carousell').slick({
         slidesToShow: 4,
@@ -69,7 +69,7 @@ $(document).ready(function(){
       })
       
 
-
+//////////// COMPANY /////////////////
 
       $('.company__carousel').slick({
         infinite: true,
@@ -77,19 +77,47 @@ $(document).ready(function(){
         slidesToShow: 4,
         slidesToScroll: 1,
         centerMode: true,
-        variableWidth: true,
         cssEase: 'linear',
         autoplay: true,
         autoplaySpeed: 3000,
+
+        responsive: [
+            {
+              breakpoint: 991,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true
+              }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2,
+                  infinite: true
+                }
+              },
+              {
+                breakpoint: 575,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  infinite: true
+                }
+              }
+        ]
       });
 
       $(window).on("load resize", function() {
         $('.company__carousel .slick-next.slick-arrow').text('')
         $('.company__carousel .slick-prev.slick-arrow').text('')
+
+        $(".company .slick-list").addClass('slick-list-company')
+        $(".company .slick-slide").addClass('slick-slide-company')
       })
 
-      $(".company .slick-list").addClass('slick-list-company')
-      $(".company .slick-slide").addClass('slick-slide-company')
+     
   });
 
  
