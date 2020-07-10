@@ -57,17 +57,25 @@ body {
     font-family: "Roboto" ;
     font-style: normal;
     font-weight: 700 ;
-}
-
-.btn--red {
     font-size: 2rem;
     line-height: 2.3rem;
     background-color: var(--color-red);
     padding: .7rem 2.6rem;
-    color: var(--color-white);
     border-radius: .5rem;
-    
 }
+
+.btn--red {
+    color: var(--color-white);
+}
+
+.btn--blog {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    padding: .6rem .8rem .5rem .8rem;
+}
+
 
 @media (max-width: 991px) {
     .btn--red {
@@ -716,7 +724,8 @@ button.slick-prev {
 
 .feature {
     padding-top: 7rem;
-    height: 100rem;
+    padding-bottom: 5rem;
+    
     overflow: hidden;
 }
 .feature-carousell button {
@@ -726,16 +735,180 @@ button.slick-prev {
     color: var(--color-red);
     background-color: var(--color-grey-4);
 }
+
+@media (max-width: 767px) {
+    .feature-carousell button {
+        width: 6rem;
+        height: 8rem;
+        font-size: 4rem;
+    
+    }
+}
+
+@media (max-width: 576px) {
+    .feature-carousell button {
+        width: 8rem;
+        height: 10rem;
+        font-size: 5rem;
+    }
+}
 /* the slides */
 .slick-slider {
     overflow: hidden;
 }
  /* the slides */
  .slick-slide {
-    margin-left:27px;
+    margin-left:15px;
   }
 
   /* the parent */
   .slick-list {
-    margin-left:-27px;
+    margin-left:-15px;
   }
+
+
+/***************** COUNTER ***************/
+
+.counter {
+    background-image: url("../img/bg-couter.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 39rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    .counter {
+        height: 63rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .counter {
+        height: 130rem;
+    }
+}
+
+
+
+.counter__content {
+    height: 100%;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .counter .row > div {
+        margin-bottom: 4rem;
+    }
+
+    .counter .row > div:nth-last-child(1),
+    .counter .row > div:nth-last-child(2) {
+        margin-bottom: 0rem;
+    }
+    
+}
+
+@media (max-width: 576px) {
+    .counter .row > div:nth-last-child(2) {
+        margin-bottom: 4rem;
+    }
+}
+
+
+
+.counter__icon {
+    width: 16rem;
+    display: inline-block;
+    margin-bottom: 1.1rem;
+    
+}
+
+.counter__icon img {
+    width: 100%;
+}
+
+.counter__number {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 4.6rem;
+    line-height: 5.4rem;
+    color: var(--color-red);
+    margin-bottom: 0.5rem;
+}
+
+.counter__title {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    color: var(--color-white);
+}
+
+
+/****************** BLOG *********************/
+
+
+.blog {
+    padding-top: 10rem;
+}
+
+.blog__list {
+
+}
+
+.blog__content {
+    font-family: "Roboto";
+    font-style: normal;
+}
+
+.blog__photo {
+    width: 100%;
+}
+
+.blog__photo img {
+    width: 100%;
+}
+
+
+.blog__box-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog__heading {
+    
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2.3rem;
+}
+
+.blog__counter {
+    font-weight: normal;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+}
+
+.blog__tutorial {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+}
+
+.blog__box-title > * {
+    margin-bottom: 1.2rem;
+}
+
+.blog__row > *{
+    margin-bottom: 3rem;
+}
+
+
+
+
