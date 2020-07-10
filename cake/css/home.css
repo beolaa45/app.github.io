@@ -56,26 +56,27 @@ body {
 .btn {
     font-family: "Roboto" ;
     font-style: normal;
+   
+    border-radius: .5rem;
+    
+}
+
+.btn--red {
+    color: var(--color-white);
     font-weight: 700 ;
     font-size: 2rem;
     line-height: 2.3rem;
     background-color: var(--color-red);
     padding: .7rem 2.6rem;
-    border-radius: .5rem;
-}
-
-.btn--red {
-    color: var(--color-white);
 }
 
 .btn--blog {
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
     padding: .6rem .8rem .5rem .8rem;
 }
-
 
 @media (max-width: 991px) {
     .btn--red {
@@ -88,8 +89,8 @@ body {
 
 @media (max-width: 767px) {
     .btn--red {
-        font-size: 1.2rem;
-        padding: .3rem 1.5rem;
+        font-size: 2rem;
+        padding: 1rem 1.5rem;
         border-radius: .3rem;
         line-height: 1.6rem;
     }
@@ -97,10 +98,9 @@ body {
 
 @media (max-width: 576px) {
     .btn--red {
-        font-size: .8rem;
-        padding: .2rem 1rem;
-        border-radius: .3rem;
-        line-height: 1.3rem;
+        font-size: 1.7rem;
+        padding: .7rem 1rem;
+        
     }
 }
 .btn--transtion-1 {
@@ -114,7 +114,8 @@ body {
 }
 
 .btn--red:hover {
-    color: white;
+    background-color: var(--color-red-2);
+    color: var(--color-white);
 }
 
 
@@ -865,6 +866,15 @@ button.slick-prev {
 .blog__content {
     font-family: "Roboto";
     font-style: normal;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 1.2rem 0 3rem rgba(0, 0, 0, 0.05);
+
+    transition: all .3s ease-in-out;
+}
+
+.blog__content:hover {
+    box-shadow: 1.2rem 0 3rem rgba(0, 0, 0, 0.1);
 }
 
 .blog__photo {
@@ -879,8 +889,14 @@ button.slick-prev {
 .blog__box-title {
     display: flex;
     flex-direction: column;
+    padding: 1rem 1.4rem 0 0;
 }
 
+@media (max-width: 1199px) {
+    .blog__box-title {
+        padding: 0 1.4rem 0 1.4rem;
+    }
+}
 .blog__heading {
     
     font-weight: bold;
@@ -892,6 +908,12 @@ button.slick-prev {
     font-weight: normal;
     font-size: 1.6rem;
     line-height: 1.9rem;
+}
+
+@media (max-width: 1199px) {
+    .blog__list .blog__content .row > *:first-child {
+        margin-bottom: 2rem;
+    }
 }
 
 .blog__tutorial {
@@ -911,4 +933,64 @@ button.slick-prev {
 
 
 
+.blog__row > *:nth-last-child(1),
+.blog__row > *:nth-last-child(2){
+    margin-bottom: 0;
+}
+
+@media (max-width: 576px) {
+    .blog__row > *:nth-last-child(2) {
+        margin-bottom: 3rem;
+    }
+}
+
+.blog__box-title a:link,
+.blog__box-title a:visited {
+    align-self: flex-start;
+}
+
+/******************* COMPANY **************/
+
+
+.slick-slider {
+    overflow: hidden;
+}
+ /* the slides */
+ .slick-slide-company {
+     margin-left: 0;
+    margin-right:70px;
+  }
+
+  /* the parent */
+  .slick-list-company {
+    margin-left: 0;
+    margin-right: -70px;
+  }
+
+  .company {
+    
+      padding: 7rem 0;
+  }
+
+  .company__carousel button{
+      background-color: transparent;
+
+  }
+
+  .slick-list-company img {
+      opacity: .4;
+      transition: opacity .3s ease-in-out;
+  }
+
+  .slick-list-company img:hover {
+    opacity: 1;
+}
+
+.slick-list-company  a:link,
+.slick-list-company  a:visited {
+    
+    text-decoration: none;
+    display: inline-block;
+
+}
 

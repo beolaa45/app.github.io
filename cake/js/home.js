@@ -9,6 +9,19 @@ $(document).ready(function(){
         cssEase: 'linear',
         autoplay: true,
         autoplaySpeed: 3000,
+
+      //   responsive: [
+          
+      //       {
+      //         breakpoint: 575,
+      //         settings: {
+      //           slidesToShow: 1,
+      //           slidesToScroll: 1,
+      //           infinite: true,
+      //           dots: false,
+      //         }
+      //       }
+      // ]
     });
 
     $(".slick-arrow.slick-next").text('').append(`<i class="fas fa-chevron-right"></i>`)
@@ -55,6 +68,28 @@ $(document).ready(function(){
         $('.feature-carousell .slick-prev.slick-arrow').text('').append(`<i class="fas fa-chevron-left"></i>`)
       })
       
+
+
+
+      $('.company__carousel').slick({
+        infinite: true,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        centerMode: true,
+        variableWidth: true,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 3000,
+      });
+
+      $(window).on("load resize", function() {
+        $('.company__carousel .slick-next.slick-arrow').text('')
+        $('.company__carousel .slick-prev.slick-arrow').text('')
+      })
+
+      $(".company .slick-list").addClass('slick-list-company')
+      $(".company .slick-slide").addClass('slick-slide-company')
   });
 
  
