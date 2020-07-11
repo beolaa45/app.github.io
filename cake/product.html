@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/style.css"/>
     <link rel="stylesheet" href="./css/footer.css"/>
     <link href="/favicon.ico" type="image/x-icon" rel="icon"/>
+    <link rel="stylesheet" href="./css/product.css"/>
     <title>Sản Phẩm</title>
   </head>
   <body>
@@ -73,6 +74,91 @@
         </div>
       </div>
     </div>
+    <div class="product">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-3 col-lg-3">
+            <form class="product__filter" action="index.html" method="GET">
+              <div class="product__section">
+                <div class="product__section-header"> 
+                  <h4 class="product__section__title">LOẠI BÁNH</h4><span><i class="fas fa-chevron-right"></i></span>
+                </div>
+                <div class="product__wraper">
+                  <div class="product__checkbox-group">
+                    <input type="checkbox" name="loaiBanh" id="banhKem" value="banhKem"/>
+                    <label for="banhKem">Bánh Kem</label>
+                  </div>
+                  <div class="product__checkbox-group">
+                    <input type="checkbox" name="loaiBanh" id="banhSinhNhat" value="banhSinhNhat"/>
+                    <label for="banhSinhNhat">Bánh sinh nhật</label>
+                  </div>
+                  <div class="product__checkbox-group">
+                    <input type="checkbox" name="loaiBanh" id="anNhanh" value="anNhanh"/>
+                    <label for="anNhanh">   Ăn nhanh</label>
+                  </div>
+                  <div class="product__checkbox-group">
+                    <input type="checkbox" name="loaiBanh" id="bieuTang" value="bieuTang"/>
+                    <label for="bieuTang">   Biếu tặng</label>
+                  </div>
+                </div>
+              </div>
+              <div class="product__section">
+                <div class="product__section-header"> 
+                  <h4 class="product__section__title">KHOẢNG GIÁ</h4><span><i class="fas fa-chevron-right"></i></span>
+                </div>
+                <div class="product__wraper">
+                  <div class="product__checkbox-group">
+                    <input type="checkbox" name="khoangGia" id="duoi50" value="duoi50"/>
+                    <label for="duoi50">Dưới 50,000</label>
+                  </div>
+                  <div class="product__checkbox-group">
+                    <input type="checkbox" name="khoangGia" id="tu50den100" value="tu50den100"/>
+                    <label for="tu50den100">Từ 50,000 đến 100,000</label>
+                  </div>
+                  <div class="product__checkbox-group">
+                    <input type="checkbox" name="khoangGia" id="tu100den500" value="tu100den500"/>
+                    <label for="tu100den500">   Tù 100,000 đến 500,000</label>
+                  </div>
+                  <div class="product__checkbox-group">
+                    <input type="checkbox" name="khoangGia" id="tren500" value="tren500"/>
+                    <label for="tren500">   Trên 500,000</label>
+                  </div>
+                </div>
+              </div>
+              <div class="product__section">
+                <div class="product__section-header"> 
+                  <h4 class="product__section__title">NÂNG CAO</h4><span><i class="fas fa-chevron-right"></i></span>
+                </div>
+                <div class="product__wraper">
+                  <div class="product__checkbox-group">
+                    <input type="checkbox" name="nangCao" id="maGiamGia" value="maGiamGia"/>
+                    <label for="maGiamGia">Mã giảm giá</label>
+                  </div>
+                  <div class="product__checkbox-group">
+                    <input type="checkbox" name="nangCao" id="khuyenmai" value="khuyenmai"/>
+                    <label for="khuyenmai">Khuyến Mại</label>
+                  </div>
+                  <div class="product__checkbox-group">
+                    <input type="checkbox" name="nangCao" id="bannhieunhat" value="bannhieunhat"/>
+                    <label for="bannhieunhat">   Bán Nhiều Nhất</label>
+                  </div>
+                  <div class="product__checkbox-group">
+                    <input type="checkbox" name="nangCao" id="sanphanmoi" value="sanphanmoi"/>
+                    <label for="sanphanmoi">   Sản phẩm mới</label>
+                  </div>
+                </div>
+              </div>
+              <div class="product__border"></div>
+              <div class="product__action">
+                <button class="product__btn">Áp dụng</button>
+                <button class="product__btn product__btn--white">Bỏ lọc</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-xl-9 col-lg-9"></div>
+        </div>
+      </div>
+    </div>
     <footer class="footer">
       <div class="footer__top">
         <div class="container">
@@ -131,5 +217,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="./js/jQuery.js"></script>
     <script src="./js/layout.js"></script>
+    <script src="./js/product.js"></script>
   </body>
 </html>

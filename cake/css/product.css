@@ -1,0 +1,158 @@
+/*  */
+
+.product {
+    padding-top: 2.2rem;
+    margin-top: 4rem;
+    height: 100rem;
+}
+
+.product__filter {
+
+}
+
+.product__section {
+    margin-bottom: 2rem;
+}
+
+.product__section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.4rem;
+}
+
+.product__section__title {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.4rem;
+}
+
+.product__section-header span {
+
+}
+
+.product__section-header span i {
+    font-size: 1.8rem;
+    transform: rotate(-90deg);
+    color: var(--color-grey-2);
+
+    transition: transform .3s ease-in-out;
+}
+
+.product__section-header span.isOpen i {
+    transform: rotate(90deg);
+}
+
+.product__wraper {
+    overflow: hidden;
+    
+    height: 0;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+.product__wraper.isOpen {
+    height: auto;
+    opacity: 1;
+    
+}
+.product__checkbox-group {
+    position: relative;
+    margin-bottom: .8rem;
+    
+    
+}
+
+.product__checkbox-group label::before {
+    content: '';
+    height: 1.3rem;
+    width: 1.3rem;
+    position: absolute;
+    top: .5rem;
+    left: 0;
+    background-color: white;
+    border-radius: 2px;
+    border: 1px solid var(--color-grey-2);
+}
+
+.product__checkbox-group input:checked ~ label::after {
+    display: block;
+}
+
+.product__checkbox-group label::after {
+    content: "\f00c";
+    color: var(--color-grey-2);
+    transition: all .25s;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    top: .1rem;
+    left: 0;
+    font-size: 1.5rem;
+    display: none;
+
+}
+
+.product__checkbox-group label {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+
+    padding-left: .5rem;
+}
+
+
+.product__border {
+    width: 100%;
+    height: 0;
+    border: 1px solid var(--color-grey-2);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.product__btn {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    background-color: var(--color-red);
+    padding: .8rem 1rem .8rem 1rem;
+    border-radius: .5rem;
+    border: 1px solid var(--color-red);
+
+    
+    color: var(--color-white);
+    transition: all .3s ease-in-out;
+}
+
+.product__btn--white {
+    background-color: var(--color-white);
+    color: var(--color-grey-2);
+    border: 1px solid var(--color-grey-2);
+    
+}
+
+.product__btn--white:hover {
+    color: var(--color-white);
+    border: none;
+}
+.product__action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product__btn:focus {
+    outline: none;
+}
+
+.product__btn:hover {
+    background-color: var(--color-red-2);
+}
+
+
+

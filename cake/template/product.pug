@@ -1,5 +1,6 @@
 extends template-part/layout.pug
-
+block style
+    link(rel="stylesheet", href="./css/product.css")
 block title
         title Sản Phẩm
 block heading
@@ -7,8 +8,76 @@ block heading
 block title-2
     a(href="")
         p.banner__title-2 Sản Phẩm
-    
+block content
+    .product
+        .container
+            .row
+                .col-xl-3.col-lg-3
+                    form(action="index.html" method="GET").product__filter
+                        .product__section
+                            .product__section-header 
+                                h4.product__section__title LOẠI BÁNH
+                                span
+                                   i.fas.fa-chevron-right
+                            .product__wraper
+                                .product__checkbox-group
+                                    input(type="checkbox", name="loaiBanh" id='banhKem' value='banhKem')
+                                    label(for="banhKem") Bánh Kem
+                                .product__checkbox-group
+                                    input(type="checkbox", name="loaiBanh" id='banhSinhNhat' value='banhSinhNhat')
+                                    label(for="banhSinhNhat") Bánh sinh nhật
+                                .product__checkbox-group
+                                    input(type="checkbox", name="loaiBanh" id='anNhanh' value='anNhanh')
+                                    label(for="anNhanh")    Ăn nhanh
+                                .product__checkbox-group
+                                    input(type="checkbox", name="loaiBanh" id='bieuTang' value='bieuTang')
+                                    label(for="bieuTang")    Biếu tặng
+                        .product__section
+                            .product__section-header 
+                                h4.product__section__title KHOẢNG GIÁ
+                                span
+                                   i.fas.fa-chevron-right
+                            .product__wraper
+                                .product__checkbox-group
+                                    input(type="checkbox", name="khoangGia" id='duoi50' value='duoi50')
+                                    label(for="duoi50") Dưới 50,000
+                                .product__checkbox-group
+                                    input(type="checkbox", name="khoangGia" id='tu50den100' value='tu50den100')
+                                    label(for="tu50den100") Từ 50,000 đến 100,000
+                                .product__checkbox-group
+                                    input(type="checkbox", name="khoangGia" id='tu100den500' value='tu100den500')
+                                    label(for="tu100den500")    Tù 100,000 đến 500,000
+                                .product__checkbox-group
+                                    input(type="checkbox", name="khoangGia" id='tren500' value='tren500')
+                                    label(for="tren500")    Trên 500,000
+                        .product__section
+                            .product__section-header 
+                                h4.product__section__title NÂNG CAO
+                                span
+                                   i.fas.fa-chevron-right
+                            .product__wraper
+                                .product__checkbox-group
+                                    input(type="checkbox", name="nangCao" id='maGiamGia' value='maGiamGia')
+                                    label(for="maGiamGia") Mã giảm giá
+                                .product__checkbox-group
+                                    input(type="checkbox", name="nangCao" id='khuyenmai' value='khuyenmai')
+                                    label(for="khuyenmai") Khuyến Mại
+                                .product__checkbox-group
+                                    input(type="checkbox", name="nangCao" id='bannhieunhat' value='bannhieunhat')
+                                    label(for="bannhieunhat")    Bán Nhiều Nhất
+                                .product__checkbox-group
+                                    input(type="checkbox", name="nangCao" id='sanphanmoi' value='sanphanmoi')
+                                    label(for="sanphanmoi")    Sản phẩm mới
+                        .product__border
+                        .product__action
+                            button.product__btn Áp dụng
+                            button.product__btn.product__btn--white Bỏ lọc
 
+                .col-xl-9.col-lg-9
+
+
+block script
+    script(src="./js/product.js")
     
         
         
