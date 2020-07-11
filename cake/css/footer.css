@@ -52,6 +52,8 @@
     line-height: 1.9rem;
     padding: 1.6rem 1rem 1.5rem 2.3rem;
     border: none;
+
+    border-radius: .5rem;
 }
 
 @media (max-width: 576px) {

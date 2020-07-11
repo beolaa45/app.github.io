@@ -152,7 +152,7 @@
     height: 0;
     border: 1px solid var(--color-grey-2);
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .product__btn {
@@ -397,6 +397,7 @@
     color: var(--color-white);
 
     transition: background-color .2s linear;
+    text-decoration: none;
 
 }
 
@@ -408,6 +409,7 @@
 
 .best-slice__button i {
     font-size: 2.2rem;
+    text-decoration: none;
 }
 
 .best-slice__button:hover,
@@ -419,4 +421,34 @@
     .best-slice__button:link {
         padding: 1rem .8rem;
     }
+}
+
+.product__pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product__pages a:link,
+.product__pages a:visited {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.6;
+    line-height: 1.9;
+    background-color: var(--color-red);
+
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    margin-right: 3.3rem;
+    margin-top: 2rem;
+    color: var(--color-white);
+    display: inline-block;
+
+    text-decoration: none;
+}
+
+.product__pages a:hover,
+.product__pages a:active {
+    background-color: var(--color-red-2);
 }
