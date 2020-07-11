@@ -436,19 +436,24 @@
     font-weight: bold;
     font-size: 1.6;
     line-height: 1.9;
-    background-color: var(--color-red);
+    background-color: var(--color-white);
 
     padding: 1rem 2rem;
     border-radius: 50px;
     margin-right: 3.3rem;
     margin-top: 2rem;
-    color: var(--color-white);
+    color: var(--color-red);
     display: inline-block;
 
     text-decoration: none;
+    transition: all .3s ease-in-out;
 }
-
+.product__pages a.active {
+    background-color: var(--color-red);
+    color: var(--color-white);
+}
 .product__pages a:hover,
 .product__pages a:active {
     background-color: var(--color-red-2);
+    color: var(--color-white);
 }
