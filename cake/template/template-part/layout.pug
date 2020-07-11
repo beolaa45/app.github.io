@@ -18,6 +18,24 @@ html(lang="en")
             title Cake
     body
         include header.pug
+        block banner
+            .banner
+                .container
+                    .row
+                        .col
+                            .banner__content
+                                block heading
+                                    h1.heading-primary.heading-primary--white Sản Phẩm
+                                .banner__box
+                                    a(href="#")
+                                        p.banner__title Trang chủ
+                                    .banner__icon
+                                        img(src="./img/arrows-banner.svg", alt="")
+                                    block title-2
+                                        a(href="")
+                                            p.banner__title-2 Sản Phẩm
+                                                
+            
         block content
         include footer.pug
 
