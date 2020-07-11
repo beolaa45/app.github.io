@@ -19,21 +19,21 @@ html(lang="en")
     body
         include header.pug
         block banner
-            .banner
+            .banner-common
                 .container
                     .row
                         .col
-                            .banner__content
+                            .banner-common__content
                                 block heading
                                     h1.heading-primary.heading-primary--white Sản Phẩm
-                                .banner__box
+                                .banner-common__box
                                     a(href="#")
-                                        p.banner__title Trang chủ
-                                    .banner__icon
+                                        p.banner-common__title Trang chủ
+                                    .banner-common__icon
                                         img(src="./img/arrows-banner.svg", alt="")
                                     block title-2
                                         a(href="")
-                                            p.banner__title-2 Sản Phẩm
+                                            p.banner-common__title-2 Sản Phẩm
                                                 
             
         block content

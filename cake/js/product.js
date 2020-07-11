@@ -14,4 +14,25 @@ $(document).ready(function(){
         e.preventDefault()
         $("input").prop("checked", false);
     })
+
+    $(window).on("load resize", function() {
+        let width = $(this).width();
+        console.log(width)
+
+        if(width <= 991) {
+            
+            $("#product__filter").addClass('isMobile')
+        }else $("#product__filter").removeClass('isMobile')
+
+    })
+
+    $("#product__filter-icon").click(function() {
+        $("#product__filter").removeClass('isClose')
+    })
+
+    $("#product__close p").click(function() {
+
+        console.log('close')
+        $("#product__filter").addClass('isClose')
+    })
 })

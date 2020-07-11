@@ -7,13 +7,17 @@ block heading
     h1.heading-primary.heading-primary--white Sản Phẩm
 block title-2
     a(href="")
-        p.banner__title-2 Sản Phẩm
+        p.banner-common__title-2 Sản Phẩm
 block content
     .product
         .container
             .row
                 .col-xl-3.col-lg-3
-                    form(action="index.html" method="GET").product__filter
+                    #product__filter-icon
+                        i.fas.fa-filter
+                    form(action="index.html" method="GET")#product__filter.isClose
+                    
+                        
                         .product__section
                             .product__section-header 
                                 h4.product__section__title LOẠI BÁNH
@@ -72,8 +76,242 @@ block content
                         .product__action
                             button.product__btn Áp dụng
                             button.product__btn.product__btn--white Bỏ lọc
+                        #product__close
+                            p Đóng
+                .col-xl-9.col-lg-9.col-md-12
+                    .product__sort
+                        p.product__sort-title Sắp xếp theo:
+                        select(name="product-sort")#product__select
+                            option(value="default" select="selected") Mặc định
+                            option(value='az') A đến Z
+                            option(value='za') Z đến A
+                            option(value='lowHigh') Giá từ thấp đến cao
+                            option(value='highLow') Giá từ cao đến thấp
+                        i.fas.fa-chevron-right.product__sort-icon
+                    .product__list
+                        .row
+                            .col-xl-4.col-lg-4.col-md-4.col-sm-6.col-12
+                                .best-slice__card
+                                    .best-slice__photo
+                                        a(href="#")
+                                            img(src="./img/banh-hamburger.jpg", alt="./img/banh-hamburger" title="Bánh Hamburger")
+                                    .best-slice__content
+                                        a(href="#")
+                                            h3.best-slice__heading  Bánh Hamburger
+                                        .best-slice__rate
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                        .best-slice__price 50,000 đ
+                                        a(href="#").best-slice__button
+                                            span Thêm Vào Giỏ
+                                            i.fas.fa-cart-plus
+                            .col-xl-4.col-lg-4.col-md-4.col-sm-6.col-12
+                                .best-slice__card
+                                    .best-slice__photo
+                                        a(href="#")
+                                            img(src="./img/banh-4.jpg", alt="Banh Mì" title="Bánh Mì")
+                                    .best-slice__content
+                                        a(href="#")
+                                            h3.best-slice__heading  Bánh Mì
+                                        .best-slice__rate
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                        .best-slice__price 30,000 đ
+                                        a(href="#").best-slice__button
+                                            span Thêm Vào Giỏ
+                                            i.fas.fa-cart-plus
+                            .col-xl-4.col-lg-4.col-md-4.col-sm-6.col-12
+                                .best-slice__card
+                                    .best-slice__photo
+                                        a(href="#")
+                                            img(src="./img/banh-5.jpg", alt="Banh Sinh Nhật" title="Bánh Sinh Nhật")
+                                    .best-slice__content
+                                        a(href="#")
+                                            h3.best-slice__heading  Bánh Sinh Nhật
+                                        .best-slice__rate
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                        .best-slice__price 120,000 đ
+                                        a(href="#").best-slice__button
+                                            span Thêm Vào Giỏ
+                                            i.fas.fa-cart-plus   
+                            .col-xl-4.col-lg-4.col-md-4.col-sm-6.col-12
+                                .best-slice__card
+                                    .best-slice__photo
+                                        a(href="#")
+                                            img(src="./img/banh-7.jpg", alt="Banh Cupcake" title="Bánh Cupcake")
+                                    .best-slice__content
+                                        a(href="#")
+                                            h3.best-slice__heading  Bánh Cupcake
+                                        .best-slice__rate
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                        .best-slice__price 50,000 đ
+                                        a(href="#").best-slice__button
+                                            span Thêm Vào Giỏ
+                                            i.fas.fa-cart-plus
+                            .col-xl-4.col-lg-4.col-md-4.col-sm-6.col-12
+                                .best-slice__card
+                                    .best-slice__photo
+                                        a(href="#")
+                                            img(src="./img/banh-2.jpg", alt="Banh-Cupcake" title="Bánh Cupcake")
+                                    .best-slice__content
+                                        a(href="#")
+                                            h3.best-slice__heading  Bánh Cupcake
+                                        .best-slice__rate
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                        .best-slice__price 30,000 đ
+                                        a(href="#").best-slice__button
+                                            span Thêm Vào Giỏ
+                                            i.fas.fa-cart-plus
+                            .col-xl-4.col-lg-4.col-md-4.col-sm-6.col-12
+                                .best-slice__card
+                                    .best-slice__photo
+                                        a(href="#")
+                                            img(src="./img/banh-8.jpg", alt="Banh Tiramisu" title="Bánh Tiramisu")
+                                    .best-slice__content
+                                        a(href="#")
+                                            h3.best-slice__heading  Bánh Tiramisu
+                                        .best-slice__rate
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                        .best-slice__price 70,000 đ
+                                        a(href="#").best-slice__button
+                                            span Thêm Vào Giỏ
+                                            i.fas.fa-cart-plus
+                            .col-xl-4.col-lg-4.col-md-4.col-sm-6.col-12
+                                .best-slice__card
+                                    .best-slice__photo
+                                        a(href="#")
+                                            img(src="./img/banh-6.jpg", alt="Banh Pizza" title="Bánh Pizza")
+                                    .best-slice__content
+                                        a(href="#")
+                                            h3.best-slice__heading  Bánh Pizza
+                                        .best-slice__rate
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                        .best-slice__price 150,000 đ
+                                        a(href="#").best-slice__button
+                                            span Thêm Vào Giỏ
+                                            i.fas.fa-cart-plus
+                            .col-xl-4.col-lg-4.col-md-4.col-sm-6.col-12
+                                .best-slice__card
+                                    .best-slice__photo
+                                        a(href="#")
+                                            img(src="./img/banh-3.jpg", alt="Banh Bao" title="Bánh Bao")
+                                    .best-slice__content
+                                        a(href="#")
+                                            h3.best-slice__heading  Bánh Bao
+                                        .best-slice__rate
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                        .best-slice__price 40,000 đ
+                                        a(href="#").best-slice__button
+                                            span Thêm Vào Giỏ
+                                            i.fas.fa-cart-plus
+                            
+                            .col-xl-4.col-lg-4.col-md-4.col-sm-6.col-12
+                                .best-slice__card
+                                    .best-slice__photo
+                                        a(href="#")
+                                            img(src="./img/banh-9.jpg", alt="Banh-Bông Lan" title="Bánh Bông Lan")
+                                    .best-slice__content
+                                        a(href="#")
+                                            h3.best-slice__heading  Bánh Bông Lan
+                                        .best-slice__rate
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                        .best-slice__price 50,000 đ
+                                        a(href="#").best-slice__button
+                                            span Thêm Vào Giỏ
+                                            i.fas.fa-cart-plus
+                            .col-xl-4.col-lg-4.col-md-4.col-sm-6.col-12
+                                .best-slice__card
+                                    .best-slice__photo
+                                        a(href="#")
+                                            img(src="./img/banh-10.jpg", alt="Banh Phô Mai" title="Bánh Phô Mai")
+                                    .best-slice__content
+                                        a(href="#")
+                                            h3.best-slice__heading  Bánh Phô Mai
+                                        .best-slice__rate
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                        .best-slice__price 50,000 đ
+                                        a(href="#").best-slice__button
+                                            span Thêm Vào Giỏ
+                                            i.fas.fa-cart-plus
+                            .col-xl-4.col-lg-4.col-md-4.col-sm-6.col-12
+                                .best-slice__card
+                                    .best-slice__photo
+                                        a(href="#")
+                                            img(src="./img/banh-11.jpg", alt="Banh Bông Cuộn" title="Bánh Bông Cuộn")
+                                    .best-slice__content
+                                        a(href="#")
+                                            h3.best-slice__heading  Bánh Bông Cuộn
+                                        .best-slice__rate
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                        .best-slice__price 70,000 đ
+                                        a(href="#").best-slice__button
+                                            span Thêm Vào Giỏ
+                                            i.fas.fa-cart-plus
+                            .col-xl-4.col-lg-4.col-md-4.col-sm-6.col-12
+                                .best-slice__card
+                                    .best-slice__photo
+                                        a(href="#")
+                                            img(src="./img/banh-13.jpg", alt="Banh Bông Cuộn" title="Bánh Bông Cuộn")
+                                    .best-slice__content
+                                        a(href="#")
+                                            h3.best-slice__heading  Bánh Bông Cuộn
+                                        .best-slice__rate
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                            i.fas.fa-star
+                                        .best-slice__price 70,000 đ
+                                        a(href="#").best-slice__button
+                                            span Thêm Vào Giỏ
+                                            i.fas.fa-cart-plus
+                            .col
+                                
 
-                .col-xl-9.col-lg-9
+
+
 
 
 block script

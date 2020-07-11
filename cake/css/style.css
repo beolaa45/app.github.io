@@ -120,7 +120,7 @@ body {
 
 /*********** BANNER ***********/
 
-.banner {
+.banner-common {
     height: 20rem;
     background-image: url(../img/banner-product.jpg);
     background-repeat: no-repeat;
@@ -145,7 +145,7 @@ body {
     margin-bottom: 2.5rem;
 }
 
-.banner__box {
+.banner-common__box {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -157,30 +157,30 @@ body {
     line-height: 1.9rem;
 }
 
-.banner__box > * {
+.banner-common__box > * {
     margin-right: 0.8rem;
 }
 
-.banner__box p {
+.banner-common__box p {
     margin-bottom: 0;
     
 }
 
-.banner__title {
+.banner-common__title {
     color:  var(--color-grey-8);
 }
 
-.banner__icon {
+.banner-common__icon {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.banner__icon img {
+.banner-common__icon img {
     width: 100%;
 }
 
-.banner__title-2 {
+.banner-common__title-2 {
     color:  var(--color-white);
 }
 /********** BUTTOM ************/
