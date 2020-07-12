@@ -502,6 +502,8 @@ header i {
     height: 100vh;
     background-color: transparent;
     z-index: 5;
+
+    display: none;
 }
 
 #header-right__search-box {

@@ -1,5 +1,6 @@
 $(document).ready(function(){
     // MENU CLONE
+
     $(".header-right__open-draw").click(function(){
       $(this).toggleClass('active');
 
@@ -22,6 +23,8 @@ $(document).ready(function(){
       $(".header-right__open-draw").find('i').removeClass().addClass("fas fa-bars mobile");
       $(this).css("display", "none")
     })
+
+    
     
 
     ///// SEARCH

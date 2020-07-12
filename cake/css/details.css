@@ -1,7 +1,9 @@
+
+
 .details {
-
+  margin-top: 10rem;
 }
-
+/********* DETAILS PHOTO ***********/
 .details__carousel {
 
 }
@@ -36,3 +38,136 @@
   .slick-list.draggable {
     height: 7.5rem;
   }
+
+  .details__photo {
+      margin-bottom: 2rem;
+
+  }
+
+  .details__photo img {
+    width: 100%;
+  }
+
+     /******** DETAILS INFO ***********/
+
+  .details__info {
+    font-family: "Roboto";
+    font-style: normal;
+    
+  }
+  h2.heading__primary {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 3.5rem;
+
+    color: var(--color-grey);
+    position: relative;
+    text-align: center;
+    position: relative;
+
+    margin-bottom: 3rem;
+    
+  }
+
+ 
+
+
+
+  h2.heading__primary::before {
+    content: '';
+    position: absolute;
+    width: 16.5rem;
+    height: 0;
+    border: .2rem solid var(--color-red);
+
+    bottom: -1.6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    
+  }
+
+  .details__price {
+
+  }
+
+  .details__price p{
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 1.9rem
+  }
+
+  .details__rate {
+
+  }
+
+  .details__rate p {
+
+  }
+
+  .details__rate p span{
+
+  }
+
+  .details__stocking {
+
+  }
+
+  .details__stocking i {
+
+  }
+
+  .details__stocking span {
+
+  }
+
+  .details__description {
+
+  }
+
+  .details__title {
+
+  }
+
+  .details__text {
+
+  }
+
+  .details__select {
+
+  }
+
+  .details__number {
+
+  }
+
+  .details__number-minus {
+
+  }
+
+  .details__number-basket {
+
+  }
+
+  .details__number-plus {
+
+  }
+
+  .details__add-to-basket {
+
+  }
+
+  .details__buy-now {
+
+  }
+
+  .details__share {
+
+  }
+
+  .details__share i {
+
+  }
+
+
