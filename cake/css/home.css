@@ -896,6 +896,10 @@ button.slick-prev {
     margin-left: 35px;
   }
 
+  .slick-slide-company > div > div {
+      text-align: center;
+  }
+
   /* the parent */
   .slick-list-company {
     margin-left: 0;
