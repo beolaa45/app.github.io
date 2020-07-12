@@ -1,0 +1,42 @@
+extends template-part/layout.pug
+block style
+    link(rel='stylesheet' type='text/css' href='./css/slick/slick.css')
+    link(rel="stylesheet", href="./css/slick/slick-theme.css")
+    link(rel="stylesheet", href="./css/details.css")
+block title
+    title Chi Tiết Sản phẩm
+block heading
+    h1.heading-primary.heading-primary--white Chi Tiết Sản Phẩm
+block title-2
+    a(href="")
+        p.banner-common__title-2 Sản Phẩm
+    .banner-common__icon
+        img(src="./img/arrows-banner.svg", alt="")
+    a(href="")
+        p.banner-common__title-2 Chi Tiết Sản Phẩm
+block content
+    .details
+        .container
+            .row.justify-content-between
+                .col-xl-6.col-lg-6-col-md-6 
+                    .details__carousel
+                        .details__carousel-list
+                             
+                                img(src="./img/details-mini-1.png", alt="")
+                             
+                                img(src="./img/details-mini-2.png", alt="")
+                             
+                                img(src="./img/details-mini-3.png", alt="")
+                             
+                                img(src="./img/details-mini-4.png", alt="")
+                             
+                                img(src="./img/details-mini-5.png", alt="")
+                .col-xl-5.col-lg-5-col-md-5 2
+
+
+
+
+
+block script
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js' integrity='sha512-eP8DK17a+MOcKHXC5Yrqzd8WI5WKh6F1TIk5QZ/8Lbv+8ssblcz7oGC8ZmQ/ZSAPa7ZmsCU4e/hcovqR8jfJqA==' crossorigin='anonymous')
+    script(src="./js/details.js")

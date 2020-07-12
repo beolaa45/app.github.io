@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    ///////// FILTER //////// 
+
     $(".product__section-header").children('span').addClass('isOpen')
     $(".product__section-header").siblings().addClass('isOpen')
     $(".product__section-header").click(function(){

@@ -1,0 +1,38 @@
+.details {
+
+}
+
+.details__carousel {
+
+}
+
+.details__carousel .slick-slide {
+    height: 7.5rem;
+    width: 10rem !important;
+}
+
+/* the slides */
+.slick-slider {
+    overflow: hidden !important;
+}
+ /* the slides */
+ .slick-slide {
+    margin-left:15px;
+  }
+
+  /* the parent */
+  .slick-list {
+    margin-left:-15px;
+  }
+
+  .slick-arrow {
+      background-color: red;
+  }
+
+  .slick-track {
+    width: 60rem !important;
+  }
+
+  .slick-list.draggable {
+    height: 7.5rem;
+  }
