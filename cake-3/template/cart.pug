@@ -1,0 +1,52 @@
+extends template-part/layout.pug
+
+block style 
+    link(rel="stylesheet", href="./css/slick/slick.css")
+    link(rel="stylesheet", href="./css/slick/slick-theme.css")
+    link(rel="stylesheet", href="./css/cart.css")
+
+block title
+    title Giỏ Hàng
+block heading
+    h1.heading-primary.heading-primary--white Giỏ Hàng
+block title-2
+    a(href="")
+        p.banner-common__title-2 Giỏ Hàng
+
+block content
+    .cart
+        .container
+            .row
+                .col
+                    .cart__list
+                        table#cart__table
+                            tbody
+                                tr
+                                    th.cart__delete Xóa
+                                    th 
+                                    th Tên Sản Phẩm
+                                    th Giá
+                                    th Số Lượng
+                                    th Tổng Giá
+                                tr.cart__row
+                                    td 
+                                        i.far.fa-trash-alt
+                                    td 
+                                        img(src="./img/cart-1.png", alt="Bánh Pizza", title="Bánh Pizza")
+                                    td Bánh Pizza
+                                    td 150,000 đ
+                                    td 
+                                        .cart__select                                    
+                                            i.fas.fa-minus
+                                            span.details__number-basket 1                                
+                                            i.fas.fa-plus
+                                    td 150,000 đ
+                                
+
+
+
+
+
+
+block script
+    script(src="./js/cart.js")

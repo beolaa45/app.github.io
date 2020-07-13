@@ -1,0 +1,50 @@
+header.container.header
+    .header-left
+        .logo
+            a.logo__link(href="")
+                img(src="./img/logo.png", alt="Cake")
+        .header-left__search.desktop
+            .header-left__search-box
+                form.header-left__form(action="#")
+                    input(type="text" placeholder='Tìm kiếm...').header-left__input
+                    a.header-left__link
+                        i.fas.fa-search.header-left__icon
+
+    .header-right
+        nav.header-right__main-menu.desktop
+            ul.header-right__list
+                li.header-right__item
+                    a(href="").header-right__link Trang chủ
+                li.header-right__item 
+                    a(href="").header-right__link Sản Phẩm
+                li.header-right__item 
+                    a(href="").header-right__link Tin Tức
+                li.header-right__item 
+                    a(href="").header-right__link Liên Hệ
+        .header-right__avatar
+            i.fas.fa-user.header-right__icon
+        .header-right__search
+            i.fas.fa-search.header-right__icon.mobile         
+        .header-right__cart
+            a.header-right__link
+                i.fas.fa-cart-arrow-down.header-right__icon
+        .header-right__open-draw
+                i.fas.fa-bars.mobile
+    #clone-menu.mobile
+        nav.header-right__main-menu
+            ul.header-right__list
+                li.header-right__item
+                    a(href="").header-right__link Trang chủ
+                li.header-right__item 
+                    a(href="").header-right__link Sản Phẩm
+                li.header-right__item 
+                    a(href="").header-right__link Tin Tức
+                li.header-right__item 
+                    a(href="").header-right__link Liên Hệ
+    .clone-menu__box
+    #header-right__search-box
+        i.fas.fa-times.header-right__search-icon
+        .header-right__search-box-input
+            .header-right__search-input
+                input(type="text" placeholder='Tìm kiếm loại bánh...')
+                i.far.fa-paper-plane
