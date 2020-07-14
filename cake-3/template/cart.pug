@@ -20,10 +20,10 @@ block content
                 .col
                     .cart__list
                         table#cart__table
-                            tbody
+                            
                                 tr
                                     th.cart__delete Xóa
-                                    th 
+                                    th
                                     th Tên Sản Phẩm
                                     th Giá
                                     th Số Lượng
@@ -32,7 +32,8 @@ block content
                                     td 
                                         i.far.fa-trash-alt
                                     td 
-                                        img(src="./img/cart-1.png", alt="Bánh Pizza", title="Bánh Pizza")
+                                        .cart__photo
+                                            img(src="./img/cart-1.png", alt="Bánh Pizza", title="Bánh Pizza")
                                     td Bánh Pizza
                                     td 150,000 đ
                                     td 
@@ -42,20 +43,29 @@ block content
                                             i.fas.fa-plus
                                     td 150,000 đ
                     .cart__money
-                        .row
-                            .col-xl-4.col-lg-4.col-md-4
+                        .row.justify-content-end
+                            .col-xl-4.col-lg-5.col-md-6.col-sm-9.col-12
                                 .money__content
                                     p.money__title Thành Tiền
                                     .money__price
-                                        p Bánh Pizza x
-                                            span (1)
-                                        p 150,000 đ
+                                            p Bánh Humburger x
+                                                span (1)
+                                            p 150,000 đ
+                                    .money__price
+                                            p Bánh Pizza x
+                                                span (1)
+                                            p 50,000 đ
+                                    .money__price
+                                            p Bánh Phô Mai x
+                                                span (1)
+                                            p 50,000 đ
                                     p.money__car 
-                                        p Phí vận chuyển
-                                        p Miễn phí vận chuyển
+                                        span Phí vận chuyển
+                                        span Miễn phí
                                     .money__total 
                                         p Tổng cộng:
-                                        p 450,000 đ
+                                        p 250,000 đ
+                                    p.money__pay Tiến Hành Thanh Toán
 
 
 

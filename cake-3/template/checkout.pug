@@ -1,0 +1,45 @@
+extends template-part/layout.pug
+block style
+    link(rel="stylesheet", href="checkout.css")
+block title
+    title Thanh Toán
+
+block heading
+    h1.heading-primary.heading-primary--white Thanh Toán
+block title-2
+    a(href="")
+        p.banner-common__title-2.banner-common__title-2--active Thanh Toán
+
+block content
+    .checkout
+        .container
+            .row
+                .col-xl-6
+                    form.checkout__infor
+                        .infor__group
+                            lable(for="") Họ và tên*
+                            input(type="text" name="fullname").infor__input
+                        .infor__group
+                            lable(for="") Thành phố*
+                            select(name="thanhpho")
+                                option(value="Hà Nội")
+                                option(value="Đà Nẵng")
+                                option(value="Thành Phố Hồ Chí Minh")
+                        .infor__group
+                            lable(for="") Địa chỉ giao hàng*
+                            input(type="text" name="address").infor__input
+                        .infor__group
+                            lable(for="") Địa chỉ Email*
+                            input(type="text").infor__input
+                        .infor__group
+                            lable(for="") Số điện thoại*
+                            input(type="text").infor__input
+                        .infor__group
+                            lable(for="") Ghi chú thêm
+                            input(type="text").infor__input.infor__note
+                            
+                .col-xl-6
+                    .checkout__pay
+
+block script
+    script(src="./js/checkout.js")
