@@ -1,6 +1,6 @@
 extends template-part/layout.pug
 block style
-    link(rel="stylesheet", href="checkout.css")
+    link(rel="stylesheet", href="./css/checkout.css")
 block title
     title Thanh Toán
 
@@ -11,35 +11,79 @@ block title-2
         p.banner-common__title-2.banner-common__title-2--active Thanh Toán
 
 block content
-    .checkout
+    form.checkout
         .container
-            .row
-                .col-xl-6
-                    form.checkout__infor
+            .row.justify-content-between
+                .col-xl-6.col-lg-6.col-md-6.col-sm-6
+                    .checkout__infor
+                        h2.infor__user Thông tin người nhận:
                         .infor__group
-                            lable(for="") Họ và tên*
-                            input(type="text" name="fullname").infor__input
+                            label(for="fullname") Họ và tên*
+                            .input-wraper
+                                input(type="text" name="fullname" id="fullname").infor__input
+                                .error Vui lòng nhập tên hợp lệ
                         .infor__group
-                            lable(for="") Thành phố*
-                            select(name="thanhpho")
-                                option(value="Hà Nội")
-                                option(value="Đà Nẵng")
-                                option(value="Thành Phố Hồ Chí Minh")
+                            label(for="thanhpho") Thành phố*
+                            .input-wraper
+                                select(name="thanhpho" id="thanhpho")
+                                    option(value="Hà Nội") Hà Nội
+                                    option(value="Đà Nẵng") Đà Nẵng
+                                    option(value="Thành Phố Hồ Chí Minh") Thành Phố Hồ Chí Minh  
+                                    option(value='4' selected hidden disable='disable') Vui lòng chọn tỉnh/thành phố
+                                .error Vui lòng nhập tỉnh/thành phố hợp lệ
                         .infor__group
-                            lable(for="") Địa chỉ giao hàng*
-                            input(type="text" name="address").infor__input
+                            label(for="adđress") Địa chỉ giao hàng*
+                            .input-wraper
+                                input(type="text" name="address").infor__input
+                                .error Vui lòng nhập địa chỉ giao hàng hợp lệ
                         .infor__group
-                            lable(for="") Địa chỉ Email*
-                            input(type="text").infor__input
+                            label(for="email") Địa chỉ Email
+                            .input-wraper
+                                input(type="text" id="email").infor__input
+                                
                         .infor__group
-                            lable(for="") Số điện thoại*
-                            input(type="text").infor__input
-                        .infor__group
-                            lable(for="") Ghi chú thêm
-                            input(type="text").infor__input.infor__note
-                            
-                .col-xl-6
+                            label(for="number") Số điện thoại*
+                            .input-wraper
+                                input(type="text" id='number').infor__input
+                                .error Vui lòng nhập số điện thoại hợp lệ
+                        .infor__text
+                            label(for="note") Ghi chú thêm   
+                                                  
+                            textarea(name="note" id="note", cols="20", rows="5").infor__input.infor__note           
+                .col-xl-4.col-lg-5.col-md-6.col-sm-6
                     .checkout__pay
+                        .h2.pay__heading Đơn hàng của tôi
+                        .pay__calc
+                            p.pay__title Thành Tiền
+                            .pay__item
+                                p Bánh Pizza  
+                                    span x1
+                                p 150,000 đ
+                            .pay__item
+                                p Bánh Pizza  
+                                    span x1
+                                p 150,000 đ
+                            .pay__item
+                                p Bánh Pizza  
+                                    span x1
+                                p 150,000 đ
+                            .pay__total
+                                p Tổng cộng:
+                                p 300,000 đ
+                        .pay__method
+                            p.pay__title Phương Thức Thanh Toán
+                            .pay__radio
+                                .pay__group
+                                    input(type="radio" id="vimomo" name="get")
+                                    label(for="vimomo") Ví Momo
+                                .pay__group
+                                    input(type="radio" id="banking" name="get")
+                                    label(for="banking") Thanh toán bằng Internet banking
+                                .pay__group
+                                    input(type="radio" id="get" name="get")
+                                    label(for="get") Thanh toán khi nhận hàng
+                        .pay__paynow Thanh Toán
+
 
 block script
     script(src="./js/checkout.js")

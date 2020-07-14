@@ -122,9 +122,13 @@ $(document).ready(function () {
       console.log(width)
 
       if(width <= 576) {
-        $("#cart__table tr .cart__img").css("display" , "none")
-      }else {
-        $("#cart__table tr .cart__img").css("display" , "table-cell")
+      
+            $("#cart__table tr .cart__img").css({"display": "none"});
+       
+       
+      }
+      if(width > 576) {
+         $("#cart__table tr .cart__img").css("display" , "table-cell")
        
       }
       
