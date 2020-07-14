@@ -1,4 +1,7 @@
 /* CART LIST */
+.cart__list {
+  margin: 8rem 0 5rem 0;
+}
 
 table {
     border-collapse: collapse;
