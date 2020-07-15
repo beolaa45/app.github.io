@@ -1,0 +1,69 @@
+extends template-part/layout.pug
+block style
+    link(rel="stylesheet", href="./css/contact.css")
+block title
+    title Liên Hệ
+
+block heading
+    h1.heading-primary.heading-primary--white Liên Hệ
+block title-2
+    a(href="")
+        p.banner-common__title-2.banner-common__title-2--active Liên Hệ
+
+block content
+
+    .contact
+        .container
+            .row
+                
+                    .col-xl-6.col-lg-6.col-md-6.col-sm-6
+                        form.contact__sent
+                            h2.sent__heading Gửi tin nhắn cho chúng tôi
+                            .sent__group-input
+                                label(for="fullname") Họ và tên*
+                                input(type="text" id="fullname" name="fullname")
+                                p.error Vui lòng nhập họ và tên hợp lệ
+                            .sent__group-input
+                                label(for="email") Địa chỉ Email*
+                                input(type="text" id="email" name="email")
+                                p.error Vui lòng nhập Email hợp lệ
+                            .sent__group-input
+                                label(for="numberphone") Số điện thoại*
+                                input(type="text" id="numberphone" name="numberphone")
+                                p.error Vui lòng nhập số điện thoại hợp lệ
+                            .sent__group-input
+                                label(for="note") Nhập nội dung*
+                                textarea(name="note", cols="30", rows="5")
+                                p.error Vui lòng nhập nội dung hợp lệ
+                            button.btn__sent Gửi tin
+                            
+                    .col-xl-6.col-lg-6.col-md-6.col-sm-6
+                        .contact__infor
+                            .infor__group
+                                img(src="./img/contact-icon-1.svg", alt="")
+                                .infor__group__content
+                                        p.infor__title Địa chỉ liên hệ
+                                        p.infor__text 150 ngõ Xã Đàn 2, Quận Đống Đa, TP. Hà Nội
+                                .infor__group
+                                img(src="./img/contact-icon-2.svg", alt="")
+                                .infor__group__content
+                                        p.infor__title Số điện thoại
+                                        p.infor__number 0987156321
+                                img(src="./img/contact-icon-3.svg", alt="")
+                                .infor__group__content
+                                        p.infor__title Số điện thoại
+                                        p.infor__number 0987156321
+                                
+
+
+
+
+
+
+
+
+
+
+
+block script
+    script(src="./js/contact.js")
