@@ -1,0 +1,111 @@
+.detail-blog {
+  margin: 7rem 0;
+}
+
+/* BLOG INFOR */
+
+.detail-blog__infor {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+
+  color: var(--color-grey);
+}
+
+.detail-blog__infor > * {
+  margin: 2rem;
+}
+
+.infor__heading-secondery {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+}
+
+.infor__text span,
+.infor__time span {
+  font-weight: bold;
+}
+
+.infor__photo {
+  width: 50rem;
+  display: block;
+  margin: 0 auto;
+}
+
+.infor__photo img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.infor__heading-tertiary {
+  text-align: center;
+}
+
+
+.detail-blog__form {
+    font-family: Roboto;
+    font-style: normal;
+    margin-top: 5rem;
+}
+
+.detail-blog__form > * {
+    margin-bottom: 2.7rem;
+}
+
+.form__title {
+    
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2.3rem;
+}
+
+.form__box {
+    display: flex;
+    
+}
+
+.group-input.textarea textarea{
+    display: block;
+    width: 100%;
+}
+
+.btn--note {
+    border: none;
+    background-color: var(--color-red);
+    width: 12.2rem;
+    height: 4rem;
+    color: var(--color-white);
+    border-radius: .5rem;
+}
+
+
+
+
+
+.group-input {
+    width: 100%;
+    margin-right: 2rem;
+}
+
+.form__box .group-input:last-child {
+    margin-right: 0;
+    
+}
+
+.group-input label {
+    margin-bottom: .8rem;
+}
+
+.group-input input {
+    width: 100%;
+    height: 3.3rem;
+}
+
+
+
+
