@@ -105,8 +105,6 @@
     line-height: 2.3rem;
     display: inline-block;
 
-    padding-bottom: .5rem;
-    border-bottom: 2px solid var(--color-red);
     margin-bottom: 3rem;
 }
 

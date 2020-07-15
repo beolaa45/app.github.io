@@ -1,0 +1,68 @@
+.article {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+
+    margin: 7rem 0;
+}
+
+.article__heading {
+    
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    margin-bottom: 2rem;
+}
+
+.article__content {
+
+}
+
+.article__box {
+
+}
+
+.article__photo {
+    width: 100%;
+    margin-bottom: 1.3rem;
+}
+.article__photo img{
+    width: 100%;
+}
+
+.article__info {
+
+}
+
+.aricle__heading-tertiary {
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    margin-bottom: 1.1rem;
+}
+
+.article__time {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1.1rem;
+}
+
+.article__time p{
+    margin-right: .5rem;
+    margin-bottom: 0;
+}
+
+.article__text {
+    font-weight: normal;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+}   
+
+.article__content .row > div {
+    margin-bottom: 4rem;
+}
+.article__content .row > div:last-child {
+    margin-bottom: 0;
+}
+
