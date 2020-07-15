@@ -32,7 +32,8 @@
 }
 
 .infor__photo {
-  width: 50rem;
+  max-width: 50rem;
+  width: 100%;
   display: block;
   margin: 0 auto;
 }
@@ -106,6 +107,126 @@
     height: 3.3rem;
 }
 
+/* SIDEBAR */
+
+.details-blog__sidebar {
+    font-family: Roboto;
+    font-style: normal;
+    color: var(--color-grey);
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+}
+
+.details-blog__sidebar > * {
+    margin-bottom: 3rem;
+}
+
+.sidebar__form {
+    position: relative;
+}
+
+.sidebar__form input {
+    width: 100%;
+    height: 3.3rem;
+    padding: 0 .5rem;
+}
+
+.sidebar__form i {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: var(--color-grey);
+}
+
+.sidebar__topic  {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar__title {
+    
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2.3;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+
+}
+
+.sidebar__link:link,
+.sidebar__link:visited {
+    font-weight: normal;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: var(--color-grey);
+
+    transition: all .3s ease-in-out;
+}
+
+.sidebar__link:active,
+.sidebar__link:hover {
+    color: var(--color-red);
+}
+
+
+.sidebar__blog {
+
+}
+
+.sidebar__title {
+
+}
+
+.sidebar__blog__link:link,
+.sidebar__blog__link:visited,
+.sidebar__blog__link:active,
+.sidebar__blog__link:hover {
+    color: var(--color-grey);
+    text-decoration: none;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+
+}
+
+.sidebar__photo {
+    margin-right: 1.5rem;
+}
+
+.sidebar__box p:first-child {
+    margin-bottom: 1rem;
+    font-weight: bold;
+    transition: all .3s ease-in-out;
+}
+
+.sidebar__box p:first-child:hover {
+    color: var(--color-red);
+}
+
+
+.sidebar__tag a:link,
+.sidebar__tag a:visited{
+    background-color: var(--color-grey-10);
+    padding: .3rem 1rem;
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    color: var(--color-grey);
+
+    transition: all .3s ease-in-out;
+    text-decoration: none;
+    border-radius: .3rem;
+}
+
+.sidebar__tag a:hover,
+.sidebar__tag a:active {
+    background-color: var(--color-red);
+    color: var(--color-white);
+}
 
 
 
