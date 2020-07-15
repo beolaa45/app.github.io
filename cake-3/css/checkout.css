@@ -211,6 +211,7 @@
     font-size: 2rem;
     line-height: 2.3rem;
     height: 4.2rem;
+    display: inline-block;
 
     display: flex;
     justify-content: center;
@@ -218,6 +219,7 @@
     background-color: var(--color-red);
     border-radius: .5rem;
     color: var(--color-white);
+    border: none;
 
     transition: all .3s ease-in-out;
 }
@@ -225,3 +227,4 @@
 .pay__paynow:hover {
     background-color: var(--color-red-2);
 }
+

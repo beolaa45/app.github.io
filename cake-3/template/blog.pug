@@ -1,0 +1,39 @@
+extends template-part/layout.pug
+block style
+    link(rel="stylesheet", href="./css/blog.css")
+block title
+    title Tin Tức
+
+block heading
+    h1.heading-primary.heading-primary--white Tin Tức
+block title-2
+    a(href="")
+        p.banner-common__title-2.banner-common__title-2--active Tin Tức
+
+block content
+
+    .article
+        .container
+            .row
+                .col
+                    h2.article__heading Bài viết
+                    .article__content
+                        .row
+                            .col-xl-4.col-lg-4.col-md-6.col-sm-6
+                                .
+                            .col-xl-4.col-lg-4.col-md-6.col-sm-6
+                            .col-xl-4.col-lg-4.col-md-6.col-sm-6
+
+
+
+
+
+
+
+
+
+
+
+
+block script
+    script(src="./js/blog.js")

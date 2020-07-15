@@ -3,6 +3,8 @@
     font-style: normal;
     font-weight: 400;
     color: var(--colo-grey);
+
+    margin: 8rem 0;
     
 }
 
@@ -37,6 +39,7 @@
     font-size: 1.6rem;
     line-height: 1.9rem;
     height: 3.2rem;
+    margin-bottom: 0.8rem;
 }
 
 .sent__group-input label {
@@ -45,5 +48,73 @@
 
 .btn__sent {
     border: none;
+    background-color: var(--color-red);
+    width: 10.4rem;
+    height: 4.4rem;
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+
+    color: var(--color-white);
+    border-radius: .5rem;
+
+}
+
+.error {
+    color: var(--color-red);
     
 }
+
+
+/* INFOR */
+.contact__infor {
+    margin-top: 6rem;
+
+
+}
+
+.infor__group {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.infor__group img {
+    margin-right: 2rem;
+    
+}
+
+.infor__group__content p:first-child {
+    margin-bottom: 1.1rem;
+    font-weight: bold;
+}
+.infor__group__content p:last-child {
+    margin-bottom: 0;
+}
+
+/* GOOGLE MAPS */
+.map {
+    margin-bottom: 7rem;
+}
+.map__heading {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    display: inline-block;
+
+    padding-bottom: .5rem;
+    border-bottom: 2px solid var(--color-red);
+    margin-bottom: 3rem;
+}
+
+
+
+.map__photo img{
+    width: 100%;
+}
+
+
+
