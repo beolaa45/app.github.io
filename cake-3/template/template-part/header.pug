@@ -1,7 +1,7 @@
 header.container.header
     .header-left
         .logo
-            a.logo__link(href="")
+            a.logo__link(href="./index.html")
                 img(src="./img/logo.png", alt="Cake")
         .header-left__search.desktop
             .header-left__search-box
@@ -14,13 +14,13 @@ header.container.header
         nav.header-right__main-menu.desktop
             ul.header-right__list
                 li.header-right__item
-                    a(href="").header-right__link Trang chủ
+                    a(href="./index.html").header-right__link Trang chủ
                 li.header-right__item 
-                    a(href="").header-right__link Sản Phẩm
+                    a(href="./product.html").header-right__link Sản Phẩm
                 li.header-right__item 
-                    a(href="").header-right__link Tin Tức
+                    a(href="./blog.html").header-right__link Tin Tức
                 li.header-right__item 
-                    a(href="").header-right__link Liên Hệ
+                    a(href="./contact.html").header-right__link Liên Hệ
         .header-right__avatar
             i.fas.fa-user.header-right__icon
         .header-right__search
@@ -34,13 +34,13 @@ header.container.header
         nav.header-right__main-menu
             ul.header-right__list
                 li.header-right__item
-                    a(href="").header-right__link Trang chủ
+                    a(href="./index.html").header-right__link Trang chủ
                 li.header-right__item 
-                    a(href="").header-right__link Sản Phẩm
+                    a(href="./product.html").header-right__link Sản Phẩm
                 li.header-right__item 
-                    a(href="").header-right__link Tin Tức
+                    a(href="./blog.html").header-right__link Tin Tức
                 li.header-right__item 
-                    a(href="").header-right__link Liên Hệ
+                    a(href="./contact.html").header-right__link Liên Hệ
     .clone-menu__box
     #header-right__search-box
         i.fas.fa-times.header-right__search-icon
@@ -48,3 +48,27 @@ header.container.header
             .header-right__search-input
                 input(type="text" placeholder='Tìm kiếm loại bánh...')
                 i.far.fa-paper-plane
+    #header__user
+        .user__box
+            p.user--active Đăng nhập
+            p  Đăng kí
+        form.user__form
+            .group-input
+                input(type="text" placeholder="Email")
+                p.error Vui lòng nhập email hợp lệ
+            .group-input
+                input(type="text" placeholder="Password")
+                p.error Vui lòng nhập Password hợp lệ
+            a(href="#").user__form__box
+                i.far.fa-question-circle
+                p Quên mật khẩu
+            button.user__btn ĐĂNG NHẬP
+        .user__socail
+            p Hoặc đăng nhập với
+            .user__socail__list
+                a(href="#").user__socail__box
+                    img(src="./img/user-1.svg", alt="facebook")
+                a(href="#").user__socail__box
+                    img(src="./img/user-2.svg", alt="google")
+                a(href="#").user__socail__box
+                    img(src="./img/user-3.svg", alt="twiter")

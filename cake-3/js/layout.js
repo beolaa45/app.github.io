@@ -36,5 +36,19 @@ $(document).ready(function(){
       $('#header-right__search-box').removeClass('active')
      })
 
+     //// USER
 
+     $(".header-right__icon.fa-user").click(function() {
+       console.log("ok")
+       $(this).addClass(".header-right__icon--active")
+
+       $(".clone-menu__box").css("display" , "block");
+      $("#header__user").addClass("header__user--active")
+      
+     })
+
+     $(".clone-menu__box").click(function() {
+       $(this).css("display" , "none");
+       $("#header__user").removeClass("header__user--active")
+     })
   });
