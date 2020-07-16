@@ -1,0 +1,33 @@
+extends template-part/layout.pug
+
+block style
+    
+    
+    link(rel="stylesheet", href="./css/success.css")
+
+block title
+            title Cake
+block banner
+
+block content
+    .success
+        .container
+            .row
+                .col
+                    .success__photo
+                        img(src="./img/success-1.svg", alt="Thành công")
+                    h1.success__heading Bạn thanh toán thành công!
+                    p.success__text Cảm ơn bạn đã thanh toán. Đơn hàng của bạn chuẩn bị gửi
+                        |
+                        br
+                        | vui lòng kiểm tra email đăng kí.
+                    form.success__form
+                        .group-input
+                            input(type="text" placeholder="Tìm kiếm...")
+                            button
+                                i.fas.fa-search
+                    .success__home
+                        img(src="./img/success-2.svg", alt="back")
+                        a(href="./index.html") Quay lại Trang chủ
+  
+                    

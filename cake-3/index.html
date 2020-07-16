@@ -17,7 +17,7 @@
   <body>
     <header class="container header">
       <div class="header-left">
-        <div class="logo"><a class="logo__link" href="./index.html"><img src="./img/logo.png" alt="Cake"/></a></div>
+        <div class="logo"><a class="logo__link" href="./error.html"><img src="./img/logo.png" alt="Cake"/></a></div>
         <div class="header-left__search desktop">
           <div class="header-left__search-box">
             <form class="header-left__form" action="#">
@@ -60,10 +60,10 @@
       </div>
       <div id="header__user">
         <div class="user__box">
-          <p class="user--active">Đăng nhập</p>
-          <p> Đăng kí</p>
+          <p class="user--active user__action">Đăng nhập</p>
+          <p class="user__action">Đăng kí</p>
         </div>
-        <form class="user__form">
+        <form class="user__form" data-number="0">
           <div class="group-input">
             <input type="text" placeholder="Email"/>
             <p class="error">Vui lòng nhập email hợp lệ</p>
@@ -74,11 +74,34 @@
           </div><a class="user__form__box" href="#"><i class="far fa-question-circle"></i>
             <p>Quên mật khẩu</p></a>
           <button class="user__btn">ĐĂNG NHẬP</button>
+          <div class="user__socail">
+            <p>Hoặc đăng nhập với</p>
+            <div class="user__socail__list"><a class="user__socail__box" href="#"><img src="./img/user-1.svg" alt="facebook"/></a><a class="user__socail__box" href="#"><img src="./img/user-2.svg" alt="google"/></a><a class="user__socail__box" href="#"><img src="./img/user-3.svg" alt="twiter"/></a></div>
+          </div>
         </form>
-        <div class="user__socail">
-          <p>Hoặc đăng nhập với</p>
-          <div class="user__socail__list"><a class="user__socail__box" href="#"><img src="./img/user-1.svg" alt="facebook"/></a><a class="user__socail__box" href="#"><img src="./img/user-2.svg" alt="google"/></a><a class="user__socail__box" href="#"><img src="./img/user-3.svg" alt="twiter"/></a></div>
-        </div>
+        <form class="user__form" data-number="1">
+          <div class="group-input">
+            <input type="text" placeholder="Họ và Tên"/>
+            <p class="error">Vui lòng nhập họ và tên hợp lệ</p>
+          </div>
+          <div class="group-input">
+            <input type="text" placeholder="Số điện thoại"/>
+            <p class="error">Vui lòng nhập số điện thoại hợp lệ</p>
+          </div>
+          <div class="group-input">
+            <input type="text" placeholder="Email"/>
+            <p class="error">Vui lòng nhập Email hợp lệ</p>
+          </div>
+          <div class="group-input">
+            <input type="text" placeholder="Mật khẩu"/>
+            <p class="error">Vui lòng nhập nhập mật khẩu hợp lệ</p>
+          </div>
+          <div class="group-input">
+            <input type="text" placeholder="Nhập lại mật khẩu"/>
+            <p class="error">Vui lòng nhập lại mật khẩu hợp lệ</p>
+          </div>
+          <button class="user__btn user__signin">Đăng kí</button>
+        </form>
       </div>
     </header>
     <main class="content">

@@ -1,7 +1,7 @@
 header.container.header
     .header-left
         .logo
-            a.logo__link(href="./index.html")
+            a.logo__link(href="./error.html")
                 img(src="./img/logo.png", alt="Cake")
         .header-left__search.desktop
             .header-left__search-box
@@ -50,9 +50,9 @@ header.container.header
                 i.far.fa-paper-plane
     #header__user
         .user__box
-            p.user--active Đăng nhập
-            p  Đăng kí
-        form.user__form
+            p.user--active.user__action Đăng nhập
+            p.user__action Đăng kí
+        form(data-number='0').user__form
             .group-input
                 input(type="text" placeholder="Email")
                 p.error Vui lòng nhập email hợp lệ
@@ -63,12 +63,29 @@ header.container.header
                 i.far.fa-question-circle
                 p Quên mật khẩu
             button.user__btn ĐĂNG NHẬP
-        .user__socail
-            p Hoặc đăng nhập với
-            .user__socail__list
-                a(href="#").user__socail__box
-                    img(src="./img/user-1.svg", alt="facebook")
-                a(href="#").user__socail__box
-                    img(src="./img/user-2.svg", alt="google")
-                a(href="#").user__socail__box
-                    img(src="./img/user-3.svg", alt="twiter")
+            .user__socail
+                p Hoặc đăng nhập với
+                .user__socail__list
+                    a(href="#").user__socail__box
+                        img(src="./img/user-1.svg", alt="facebook")
+                    a(href="#").user__socail__box
+                        img(src="./img/user-2.svg", alt="google")
+                    a(href="#").user__socail__box
+                        img(src="./img/user-3.svg", alt="twiter")
+        form(data-number='1').user__form
+            .group-input
+                input(type="text" placeholder="Họ và Tên")
+                p.error Vui lòng nhập họ và tên hợp lệ
+            .group-input
+                input(type="text" placeholder="Số điện thoại")
+                p.error Vui lòng nhập số điện thoại hợp lệ
+            .group-input
+                input(type="text" placeholder="Email")
+                p.error Vui lòng nhập Email hợp lệ
+            .group-input
+                input(type="text" placeholder="Mật khẩu")
+                p.error Vui lòng nhập nhập mật khẩu hợp lệ
+            .group-input
+                input(type="text" placeholder="Nhập lại mật khẩu")
+                p.error Vui lòng nhập lại mật khẩu hợp lệ
+            button.user__btn.user__signin Đăng kí

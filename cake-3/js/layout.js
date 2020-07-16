@@ -40,6 +40,8 @@ $(document).ready(function(){
 
      $(".header-right__icon.fa-user").click(function() {
        console.log("ok")
+       $("#header__user").css("visibility" ,"visible")
+       
        $(this).addClass(".header-right__icon--active")
 
        $(".clone-menu__box").css("display" , "block");
@@ -49,6 +51,25 @@ $(document).ready(function(){
 
      $(".clone-menu__box").click(function() {
        $(this).css("display" , "none");
-       $("#header__user").removeClass("header__user--active")
+       $("#header__user").removeClass("header__user--active");
+      
      })
+
+
+    //  FORM
+    $(".user__form[data-number='" +1 +"']").css("display", "none")
+    
+    $(".user__box p").click(function() {
+     
+      if($(this).hasClass("user--active")){
+       return
+      }
+      $(".user--active").removeClass("user--active");
+      $(this).addClass("user--active");
+
+      let index = $(".user__action").index(this)
+      console.log(index)
+      $(".user__form").css("display", "none")
+      $(".user__form[data-number='" +index +"']").css("display", "block")
+    })
   });
