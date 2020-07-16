@@ -657,6 +657,8 @@ header i {
     padding: 0 5rem;
 }
 
+
+
 .user__form input {
     font-family: inherit;
     height: 3.3rem;
@@ -675,8 +677,14 @@ header i {
 }
 
 .group-input {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
+
+.group-last {
+    margin-bottom: 2.5rem;
+}
+
+
 
 .user__form input:focus {
     outline:  none;

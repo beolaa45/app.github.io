@@ -52,12 +52,12 @@ header.container.header
         .user__box
             p.user--active.user__action Đăng nhập
             p.user__action Đăng kí
-        form(data-number='0').user__form
+        form(action='./index.html' data-number='0').user__form
             .group-input
-                input(type="text" placeholder="Email")
+                input(type="text" placeholder="Email")#form__email
                 p.error Vui lòng nhập email hợp lệ
-            .group-input
-                input(type="text" placeholder="Password")
+            .group-input.group-last
+                input(type="password" placeholder="Password")#form__password
                 p.error Vui lòng nhập Password hợp lệ
             a(href="#").user__form__box
                 i.far.fa-question-circle
