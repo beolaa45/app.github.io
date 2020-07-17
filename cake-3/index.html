@@ -63,7 +63,7 @@
           <p class="user--active user__action">Đăng nhập</p>
           <p class="user__action">Đăng kí</p>
         </div>
-        <form class="user__form" action="./index.html" data-number="0">
+        <form class="user__form" action="./index.html" data-number="0" id="user__signin">
           <div class="group-input">
             <input type="text" placeholder="Email" id="form__email"/>
             <p class="error">Vui lòng nhập email hợp lệ</p>
@@ -79,25 +79,25 @@
             <div class="user__socail__list"><a class="user__socail__box" href="#"><img src="./img/user-1.svg" alt="facebook"/></a><a class="user__socail__box" href="#"><img src="./img/user-2.svg" alt="google"/></a><a class="user__socail__box" href="#"><img src="./img/user-3.svg" alt="twiter"/></a></div>
           </div>
         </form>
-        <form class="user__form" data-number="1">
+        <form class="user__form" data-number="1" id="user__signup">
           <div class="group-input">
-            <input type="text" placeholder="Họ và Tên"/>
+            <input type="text" placeholder="Họ và Tên" id="signup__fullname"/>
             <p class="error">Vui lòng nhập họ và tên hợp lệ</p>
           </div>
           <div class="group-input">
-            <input type="text" placeholder="Số điện thoại"/>
+            <input type="number" placeholder="Số điện thoại" id="signup__phone"/>
             <p class="error">Vui lòng nhập số điện thoại hợp lệ</p>
           </div>
           <div class="group-input">
-            <input type="text" placeholder="Email"/>
+            <input type="text" placeholder="Email" id="signup__email"/>
             <p class="error">Vui lòng nhập Email hợp lệ</p>
           </div>
           <div class="group-input">
-            <input type="text" placeholder="Mật khẩu"/>
+            <input type="text" placeholder="Mật khẩu" id="signup__password"/>
             <p class="error">Vui lòng nhập nhập mật khẩu hợp lệ</p>
           </div>
           <div class="group-input">
-            <input type="text" placeholder="Nhập lại mật khẩu"/>
+            <input type="text" placeholder="Nhập lại mật khẩu" id="signup__match"/>
             <p class="error">Vui lòng nhập lại mật khẩu hợp lệ</p>
           </div>
           <button class="user__btn user__signin">Đăng kí</button>

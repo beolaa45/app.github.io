@@ -52,7 +52,7 @@ header.container.header
         .user__box
             p.user--active.user__action Đăng nhập
             p.user__action Đăng kí
-        form(action='./index.html' data-number='0').user__form
+        form(action='./index.html' data-number='0').user__form#user__signin
             .group-input
                 input(type="text" placeholder="Email")#form__email
                 p.error Vui lòng nhập email hợp lệ
@@ -72,20 +72,20 @@ header.container.header
                         img(src="./img/user-2.svg", alt="google")
                     a(href="#").user__socail__box
                         img(src="./img/user-3.svg", alt="twiter")
-        form(data-number='1').user__form
+        form(data-number='1').user__form#user__signup
             .group-input
-                input(type="text" placeholder="Họ và Tên")
+                input(type="text" placeholder="Họ và Tên")#signup__fullname
                 p.error Vui lòng nhập họ và tên hợp lệ
             .group-input
-                input(type="text" placeholder="Số điện thoại")
+                input(type="number" placeholder="Số điện thoại")#signup__phone
                 p.error Vui lòng nhập số điện thoại hợp lệ
             .group-input
-                input(type="text" placeholder="Email")
+                input(type="text" placeholder="Email")#signup__email
                 p.error Vui lòng nhập Email hợp lệ
             .group-input
-                input(type="text" placeholder="Mật khẩu")
+                input(type="text" placeholder="Mật khẩu")#signup__password
                 p.error Vui lòng nhập nhập mật khẩu hợp lệ
             .group-input
-                input(type="text" placeholder="Nhập lại mật khẩu")
+                input(type="text" placeholder="Nhập lại mật khẩu")#signup__match
                 p.error Vui lòng nhập lại mật khẩu hợp lệ
             button.user__btn.user__signin Đăng kí
