@@ -39,7 +39,6 @@ $(document).ready(function () {
   //// USER
 
   $(".header-right__icon.fa-user").click(function () {
-    
     $("#header__user").css("visibility", "visible");
 
     $(this).addClass(".header-right__icon--active");
@@ -75,7 +74,7 @@ $(document).ready(function () {
   let password = $("#form__password");
   let errEmail = $("#form__email ~ .error");
   let errPassword = $("#form__password ~ .error");
-  let submit = $("#user__signin")
+  let submit = $("#user__signin");
 
   errEmail.hide();
   errPassword.hide();
@@ -86,78 +85,72 @@ $(document).ready(function () {
     // var pattern = /[\w]+[\d]@[a-z]+.[a-z]+/;
     pattern = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
     return pattern.test(emailAddress);
-}
+  }
 
-function isValidPassword(password) {
-  // var pattern = /[\w]+[\d]@[a-z]+.[a-z]+/;
-  pattern = new RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,}$/i);
-  return pattern.test(password);
-}
+  function isValidPassword(password) {
+    // var pattern = /[\w]+[\d]@[a-z]+.[a-z]+/;
+    pattern = new RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,}$/i);
+    return pattern.test(password);
+  }
 
   email.focusout(function () {
     let len = $(this).val().trim();
 
-    
     if (len.length < 6 || len.length > 20) {
       errEmail.html("Email lớn hơn 6 kí tự và nhỏ hơn 20 kí tự");
-      errEmailBool = true
+      errEmailBool = true;
       return errEmail.show();
     }
 
     if (!isValidEmailAddress(len)) {
       errEmail.html("Email không hợp lệ");
-      errEmailBool = true
+      errEmailBool = true;
       return errEmail.show();
     }
 
     errEmail.hide();
-    errEmailBool = false
+    errEmailBool = false;
   });
 
-  password.focusout(function(){
-    
+  password.focusout(function () {
     let len = $(this).val().trim();
-    if(len.length < 6 || len.length > 20) {
-      errPassword.html("Password lớn hơn 6 kí tự và nhỏ hơn 20 kí tự")
-      errPasswordlBool = true
-      return errPassword.show()
-    }
-
-    if(! isValidPassword(len)) {
-      errPassword.html("Password có it nhất 1 số, 1 kí tự thường" )
+    if (len.length < 6 || len.length > 20) {
+      errPassword.html("Password lớn hơn 6 kí tự và nhỏ hơn 20 kí tự");
       errPasswordlBool = true;
-      return errPassword.show()
+      return errPassword.show();
     }
 
-    errPassword.hide()
-    errPasswordlBool = false
-
-  })
-
-  submit.submit(function(){
-
-    if(errEmailBool === false && errPasswordlBool === false){
-      return true
-    }else {
-      return false
+    if (!isValidPassword(len)) {
+      errPassword.html("Password có it nhất 1 số, 1 kí tự thường");
+      errPasswordlBool = true;
+      return errPassword.show();
     }
-    
-  })
 
+    errPassword.hide();
+    errPasswordlBool = false;
+  });
+
+  submit.submit(function () {
+    if (errEmailBool === false && errPasswordlBool === false) {
+      return true;
+    } else {
+      return false;
+    }
+  });
 
   // VALIDATE SIGNUP
 
-  let submitSignup =  $("#user__signup");
+  let submitSignup = $("#user__signup");
   let fullName = $("#signup__fullname");
   let phone = $("#signup__phone");
   let emailSignup = $("#signup__email");
   let passwordSignup = $("#signup__password");
   let match = $("#signup__match");
 
-  let errFullName =  $("#signup__fullname ~ .error");
-  let errPhone = $("#signup__phone ~ .error")
-  let errEmailSignup = $("#signup__email ~ .error")
-  let errPasswordSignup =$("#signup__password ~ .error");
+  let errFullName = $("#signup__fullname ~ .error");
+  let errPhone = $("#signup__phone ~ .error");
+  let errEmailSignup = $("#signup__email ~ .error");
+  let errPasswordSignup = $("#signup__password ~ .error");
   let errMatch = $("#signup__match ~ .error");
 
   errFullName.hide();
@@ -172,106 +165,101 @@ function isValidPassword(password) {
   let errPasswordSignupBool = true;
   let errMatchBool = true;
 
-
-//   function isValidPhone(phone) {
-//     // var pattern = /[\w]+[\d]@[a-z]+.[a-z]+/;
-//     pattern = new RegExp(/[\d]+/i);
-//     return pattern.test(phone);
-// }
-  fullName.focusout(function(){
-    console.log("full")
-    let len = $(this).val().trim()
-    console.log(len.length)
-    if(len.length < 2 || len.length > 20){
-      errFullName.html("Họ và Tên có ít nhất 3 kí tự và nhiều nhất 20 kí tự")
-      errFullName.show()
-    return  errFullNameBool = true
-
+  //   function isValidPhone(phone) {
+  //     // var pattern = /[\w]+[\d]@[a-z]+.[a-z]+/;
+  //     pattern = new RegExp(/[\d]+/i);
+  //     return pattern.test(phone);
+  // }
+  fullName.focusout(function () {
+    console.log("full");
+    let len = $(this).val().trim();
+    console.log(len.length);
+    if (len.length < 2 || len.length > 20) {
+      errFullName.html("Họ và Tên có ít nhất 3 kí tự và nhiều nhất 20 kí tự");
+      errFullName.show();
+      return (errFullNameBool = true);
     }
 
-    errFullName.hide()
+    errFullName.hide();
     errFullNameBool = false;
+  });
 
-  })
+  phone.focusout(function () {
+    let str = $(this).val().trim();
 
-  phone.focusout(function(){
-    let str = $(this).val().trim()
-
-    if(str.length !== 10 ){
-      errPhone.html("Số điện thoại có 10 kí tự")
+    if (str.length !== 10) {
+      errPhone.html("Số điện thoại có 10 kí tự");
       errPhone.show();
-      return errPhoneBool = true
+      return (errPhoneBool = true);
     }
-    
-
 
     errPhone.hide();
-    errPhoneBool = false
-  })
+    errPhoneBool = false;
+  });
 
-  emailSignup.focusout(function(){
+  emailSignup.focusout(function () {
     let len = $(this).val().trim();
 
-    
     if (len.length < 6 || len.length > 20) {
       errEmailSignup.html("Email lớn hơn 6 kí tự và nhỏ hơn 20 kí tự");
-      errEmailSignupBool = true
+      errEmailSignupBool = true;
       return errEmailSignup.show();
     }
 
     if (!isValidEmailAddress(len)) {
       errEmailSignup.html("Email không hợp lệ");
-      errEmailSignupBool = true
+      errEmailSignupBool = true;
       return errEmailSignup.show();
     }
 
     errEmailSignup.hide();
-    errEmailSignupBool = false
-  })
+    errEmailSignupBool = false;
+  });
 
-  passwordSignup.focusout(function(){
+  passwordSignup.focusout(function () {
     let len = $(this).val().trim();
-    if(len.length < 6 || len.length > 20) {
-      errPasswordSignup.html("Password lớn hơn 6 kí tự và nhỏ hơn 20 kí tự")
-      errPasswordSignuplBool = true
-      return errPasswordSignup.show()
-    }
-
-    if(! isValidPassword(len)) {
-      errPasswordSignup.html("Password có it nhất 1 số, 1 kí tự thường" )
+    if (len.length < 6 || len.length > 20) {
+      errPasswordSignup.html("Password lớn hơn 6 kí tự và nhỏ hơn 20 kí tự");
       errPasswordSignuplBool = true;
-      return errPasswordSignup.show()
+      return errPasswordSignup.show();
     }
 
-    errPasswordSignup.hide()
-    errPasswordSignupBool = false
-  })
+    if (!isValidPassword(len)) {
+      errPasswordSignup.html("Password có it nhất 1 số, 1 kí tự thường");
+      errPasswordSignuplBool = true;
+      return errPasswordSignup.show();
+    }
 
-  match.focusout(function(){
+    errPasswordSignup.hide();
+    errPasswordSignupBool = false;
+  });
+
+  match.focusout(function () {
     let str = $(this).val();
     let password = passwordSignup.val();
 
-    if(str !== password){
+    if (str !== password) {
       errMatch.html("Password không khớp");
-      errMatchBool = true
-     return errMatch.show()
+      errMatchBool = true;
+      return errMatch.show();
     }
 
-    errMatch.hide()
-    errMatchBool = false
+    errMatch.hide();
+    errMatchBool = false;
+  });
 
-    
-
-  })
-
-  submitSignup.submit(function(){
-    console.log("ok")
-    if(errFullNameBool == false && errPhoneBool == false && errEmailSignupBool == false &&
-      errPasswordSignupBool == false && errMatchBool == false){
-        return true
-      }else {
-        return false
-      }
-  })
-
+  submitSignup.submit(function () {
+    console.log("ok");
+    if (
+      errFullNameBool == false &&
+      errPhoneBool == false &&
+      errEmailSignupBool == false &&
+      errPasswordSignupBool == false &&
+      errMatchBool == false
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  });
 });
