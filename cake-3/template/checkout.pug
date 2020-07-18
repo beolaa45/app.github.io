@@ -11,16 +11,16 @@ block title-2
         p.banner-common__title-2.banner-common__title-2--active Thanh Toán
 
 block content
-    form.checkout
+    form(action="./success.html").checkout
         .container
             .row.justify-content-between
                 .col-xl-6.col-lg-6.col-md-6.col-sm-6
                     .checkout__infor
                         h2.infor__user Thông tin người nhận:
                         .infor__group
-                            label(for="fullname") Họ và tên*
+                            label(for="check__name") Họ và tên*
                             .input-wraper
-                                input(type="text" name="fullname" id="fullname").infor__input
+                                input(type="text" name="fullname" id="check__name").infor__input
                                 .error Vui lòng nhập tên hợp lệ
                         .infor__group
                             label(for="thanhpho") Thành phố*
@@ -29,12 +29,12 @@ block content
                                     option(value="Hà Nội") Hà Nội
                                     option(value="Đà Nẵng") Đà Nẵng
                                     option(value="Thành Phố Hồ Chí Minh") Thành Phố Hồ Chí Minh  
-                                    option(value='4' selected hidden disable='disable') Vui lòng chọn tỉnh/thành phố
+                                    option(value='' selected hidden disable='disable') Vui lòng chọn tỉnh/thành phố
                                 .error Vui lòng nhập tỉnh/thành phố hợp lệ
                         .infor__group
-                            label(for="adđress") Địa chỉ giao hàng*
+                            label(for="check__address") Địa chỉ giao hàng*
                             .input-wraper
-                                input(type="text" name="address").infor__input
+                                input(type="text" name="check__address" id="check__address").infor__input
                                 .error Vui lòng nhập địa chỉ giao hàng hợp lệ
                         .infor__group
                             label(for="email") Địa chỉ Email
@@ -42,9 +42,9 @@ block content
                                 input(type="text" id="email").infor__input
                                 
                         .infor__group
-                            label(for="number") Số điện thoại*
+                            label(for="check__phone") Số điện thoại*
                             .input-wraper
-                                input(type="text" id='number').infor__input
+                                input(type="text" id='check__phone').infor__input
                                 .error Vui lòng nhập số điện thoại hợp lệ
                         .infor__text
                             label(for="note") Ghi chú thêm   
@@ -60,13 +60,13 @@ block content
                                     span x1
                                 p 150,000 đ
                             .pay__item
-                                p Bánh Pizza  
+                                p Bánh Humburger  
                                     span x1
-                                p 150,000 đ
+                                p 100,000 đ
                             .pay__item
-                                p Bánh Pizza  
+                                p Bánh Mì 
                                     span x1
-                                p 150,000 đ
+                                p 50,000 đ
                             .pay__total
                                 p Tổng cộng:
                                 p 300,000 đ
@@ -82,7 +82,7 @@ block content
                                 .pay__group
                                     input(type="radio" id="get" name="get")
                                     label(for="get") Thanh toán khi nhận hàng
-                        button.pay__paynow Thanh Toán
+                        button.pay__paynow#pay__submit Thanh Toán
 
 
 block script

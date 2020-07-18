@@ -184,6 +184,11 @@ h2.heading__primary::before {
 
 .details__number-minus {
   margin-right: 1.6rem;
+  transition: all .3s ease-in-out;
+}
+
+.details__number-minus:hover{
+  color: var(--color-red);
 }
 
 .details__number-basket {
@@ -192,9 +197,16 @@ h2.heading__primary::before {
 }
 
 .details__number-plus {
+    color: inherit;
+    transition: all .3s ease-in-out;
 }
 
-.details__add-to-basket {
+.details__number-plus:hover {
+  color: var(--color-red);
+}
+
+.details__add-to-basket:link,
+.details__add-to-basket:visited {
   width: 13.6rem;
   height: 4rem;
   border: 3px solid var(--color-red);
@@ -205,14 +217,18 @@ h2.heading__primary::before {
   border-radius: 50px;
   background-color: rgba(255, 87, 34, 0.15);
   transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  color: var(--color-red);
 }
 
-.details__add-to-basket:hover {
+.details__add-to-basket:hover,
+.details__add-to-basket:active {
   background-color: var(--color-red);
   color: var(--color-white);
 }
 
-.details__buy-now {
+.details__buy-now:link,
+.details__buy-now:visited {
   width: 11.6rem;
   height: 4rem;
   border: 3px solid var(--color-red);
@@ -224,9 +240,11 @@ h2.heading__primary::before {
   border-radius: 50px;
   background-color: var(--color-red);
   color: var(--color-white);
+  text-decoration: none;
 }
 
-.details__buy-now:hover {
+.details__buy-now:hover,
+.details__buy-now:active {
   background-color: var(--color-red-2);
 }
 
@@ -325,6 +343,7 @@ h2.heading__primary::before {
 }
 
 
+
 .best-slice__card a img {
     transition: transform .5s ease-in;
     width: 100%;
@@ -336,6 +355,10 @@ h2.heading__primary::before {
 .best-slice__content {
     text-align: center;
     padding: 2.1rem 1rem;
+}
+
+.best-slice__content a {
+  outline: none;
 }
 
 .best-slice__heading {

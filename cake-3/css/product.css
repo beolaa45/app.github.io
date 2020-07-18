@@ -347,6 +347,10 @@
     padding: 2.1rem 1rem;
 }
 
+.best-slice__content a {
+    text-decoration: none;
+}
+
 .best-slice__heading {
     font-family: Roboto;
     font-style: normal;

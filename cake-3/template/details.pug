@@ -15,7 +15,7 @@ block title-2
     a(href="")
         p.banner-common__title-2.banner-common__title-2--active Chi Tiết Sản Phẩm
 block content
-    .details
+    main.details
         .container
             .row.justify-content-between
                 .col-xl-6.col-lg-6.col-md-6
@@ -61,8 +61,8 @@ block content
                                 span.details__number-plus   
                                     i.fas.fa-plus
 
-                            .details__add-to-basket Thêm vào giỏ
-                            .details__buy-now Mua ngay
+                            a(href="./cart.html").details__add-to-basket Thêm vào giỏ
+                            a(href="./checkout.html").details__buy-now Mua ngay
                         .details__share
                             .details__share-title Chia sẻ sản phẩm:
                             i.fab.fa-google-plus-square
@@ -78,10 +78,10 @@ block content
                         
                             .best-slice__card
                                 .best-slice__photo
-                                    a(href="#")
-                                        img(src="./img/banh-9.jpg", alt="Banh-Bông Lan" title="Bánh Bông Lan")
+                                    a(href="./details.html")
+                                        img(src="./img/banh-9.jpg", alt="Banh-Bông Lan" title="Bánh Bông Lan" )
                                 .best-slice__content
-                                    a(href="#")
+                                    a(href="./details.html")
                                         h3.best-slice__heading  Bánh Bông Lan
                                     .best-slice__rate
                                         i.fas.fa-star
@@ -90,15 +90,15 @@ block content
                                         i.fas.fa-star
                                         i.fas.fa-star
                                     .best-slice__price 50,000 đ
-                                    a(href="#").best-slice__button
+                                    a(href="./cart.html").best-slice__button
                                         span Thêm Vào Giỏ
                                         i.fas.fa-cart-plus
                             .best-slice__card
                                 .best-slice__photo
-                                    a(href="#")
+                                    a(href="./details.html")
                                         img(src="./img/banh-10.jpg", alt="Banh Phô Mai" title="Bánh Phô Mai")
                                 .best-slice__content
-                                    a(href="#")
+                                    a(href="./details.html")
                                         h3.best-slice__heading  Bánh Phô Mai
                                     .best-slice__rate
                                         i.fas.fa-star
@@ -107,15 +107,15 @@ block content
                                         i.fas.fa-star
                                         i.fas.fa-star
                                     .best-slice__price 50,000 đ
-                                    a(href="#").best-slice__button
+                                    a(href="./cart.html").best-slice__button
                                         span Thêm Vào Giỏ
                                         i.fas.fa-cart-plus
                             .best-slice__card
                                 .best-slice__photo
-                                    a(href="#")
+                                    a(href="./details.html")
                                         img(src="./img/banh-11.jpg", alt="Banh Bông Cuộn" title="Bánh Bông Cuộn")
                                 .best-slice__content
-                                    a(href="#")
+                                    a(href="./details.html")
                                         h3.best-slice__heading  Bánh Bông Cuộn
                                     .best-slice__rate
                                         i.fas.fa-star
@@ -124,15 +124,15 @@ block content
                                         i.fas.fa-star
                                         i.fas.fa-star
                                     .best-slice__price 70,000 đ
-                                    a(href="#").best-slice__button
+                                    a(href="./cart.html").best-slice__button
                                         span Thêm Vào Giỏ
                                         i.fas.fa-cart-plus
                             .best-slice__card
                                 .best-slice__photo
-                                    a(href="#")
+                                    a(href="./details.html")
                                         img(src="./img/banh-12.jpg", alt="Banh Cupcake" title="Bánh Cupcake")
                                 .best-slice__content
-                                    a(href="#")
+                                    a(href="./details.html")
                                         h3.best-slice__heading  Bánh Cupcake
                                     .best-slice__rate
                                         i.fas.fa-star
@@ -141,15 +141,15 @@ block content
                                         i.fas.fa-star
                                         i.fas.fa-star
                                     .best-slice__price 90,000 đ
-                                    a(href="#").best-slice__button
+                                    a(href="./cart.html").best-slice__button
                                         span Thêm Vào Giỏ
                                         i.fas.fa-cart-plus
                             .best-slice__card
                                 .best-slice__photo
-                                    a(href="#")
+                                    a(href="./details.html")
                                         img(src="./img/banh-6.jpg", alt="Banh Pizza" title="Bánh Pizza")
                                 .best-slice__content
-                                    a(href="#")
+                                    a(href="./details.html")
                                         h3.best-slice__heading  Bánh Pizza
                                     .best-slice__rate
                                         i.fas.fa-star
@@ -158,7 +158,7 @@ block content
                                         i.fas.fa-star
                                         i.fas.fa-star
                                     .best-slice__price 90,000 đ
-                                    a(href="#").best-slice__button
+                                    a(href="./cart.html").best-slice__button
                                         span Thêm Vào Giỏ
                                         i.fas.fa-cart-plus
                             
@@ -168,5 +168,6 @@ block content
 
 
 block script
+    script(src="./js/jquery.elevateZoom.js")
     script(src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js' integrity='sha512-eP8DK17a+MOcKHXC5Yrqzd8WI5WKh6F1TIk5QZ/8Lbv+8ssblcz7oGC8ZmQ/ZSAPa7ZmsCU4e/hcovqR8jfJqA==' crossorigin='anonymous')
     script(src="./js/details.js")

@@ -129,7 +129,8 @@ table {
     color: var(--color-red);
   }
     
-.money__pay {
+.money__pay:link,
+.money__pay:visited {
 
   
   font-weight: bold;
@@ -141,4 +142,12 @@ table {
   border-radius: .5rem;
   justify-content: center;
   color: var(--color-white);
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+  }
+
+  .money__pay:hover,
+  .money__pay:active {
+    color: var(--color-white);
+    background-color: var(--color-red-2);
   }

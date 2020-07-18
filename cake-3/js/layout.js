@@ -165,11 +165,7 @@ $(document).ready(function () {
   let errPasswordSignupBool = true;
   let errMatchBool = true;
 
-  //   function isValidPhone(phone) {
-  //     // var pattern = /[\w]+[\d]@[a-z]+.[a-z]+/;
-  //     pattern = new RegExp(/[\d]+/i);
-  //     return pattern.test(phone);
-  // }
+  
   fullName.focusout(function () {
     console.log("full");
     let len = $(this).val().trim();
@@ -249,7 +245,7 @@ $(document).ready(function () {
   });
 
   submitSignup.submit(function () {
-    console.log("ok");
+   
     if (
       errFullNameBool == false &&
       errPhoneBool == false &&
@@ -262,4 +258,26 @@ $(document).ready(function () {
       return false;
     }
   });
+  if($("main").hasClass("home")){
+    console.log("ok")
+      $(".home--active").addClass("header-right__link--active")
+  }
+
+  if($("main").hasClass("product")){
+    console.log("ok")
+      $(".product--active").addClass("header-right__link--active")
+  }
+
+  if($("main").hasClass("details")){
+    console.log("ok")
+      $(".product--active").addClass("header-right__link--active")
+  }
+
+  if($("main").hasClass("cart")){
+    console.log("ok")
+      $(".cart--active").addClass("header-right__link--active")
+  }
+
+
+  // $(".header-right__link").addClass("header-right__link--active")
 });

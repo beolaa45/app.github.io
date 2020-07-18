@@ -28,24 +28,24 @@
       <div class="header-right">
         <nav class="header-right__main-menu desktop">
           <ul class="header-right__list">
-            <li class="header-right__item"><a class="header-right__link" href="./index.html">Trang chủ</a></li>
-            <li class="header-right__item"> <a class="header-right__link" href="./product.html">Sản Phẩm</a></li>
-            <li class="header-right__item"> <a class="header-right__link" href="./blog.html">Tin Tức</a></li>
-            <li class="header-right__item"> <a class="header-right__link" href="./contact.html">Liên Hệ</a></li>
+            <li class="header-right__item"><a class="header-right__link home--active" href="./index.html">Trang chủ</a></li>
+            <li class="header-right__item"> <a class="header-right__link product--active" href="./product.html">Sản Phẩm</a></li>
+            <li class="header-right__item"> <a class="header-right__link block--active" href="./blog.html">Tin Tức</a></li>
+            <li class="header-right__item"> <a class="header-right__link contact--active" href="./contact.html">Liên Hệ</a></li>
           </ul>
         </nav>
         <div class="header-right__avatar"><i class="fas fa-user header-right__icon"></i></div>
         <div class="header-right__search"><i class="fas fa-search header-right__icon mobile">        </i></div>
-        <div class="header-right__cart"><a class="header-right__link"><i class="fas fa-cart-arrow-down header-right__icon"></i></a></div>
+        <div class="header-right__cart"><a class="header-right__link cart--active"><i class="fas fa-cart-arrow-down header-right__icon"></i></a></div>
         <div class="header-right__open-draw"><i class="fas fa-bars mobile"></i></div>
       </div>
       <div class="mobile" id="clone-menu">
         <nav class="header-right__main-menu">
           <ul class="header-right__list">
-            <li class="header-right__item"><a class="header-right__link" href="./index.html">Trang chủ</a></li>
-            <li class="header-right__item"> <a class="header-right__link" href="./product.html">Sản Phẩm</a></li>
-            <li class="header-right__item"> <a class="header-right__link" href="./blog.html">Tin Tức</a></li>
-            <li class="header-right__item"> <a class="header-right__link" href="./contact.html">Liên Hệ</a></li>
+            <li class="header-right__item"><a class="header-right__link home--active" href="./index.html">Trang chủ</a></li>
+            <li class="header-right__item"> <a class="header-right__link product--active" href="./product.html">Sản Phẩm</a></li>
+            <li class="header-right__item"> <a class="header-right__link block--active" href="./blog.html">Tin Tức</a></li>
+            <li class="header-right__item"> <a class="header-right__link contact--active" href="./contact.html">Liên Hệ</a></li>
           </ul>
         </nav>
       </div>
@@ -119,16 +119,16 @@
         </div>
       </div>
     </div>
-    <form class="checkout">
+    <form class="checkout" action="./success.html">
       <div class="container">
         <div class="row justify-content-between">
           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
             <div class="checkout__infor">
               <h2 class="infor__user">Thông tin người nhận:</h2>
               <div class="infor__group">
-                <label for="fullname">Họ và tên*</label>
+                <label for="check__name">Họ và tên*</label>
                 <div class="input-wraper">
-                  <input class="infor__input" type="text" name="fullname" id="fullname"/>
+                  <input class="infor__input" type="text" name="fullname" id="check__name"/>
                   <div class="error">Vui lòng nhập tên hợp lệ</div>
                 </div>
               </div>
@@ -139,15 +139,15 @@
                     <option value="Hà Nội">Hà Nội</option>
                     <option value="Đà Nẵng">Đà Nẵng</option>
                     <option value="Thành Phố Hồ Chí Minh">Thành Phố Hồ Chí Minh  </option>
-                    <option value="4" selected="selected" hidden="hidden" disable="disable">Vui lòng chọn tỉnh/thành phố</option>
+                    <option value="" selected="selected" hidden="hidden" disable="disable">Vui lòng chọn tỉnh/thành phố</option>
                   </select>
                   <div class="error">Vui lòng nhập tỉnh/thành phố hợp lệ</div>
                 </div>
               </div>
               <div class="infor__group">
-                <label for="adđress">Địa chỉ giao hàng*</label>
+                <label for="check__address">Địa chỉ giao hàng*</label>
                 <div class="input-wraper">
-                  <input class="infor__input" type="text" name="address"/>
+                  <input class="infor__input" type="text" name="check__address" id="check__address"/>
                   <div class="error">Vui lòng nhập địa chỉ giao hàng hợp lệ</div>
                 </div>
               </div>
@@ -158,9 +158,9 @@
                 </div>
               </div>
               <div class="infor__group">
-                <label for="number">Số điện thoại*</label>
+                <label for="check__phone">Số điện thoại*</label>
                 <div class="input-wraper">
-                  <input class="infor__input" type="text" id="number"/>
+                  <input class="infor__input" type="text" id="check__phone"/>
                   <div class="error">Vui lòng nhập số điện thoại hợp lệ</div>
                 </div>
               </div>
@@ -180,12 +180,12 @@
                   <p>150,000 đ</p>
                 </div>
                 <div class="pay__item">
-                  <p>Bánh Pizza  <span>x1</span></p>
-                  <p>150,000 đ</p>
+                  <p>Bánh Humburger  <span>x1</span></p>
+                  <p>100,000 đ</p>
                 </div>
                 <div class="pay__item">
-                  <p>Bánh Pizza  <span>x1</span></p>
-                  <p>150,000 đ</p>
+                  <p>Bánh Mì <span>x1</span></p>
+                  <p>50,000 đ</p>
                 </div>
                 <div class="pay__total">
                   <p>Tổng cộng:</p>
@@ -209,7 +209,7 @@
                   </div>
                 </div>
               </div>
-              <button class="pay__paynow">Thanh Toán</button>
+              <button class="pay__paynow" id="pay__submit">Thanh Toán</button>
             </div>
           </div>
         </div>

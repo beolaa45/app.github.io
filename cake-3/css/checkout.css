@@ -222,6 +222,7 @@
     border: none;
 
     transition: all .3s ease-in-out;
+    width: 100%;
 }
 
 .pay__paynow:hover {

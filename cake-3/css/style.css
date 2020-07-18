@@ -414,6 +414,10 @@ body {
     color: var(--color-red)
 }
 
+.header-right__link--active {
+    color: var(--color-red) !important;
+}
+
 .header-right__avatar,
 .header-right__cart,
 .header-right__search,
@@ -771,6 +775,17 @@ p {
     margin-bottom: 0;
 }
 
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
 
 
