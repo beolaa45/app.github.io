@@ -5,6 +5,7 @@ $(document).ready(function() {
     let select = $("#thanhpho");
     let checkAddress = $("#check__address");
     let checkPhone = $("#check__phone");
+    let paySunmit = $("#pay__submit")
 
     let errcheckName = $("#check__name ~ .error");
     let errselect = $("#thanhpho ~ .error");
@@ -72,7 +73,8 @@ $(document).ready(function() {
     })
 
 
-    $("#pay__submit").submit(function(){
-        return false
+    console.log(paySunmit)
+    paySunmit.submit(function(e){
+        e.preventDefault()
     })
 })
