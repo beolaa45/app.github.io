@@ -44,7 +44,7 @@ block content
                         .infor__group
                             label(for="check__phone") Số điện thoại*
                             .input-wraper
-                                input(type="text" id='check__phone').infor__input
+                                input(type="number" id='check__phone').infor__input
                                 .error Vui lòng nhập số điện thoại hợp lệ
                         .infor__text
                             label(for="note") Ghi chú thêm   
@@ -82,6 +82,7 @@ block content
                                 .pay__group
                                     input(type="radio" id="get" name="get")
                                     label(for="get") Thanh toán khi nhận hàng
+                            .error Vui lòng nhập phương thức thanh toán
                         button.pay__paynow Thanh Toán
 
 

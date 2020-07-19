@@ -60,11 +60,15 @@ table {
 
   .cart__select i {
     font-size: 1.6rem;
+    cursor: pointer;
 
   }
   .cart__select i:hover {
       color: var(--color-red);
       
+  }
+  .fa-trash-alt {
+    cursor: pointer;
   }
 
   /* CART MONEY */
@@ -151,3 +155,4 @@ table {
     color: var(--color-white);
     background-color: var(--color-red-2);
   }
+
