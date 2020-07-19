@@ -30,7 +30,7 @@
           <ul class="header-right__list">
             <li class="header-right__item"><a class="header-right__link home--active" href="./index.html">Trang chủ</a></li>
             <li class="header-right__item"> <a class="header-right__link product--active" href="./product.html">Sản Phẩm</a></li>
-            <li class="header-right__item"> <a class="header-right__link block--active" href="./blog.html">Tin Tức</a></li>
+            <li class="header-right__item"> <a class="header-right__link blog--active" href="./blog.html">Tin Tức</a></li>
             <li class="header-right__item"> <a class="header-right__link contact--active" href="./contact.html">Liên Hệ</a></li>
           </ul>
         </nav>
@@ -44,7 +44,7 @@
           <ul class="header-right__list">
             <li class="header-right__item"><a class="header-right__link home--active" href="./index.html">Trang chủ</a></li>
             <li class="header-right__item"> <a class="header-right__link product--active" href="./product.html">Sản Phẩm</a></li>
-            <li class="header-right__item"> <a class="header-right__link block--active" href="./blog.html">Tin Tức</a></li>
+            <li class="header-right__item"> <a class="header-right__link blog--active" href="./blog.html">Tin Tức</a></li>
             <li class="header-right__item"> <a class="header-right__link contact--active" href="./contact.html">Liên Hệ</a></li>
           </ul>
         </nav>
@@ -78,7 +78,7 @@
             <div class="user__socail__list"><a class="user__socail__box" href="#"><img src="./img/user-1.svg" alt="facebook"/></a><a class="user__socail__box" href="#"><img src="./img/user-2.svg" alt="google"/></a><a class="user__socail__box" href="#"><img src="./img/user-3.svg" alt="twiter"/></a></div>
           </div>
         </form>
-        <form class="user__form" data-number="1" id="user__signup">
+        <form class="user__form" action="./index.html" data-number="1" id="user__signup">
           <div class="group-input">
             <input type="text" placeholder="Họ và Tên" id="signup__fullname"/>
             <p class="error">Vui lòng nhập họ và tên hợp lệ</p>
@@ -119,6 +119,8 @@
         </div>
       </div>
     </div>
+    <h1 class="heading-primary heading-primary--white">Liên Hệ</h1><a href="">
+      <p class="banner-common__title-2 banner-common__title-2--active">Liên Hệ</p></a>
     <div class="contact">
       <div class="container">
         <div class="row justify-content-between">
@@ -132,20 +134,21 @@
               </div>
               <div class="sent__group-input">
                 <label for="email">Địa chỉ Email*</label>
-                <input type="text" id="email" name="email"/>
+                <input type="email" id="email" name="email"/>
                 <p class="error">Vui lòng nhập Email hợp lệ</p>
               </div>
               <div class="sent__group-input">
                 <label for="numberphone">Số điện thoại*</label>
-                <input type="text" id="numberphone" name="numberphone"/>
+                <input type="number" id="numberphone" name="numberphone"/>
                 <p class="error">Vui lòng nhập số điện thoại hợp lệ</p>
               </div>
               <div class="sent__group-input">
                 <label for="note">Nhập nội dung*</label>
-                <textarea name="note" cols="30" rows="5"></textarea>
+                <textarea name="note" cols="30" rows="5" id="contacnote"></textarea>
                 <p class="error">Vui lòng nhập nội dung hợp lệ</p>
               </div>
               <button class="btn__sent">Gửi tin</button>
+              <p class="success">Gửi thành công</p>
             </form>
           </div>
           <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5">

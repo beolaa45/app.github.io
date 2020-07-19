@@ -131,7 +131,14 @@ $(document).ready(function () {
   });
 
   submit.submit(function () {
-    if (errEmailBool === false && errPasswordlBool === false) {
+    if(errEmailBool){
+      errEmail.show()
+    }
+    if(errPasswordlBool){
+      errPassword.show()
+    }
+    if (errEmailBool === false && 
+      errPasswordlBool === false) {
       return true;
     } else {
       return false;
@@ -244,8 +251,22 @@ $(document).ready(function () {
     errMatchBool = false;
   });
 
-  submitSignup.submit(function () {
+  submitSignup.submit(function (e) {
    
+    if(errFullNameBool){
+      errFullName.show()
+    }
+    if(errPhoneBool){
+      errPhone.show()
+    }
+    if(errEmailSignupBool){
+      errEmailSignup.show()
+    }
+    if(errPasswordSignupBool){
+      errPasswordSignup.show()
+    }
+    
+    console.log("dk")
     if (
       errFullNameBool == false &&
       errPhoneBool == false &&
@@ -258,6 +279,8 @@ $(document).ready(function () {
       return false;
     }
   });
+
+  // CHECK ACTIVE PAGES
   if($("main").hasClass("home")){
     console.log("ok")
       $(".home--active").addClass("header-right__link--active")
@@ -276,6 +299,20 @@ $(document).ready(function () {
   if($("main").hasClass("cart")){
     console.log("ok")
       $(".cart--active").addClass("header-right__link--active")
+  }
+
+  if($("body .contact").hasClass("contact")){
+    console.log("ok")
+      $(".contact--active").addClass("header-right__link--active")
+  }
+
+  if($("body .article").hasClass("article")){
+    console.log("ok")
+      $(".blog--active").addClass("header-right__link--active")
+  }
+  if($("body .detail-blog").hasClass("detail-blog")){
+    console.log("ok")
+      $(".blog--active").addClass("header-right__link--active")
   }
 
 
