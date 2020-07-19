@@ -36,6 +36,8 @@ table {
   .cart__photo {
     width: 13.4rem;
     display: inline-block;
+    border-radius: .5rem;
+    overflow: hidden;
   }
 
   .cart__photo img{
