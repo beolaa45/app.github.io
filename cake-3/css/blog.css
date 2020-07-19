@@ -4,6 +4,7 @@
     font-weight: normal;
 
     margin: 7rem 0;
+    color: var(--color-grey);
 }
 
 .article__heading {
@@ -33,12 +34,25 @@
 .article__info {
 
 }
+.article a:link,
+.article a:visited,
+.article a:active,
+.article a:hover {
+    text-decoration: none;
+    color: var(--color-grey);
+}
 
 .aricle__heading-tertiary {
     font-weight: bold;
     font-size: 1.8rem;
     line-height: 2.1rem;
     margin-bottom: 1.1rem;
+
+    transition: all .3s ease-in-out;
+}
+
+.aricle__heading-tertiary:hover{
+    color: var(--color-red);
 }
 
 .article__time {

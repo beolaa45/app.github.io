@@ -69,6 +69,11 @@ table {
   }
   .fa-trash-alt {
     cursor: pointer;
+    transition: all .3s ease-in-out;
+
+  }
+  .fa-trash-alt:hover {
+    color: var(--color-red);
   }
 
   /* CART MONEY */

@@ -5,7 +5,9 @@ $(document).ready(function() {
     let select = $("#thanhpho");
     let checkAddress = $("#check__address");
     let checkPhone = $("#check__phone");
-    let checkRadio = $("input[type='radio']:checked");
+    
+   
+    
     let paySunmit = $("#pay__submit")
 
     let errcheckName = $("#check__name ~ .error");
@@ -81,18 +83,44 @@ $(document).ready(function() {
 
     
     paySunmit.submit(function(e){
-        console.log(checkRadio)
-        if(checkRadio > 0){
-            errcheckRadioBool = false;
-            errcheckRadio.hide();
+        if (!$("input[name='get']:checked").val()) {
+            errcheckRadio.show()
+            errcheckRadioBool = true;
            
-        }else {
-            errcheckRadio.show();
-            errcheckRadioBool = true
-        }
-       
+            
+         }
+         else {
+            
+            errcheckRadio.hide()
+            errcheckRadioBool = false;
+         }
+         if(errcheckNameBool === true){
+            errcheckName.show();
 
+         }
+
+         if(errcheckAddressBool === true){
+            errcheckAddress.show()
+         }
+
+         if(errselectBool === true){
+            errselect.show()
+         }
+         if(errcheckPhoneBool){
+            errcheckPhone.show()
+         }
+         if(errcheckRadioBool){
+            errcheckRadio.show()
+         }
        
-        return false
+         if(errcheckNameBool === false && errselectBool === false
+            &&  errcheckAddressBool === false && errcheckPhoneBool === false
+            && errcheckRadioBool === false){
+             return true
+         }else{
+             return false
+         }
+       
+        
     })
 })
