@@ -8,6 +8,8 @@ $(document).ready(function () {
     cssEase: "linear",
     autoplay: true,
     autoplaySpeed: 3000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
 
     //   responsive: [
 
@@ -38,6 +40,12 @@ $(document).ready(function () {
     slidesToShow: 4,
     slidesToScroll: 1,
     centerPadding: "60px",
+  
+    infinite: true,
+    speed: 500,
+    cssEase: "linear",
+    autoplay: true,
+    autoplaySpeed: 2000,
 
     responsive: [
       {
