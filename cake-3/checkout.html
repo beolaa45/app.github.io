@@ -106,119 +106,121 @@
         </div>
       </div>
     </header>
-    <div class="banner-common">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="banner-common__content">
-              <h1 class="heading-primary heading-primary--white">Thanh Toán</h1>
-              <div class="banner-common__box"><a href="#">
-                  <p class="banner-common__title">Trang chủ</p></a>
-                <div class="banner-common__icon"><img src="./img/arrows-banner.svg" alt=""/></div><a href="">
-                  <p class="banner-common__title-2 banner-common__title-2--active">Thanh Toán</p></a>
+    <main>
+      <div class="banner-common">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="banner-common__content">
+                <h1 class="heading-primary heading-primary--white">Thanh Toán</h1>
+                <div class="banner-common__box"><a href="./index.html">
+                    <p class="banner-common__title">Trang chủ</p></a>
+                  <div class="banner-common__icon"><img src="./img/arrows-banner.svg" alt=""/></div><a href="">
+                    <p class="banner-common__title-2 banner-common__title-2--active">Thanh Toán</p></a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <form class="checkout" action="./success.html" id="pay__submit">
-      <div class="container">
-        <div class="row justify-content-between">
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-            <div class="checkout__infor">
-              <h2 class="infor__user">Thông tin người nhận:</h2>
-              <div class="infor__group">
-                <label for="check__name">Họ và tên*</label>
-                <div class="input-wraper">
-                  <input class="infor__input" type="text" name="fullname" id="check__name"/>
-                  <div class="error">Vui lòng nhập tên hợp lệ</div>
+      <form class="checkout" action="./success.html" id="pay__submit">
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+              <div class="checkout__infor">
+                <h2 class="infor__user">Thông tin người nhận:</h2>
+                <div class="infor__group">
+                  <label for="check__name">Họ và tên*</label>
+                  <div class="input-wraper">
+                    <input class="infor__input" type="text" name="fullname" id="check__name"/>
+                    <div class="error">Vui lòng nhập tên hợp lệ</div>
+                  </div>
                 </div>
-              </div>
-              <div class="infor__group">
-                <label for="thanhpho">Thành phố*</label>
-                <div class="input-wraper">
-                  <select name="thanhpho" id="thanhpho">
-                    <option value="Hà Nội">Hà Nội</option>
-                    <option value="Đà Nẵng">Đà Nẵng</option>
-                    <option value="Thành Phố Hồ Chí Minh">Thành Phố Hồ Chí Minh  </option>
-                    <option value="" selected="selected" hidden="hidden" disable="disable">Vui lòng chọn tỉnh/thành phố</option>
-                  </select>
-                  <div class="error">Vui lòng nhập tỉnh/thành phố hợp lệ</div>
+                <div class="infor__group">
+                  <label for="thanhpho">Thành phố*</label>
+                  <div class="input-wraper">
+                    <select name="thanhpho" id="thanhpho">
+                      <option value="Hà Nội">Hà Nội</option>
+                      <option value="Đà Nẵng">Đà Nẵng</option>
+                      <option value="Thành Phố Hồ Chí Minh">Thành Phố Hồ Chí Minh  </option>
+                      <option value="" selected="selected" hidden="hidden" disable="disable">Vui lòng chọn tỉnh/thành phố</option>
+                    </select>
+                    <div class="error">Vui lòng nhập tỉnh/thành phố hợp lệ</div>
+                  </div>
                 </div>
-              </div>
-              <div class="infor__group">
-                <label for="check__address">Địa chỉ giao hàng*</label>
-                <div class="input-wraper">
-                  <input class="infor__input" type="text" name="check__address" id="check__address"/>
-                  <div class="error">Vui lòng nhập địa chỉ giao hàng hợp lệ</div>
+                <div class="infor__group">
+                  <label for="check__address">Địa chỉ giao hàng*</label>
+                  <div class="input-wraper">
+                    <input class="infor__input" type="text" name="check__address" id="check__address"/>
+                    <div class="error">Vui lòng nhập địa chỉ giao hàng hợp lệ</div>
+                  </div>
                 </div>
-              </div>
-              <div class="infor__group">
-                <label for="email">Địa chỉ Email</label>
-                <div class="input-wraper">
-                  <input class="infor__input" type="text" id="email"/>
+                <div class="infor__group">
+                  <label for="email">Địa chỉ Email</label>
+                  <div class="input-wraper">
+                    <input class="infor__input" type="text" id="email"/>
+                  </div>
                 </div>
-              </div>
-              <div class="infor__group">
-                <label for="check__phone">Số điện thoại*</label>
-                <div class="input-wraper">
-                  <input class="infor__input" type="number" id="check__phone"/>
-                  <div class="error">Vui lòng nhập số điện thoại hợp lệ</div>
+                <div class="infor__group">
+                  <label for="check__phone">Số điện thoại*</label>
+                  <div class="input-wraper">
+                    <input class="infor__input" type="number" id="check__phone"/>
+                    <div class="error">Vui lòng nhập số điện thoại hợp lệ</div>
+                  </div>
                 </div>
-              </div>
-              <div class="infor__text">
-                <label for="note">Ghi chú thêm   </label>
-                <textarea class="infor__input infor__note" name="note" id="note" cols="20" rows="5">          </textarea>
+                <div class="infor__text">
+                  <label for="note">Ghi chú thêm   </label>
+                  <textarea class="infor__input infor__note" name="note" id="note" cols="20" rows="5">          </textarea>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-xl-4 col-lg-5 col-md-6 col-sm-6">
-            <div class="checkout__pay">
-              <div class="h2 pay__heading">Đơn hàng của tôi</div>
-              <div class="pay__calc">
-                <p class="pay__title">Thành Tiền</p>
-                <div class="pay__item">
-                  <p>Bánh Pizza  <span>x1</span></p>
-                  <p>150,000 đ</p>
+            <div class="col-xl-4 col-lg-5 col-md-6 col-sm-6">
+              <div class="checkout__pay">
+                <div class="h2 pay__heading">Đơn hàng của tôi</div>
+                <div class="pay__calc">
+                  <p class="pay__title">Thành Tiền</p>
+                  <div class="pay__item">
+                    <p>Bánh Pizza  <span>x1</span></p>
+                    <p>150,000 đ</p>
+                  </div>
+                  <div class="pay__item">
+                    <p>Bánh Humburger  <span>x1</span></p>
+                    <p>100,000 đ</p>
+                  </div>
+                  <div class="pay__item">
+                    <p>Bánh Mì <span>x1</span></p>
+                    <p>50,000 đ</p>
+                  </div>
+                  <div class="pay__total">
+                    <p>Tổng cộng:</p>
+                    <p>300,000 đ</p>
+                  </div>
                 </div>
-                <div class="pay__item">
-                  <p>Bánh Humburger  <span>x1</span></p>
-                  <p>100,000 đ</p>
+                <div class="pay__method">
+                  <p class="pay__title">Phương Thức Thanh Toán</p>
+                  <div class="pay__radio">
+                    <div class="pay__group">
+                      <input type="radio" id="vimomo" name="get" value="vimomo"/>
+                      <label for="vimomo">Ví Momo</label>
+                    </div>
+                    <div class="pay__group">
+                      <input type="radio" id="banking" name="get" value="banking"/>
+                      <label for="banking">Thanh toán bằng Internet banking</label>
+                    </div>
+                    <div class="pay__group">
+                      <input type="radio" id="get" name="get" value="nhanhang"/>
+                      <label for="get">Thanh toán khi nhận hàng</label>
+                    </div>
+                  </div>
+                  <div class="error">Vui lòng nhập phương thức thanh toán</div>
                 </div>
-                <div class="pay__item">
-                  <p>Bánh Mì <span>x1</span></p>
-                  <p>50,000 đ</p>
-                </div>
-                <div class="pay__total">
-                  <p>Tổng cộng:</p>
-                  <p>300,000 đ</p>
-                </div>
+                <button class="pay__paynow">Thanh Toán</button>
               </div>
-              <div class="pay__method">
-                <p class="pay__title">Phương Thức Thanh Toán</p>
-                <div class="pay__radio">
-                  <div class="pay__group">
-                    <input type="radio" id="vimomo" name="get" value="vimomo"/>
-                    <label for="vimomo">Ví Momo</label>
-                  </div>
-                  <div class="pay__group">
-                    <input type="radio" id="banking" name="get" value="banking"/>
-                    <label for="banking">Thanh toán bằng Internet banking</label>
-                  </div>
-                  <div class="pay__group">
-                    <input type="radio" id="get" name="get" value="nhanhang"/>
-                    <label for="get">Thanh toán khi nhận hàng</label>
-                  </div>
-                </div>
-                <div class="error">Vui lòng nhập phương thức thanh toán</div>
-              </div>
-              <button class="pay__paynow">Thanh Toán</button>
             </div>
           </div>
         </div>
-      </div>
-    </form>
+      </form>
+    </main>
     <footer class="footer">
       <div class="footer__top">
         <div class="container">

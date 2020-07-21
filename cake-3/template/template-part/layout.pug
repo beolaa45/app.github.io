@@ -18,25 +18,26 @@ html(lang="en")
             title Cake
     body
         include header.pug
-        block banner
-            .banner-common
-                .container
-                    .row
-                        .col
-                            .banner-common__content
-                                block heading
-                                    h1.heading-primary.heading-primary--white Sản Phẩm
-                                .banner-common__box
-                                    a(href="#")
-                                        p.banner-common__title Trang chủ
-                                    .banner-common__icon
-                                        img(src="./img/arrows-banner.svg", alt="")
-                                    block title-2
-                                        a(href="")
-                                            p.banner-common__title-2 Sản Phẩm
-                                                
-            
-        block content
+        main
+            block banner
+                .banner-common
+                    .container
+                        .row
+                            .col
+                                .banner-common__content
+                                    block heading
+                                        h1.heading-primary.heading-primary--white Sản Phẩm
+                                    .banner-common__box
+                                        a(href="./index.html")
+                                            p.banner-common__title Trang chủ
+                                        .banner-common__icon
+                                            img(src="./img/arrows-banner.svg", alt="")
+                                        block title-2
+                                            a(href="./product.html")
+                                                p.banner-common__title-2 Sản Phẩm
+                                                    
+                
+            block content
         include footer.pug
 
         script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js' integrity='sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj' crossorigin='anonymous')
