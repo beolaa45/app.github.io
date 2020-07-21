@@ -315,6 +315,16 @@ $(document).ready(function () {
       $(".blog--active").addClass("header-right__link--active")
   }
 
-
-  // $(".header-right__link").addClass("header-right__link--active")
+  $(".scroll").fadeOut()
+  $(window).scroll(function(){
+    if($(this).scrollTop() > 40){
+      $(".scroll").fadeIn()
+    }else {
+      $(".scroll").fadeOut()
+    }
+  })
+  $(".scroll").click(function(){
+    $("html, body").animate({scrollTop: 0}, 800)
+  })
+  
 });

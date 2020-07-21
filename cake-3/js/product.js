@@ -16,7 +16,8 @@ $(document).ready(function(){
         e.preventDefault()
         $("input").prop("checked", false);
     })
-
+     
+     
     $(window).on("load resize", function() {
         let width = $(this).width();
         console.log(width)

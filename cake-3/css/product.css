@@ -95,6 +95,14 @@
     opacity: 1;
     
 }
+.fa-chevron-right {
+    transform: rotate(90deg);
+    transition: all .3s ease-in-out;
+}
+
+.isOpen ~ .fa-chevron-right {
+    transform: rotate(-90deg);
+}
 .product__checkbox-group {
     position: relative;
     margin-bottom: .8rem;

@@ -289,6 +289,7 @@ body {
     justify-content: space-between;
     align-items: stretch;
     height: 9.1rem;
+
     
 }
 
@@ -787,5 +788,24 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+/* Scroll */
+.scroll {
+    position: fixed;
+    bottom: 10rem;
+    right: 0;
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--color-red);
+    box-shadow: 0 1.2rem 3rem rgba(0, 0, 0, .1);
 
+    border-radius:  .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
 
+.scroll i {
+    font-size: 2.5rem;
+    color: var(--color-white);
+}

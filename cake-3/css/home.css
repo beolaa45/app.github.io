@@ -1,48 +1,7 @@
-/* 
-*,
-*::after,
-*::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
-
-html {
-    font-size: 62.5%;
-}
-
-@media (max-width: 991px) {
-    html {
-        font-size: 56.25%;
-    }
-}
-
-@media (max-width: 767px) {
-    html {
-        font-size: 50%;
-    }
-}
-
-@media (max-width: 576px) {
-    html {
-        font-size: 37%;
-    }
-}
-
-body {
-    font-family: 'Roboto','Pattaya', sans-serif;
-    font-size: 1.6rem;
-    font-weight: 400;
-    box-sizing: border-box;
-    color:  var(--color-grey);
-}
- */
 
 
 
-.content {
 
-}
 
 .container-custom {
     max-width: 114rem;
@@ -793,9 +752,7 @@ button.slick-prev {
     padding-top: 10rem;
 }
 
-.blog__list {
 
-}
 
 .blog__content {
     font-family: "Roboto";
@@ -938,4 +895,7 @@ button.slick-prev {
     outline: none;
 }
 
+a {
+    text-decoration: none !important;
+}
 
