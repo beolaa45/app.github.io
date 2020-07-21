@@ -323,4 +323,11 @@ $(document).ready(function () {
   $(".scroll").click(function () {
     $("html, body").animate({ scrollTop: 0 }, 800);
   });
+
+  // Animate
+
+  AOS.init({
+    offset: 300,
+    duration: 500
+  });
 });
