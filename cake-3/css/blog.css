@@ -1,82 +1,69 @@
 .article {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
 
-    margin: 7rem 0;
-    color: var(--color-grey);
+  margin: 7rem 0;
+  color: var(--color-grey);
 }
 
 .article__heading {
-    
-    font-weight: bold;
-    font-size: 2rem;
-    line-height: 2.3rem;
-    margin-bottom: 2rem;
-}
-
-.article__content {
-
-}
-
-.article__box {
-
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  margin-bottom: 2rem;
 }
 
 .article__photo {
-    width: 100%;
-    margin-bottom: 1.3rem;
+  width: 100%;
+  margin-bottom: 1.3rem;
 }
-.article__photo img{
-    width: 100%;
+.article__photo img {
+  width: 100%;
 }
 
-.article__info {
-
-}
 .article a:link,
 .article a:visited,
 .article a:active,
 .article a:hover {
-    text-decoration: none;
-    color: var(--color-grey);
+  text-decoration: none;
+  color: var(--color-grey);
 }
 
 .aricle__heading-tertiary {
-    font-weight: bold;
-    font-size: 1.8rem;
-    line-height: 2.1rem;
-    margin-bottom: 1.1rem;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  margin-bottom: 1.1rem;
 
-    transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-.aricle__heading-tertiary:hover{
-    color: var(--color-red);
+.aricle__heading-tertiary:hover {
+  color: var(--color-red);
 }
 
 .article__time {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 1.1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1.1rem;
 }
 
-.article__time p{
-    margin-right: .5rem;
-    margin-bottom: 0;
+.article__time p {
+  margin-right: 0.5rem;
+  margin-bottom: 0;
 }
 
 .article__text {
-    font-weight: normal;
-    font-size: 1.6rem;
-    line-height: 1.9rem;
-}   
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+}
 
 .article__content .row > div {
-    margin-bottom: 4rem;
+  margin-bottom: 4rem;
 }
 .article__content .row > div:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
-

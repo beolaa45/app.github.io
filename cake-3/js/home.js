@@ -7,7 +7,7 @@ $(document).ready(function () {
     fade: true,
     cssEase: "linear",
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
 
@@ -40,7 +40,7 @@ $(document).ready(function () {
     slidesToShow: 4,
     slidesToScroll: 1,
     centerPadding: "60px",
-  
+
     infinite: true,
     speed: 500,
     cssEase: "linear",

@@ -12,7 +12,7 @@ $(document).ready(function () {
     },
     {
       id: 2,
-      name:"Humburger",
+      name: "Humburger",
       price: 50,
       amount: 1,
       url: "./img/cart-2.png",
@@ -34,7 +34,7 @@ $(document).ready(function () {
   let table = $("#cart__table");
 
   function render(arr) {
-      let topHtml =`<tr>
+    let topHtml = `<tr>
       <th class="cart__delete">Xóa</th>
       <th class="cart__img"> </th>
       <th>Tên Sản Phẩm</th>
@@ -49,9 +49,7 @@ $(document).ready(function () {
         <td> <i class="far fa-trash-alt"></i></td>
         <td class="cart__img"> 
         <div class="cart__photo" >
-        <img src=${obj.url} alt="${obj.name}" title="${
-        obj.name
-      }"/>
+        <img src=${obj.url} alt="${obj.name}" title="${obj.name}"/>
       </div>
       </td>
         <td>${obj.name}</td>
@@ -115,22 +113,16 @@ $(document).ready(function () {
 
     render(arrList);
   });
-  
 
-  $(window).on("load resize", function() {
-      let width = $(this).width()
-      console.log(width)
+  $(window).on("load resize", function () {
+    let width = $(this).width();
+    console.log(width);
 
-      if(width <= 576) {
-      
-            $("#cart__table tr .cart__img").css({"display": "none"});
-       
-       
-      }
-      if(width > 576) {
-         $("#cart__table tr .cart__img").css("display" , "table-cell")
-       
-      }
-      
-  })
+    if (width <= 576) {
+      $("#cart__table tr .cart__img").css({ display: "none" });
+    }
+    if (width > 576) {
+      $("#cart__table tr .cart__img").css("display", "table-cell");
+    }
+  });
 });
