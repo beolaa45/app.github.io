@@ -31,6 +31,9 @@
 html {
   font-size: 62.5%;
 }
+a {
+  text-decoration: none !important;
+}
 
 @media (max-width: 991px) {
   html {
