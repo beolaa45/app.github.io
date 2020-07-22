@@ -151,21 +151,26 @@
                   <div class="group-input">
                     <label for="name">Tên</label>
                     <input type="text" id="name" name="name"/>
+                    <div class="error">Vui lòng nhập tên</div>
                   </div>
                   <div class="group-input">
                     <label for="email">Email</label>
-                    <input type="text" id="email" name="email"/>
+                    <input type="email" id="email" name="email"/>
+                    <div class="error">Vui lòng nhập email</div>
                   </div>
                 </div>
                 <div class="group-input">
                   <label for="title">Tiêu đề</label>
                   <input type="text" id="title" name="title"/>
+                  <div class="error">Vui lòng nhập tiêu đề</div>
                 </div>
                 <div class="group-input textarea">
                   <label for="note">Nội dung</label>
-                  <textarea name="note" cols="30" rows="5"></textarea>
+                  <textarea name="note" cols="30" rows="5" id="note"></textarea>
+                  <div class="error">Vui lòng nhập nội dung</div>
                 </div>
-                <button class="btn--note">Bình luận</button>
+                <button class="btn--note" id="sendnote">Bình luận</button>
+                <div class="success">Gửi thành công</div>
               </form>
             </div>
             <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">

@@ -54,16 +54,21 @@ block content
                             .group-input
                                 label(for="name") Tên
                                 input(type="text" id="name" name="name")
+                                .error Vui lòng nhập tên
                             .group-input
                                 label(for="email") Email
-                                input(type="text" id="email" name="email")
+                                input(type="email" id="email" name="email")
+                                .error Vui lòng nhập email
                         .group-input
                                 label(for="title") Tiêu đề
                                 input(type="text" id="title" name="title")
+                                .error Vui lòng nhập tiêu đề
                         .group-input.textarea
                             label(for="note") Nội dung
-                            textarea(name="note", cols="30", rows="5")
-                        button.btn--note Bình luận
+                            textarea(name="note", cols="30", rows="5" id="note")
+                            .error Vui lòng nhập nội dung
+                        button.btn--note#sendnote Bình luận
+                        .success Gửi thành công
                 .col-xl-3.col-lg-3.col-md-12.col-sm-12
                     .details-blog__sidebar 
                         form.sidebar__form
