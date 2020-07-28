@@ -28,6 +28,7 @@ mongoose.connect(process.env.DATABASE, {
 app.use(morgan('dev'));
 //doc duoc req.body
 app.use(bodyParser.json());
+// or  `express.cookieParser('secret')` for signed cookies
 app.use(cookieParser());
 app.use(expressValidator());
 // handle the request are coming from different origin. 

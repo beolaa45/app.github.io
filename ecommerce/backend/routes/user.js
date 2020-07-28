@@ -12,8 +12,8 @@ router.get("/secret/:userId", requireSignin, isAuth, isAdmin, (req, res) => {
     })
 });
 
-router.get("/user/:userId", requireSignin, isAuth,read)
-router.put('/user/:userId', requireSignin, isAuth, update)
+router.get("/user/:userId", requireSignin, isAuth, read)
+router.patch('/user/:userId', requireSignin, isAuth, update)
 router.param("userId", userById)
 
 module.exports = router;

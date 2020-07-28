@@ -4,14 +4,14 @@ const jwt =require("jsonwebtoken"); // to generate signed token
 const expressJwt = require("express-jwt"); //for authorization check
 exports.signup = (req, res) => {
     console.log("req body: ", req.body);
-
+    
     
     const user = new User(req.body);
     user.save((err, user) => {
         if(err) {
             return res.status(400).json(errorHandler(err))
         }
-        const token = jwt.sign({_id: user._id}, process.env.JWT_SECRET);
+        const token = jwt.sign({_id: user._id}, process.env.JWT_SECRET, {expiresIn: '1h'});
         res.cookie("t", token, {expire: new Date() + 9999});
 
         user.salt = undefined;
@@ -42,12 +42,12 @@ exports.signin = (req, res) => {
             })
         }
         //genetate a signed token with user id and secret
-        const token = jwt.sign({_id: user._id}, process.env.JWT_SECRET);
+        const token = jwt.sign({_id: user._id}, process.env.JWT_SECRET,{expiresIn: '1h'});
         //presist the token as "t in cookie with expiry date"
-        res.cookie("t", token, {expire: new Date() + 9999});
+        res.cookie("t", token, {expire: new Date() + 3.6});
         //return response with and token to frontend client
         const {_id, name, email, role} = user;
-        return res.json({token, user: {_id, email, name, role, expire: 9999} })
+        return res.json({token, user: {_id, email, name, role, expire: 3.6} })
 
         
     })

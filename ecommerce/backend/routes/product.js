@@ -12,7 +12,7 @@ router.put('/product/:productId/:userId', requireSignin, isAuth, isAdmin, update
 router.delete('/product/:productId/:userId', requireSignin, isAuth, isAdmin, remove );
 router.post('/product/create/:userId', requireSignin, isAuth, isAdmin ,create);
 
-router.get('/products', list);
+router.post('/products', list);
 router.get('/products/related/:productId', litsRelated)
 //find on Product has categories dif nhau
 router.get('/products/categories', listCategories);
