@@ -45,7 +45,7 @@ export function* authStartUserSaga(action) {
             data: action.isSignup ? authData : authDataSigin
         }); 
         
-        console.log(res.data)
+       
         const expirationDate = yield new Date().getTime() + res.data.user.expire;
         yield localStorage.setItem('expirationDate', expirationDate);
         yield localStorage.setItem('token', res.data.token);

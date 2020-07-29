@@ -15,8 +15,6 @@ const Logout = (props) => {
         </div>
     );
 };
-
-
 const mapDispacthToProps = dispatch => {
     return {
         onLogout: () => dispatch(actions.initlogoutUser())

@@ -14,7 +14,7 @@ const theme = {
     black: '#393939',
     grey: '#3A3A3A',
     balck_1: '#3f3f3f',
-    offWhite: '#EDEDED',
+  
     maxWidth: '1000px',
     boxshadow: "1.3rem 0 3rem rgba(0, 0, 0 , .1)",
     bs: '0 12px 24px 0 rgba(0, 0, 0, 0.09)',
