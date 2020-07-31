@@ -16,7 +16,6 @@ const Signup = (props) => {
     password: "",
     confirmPassword: "",
   };
-
   const validationSchema = Yup.object().shape({
     name: Yup.string()
       .trim()
