@@ -65,10 +65,3 @@ const mapStateToProps = state => {
 }
 export default connect(mapStateToProps)(Layout);
 
-Layout.propTypes = {
-  token: PropTypes.bool
-}
-
-Layout.defaultProps = {
-  token: null
-}
