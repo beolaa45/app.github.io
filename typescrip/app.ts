@@ -1,21 +1,14 @@
-class Department {
-    name: String;
-    constructor(n: String){
-        this.name = n
-    }
-
-    static describe(){
-        console.log("Department ");
-    }
+type Admin = {
+  name: string
 }
 
-class A extends Department {
-    constructor(n: String){
-        super(n)
-
-    }
+const fetchedUserData = {
+  id: "u1",
+  name: 'Max',
+  job: {title: "CEO"}
 }
 
-const obj = new A("khanh")
-console.log(A.describe())
+console.log(fetchedUserData?.job.title)
 
+const names: Array<string> = [];
+console.log(names[0])
