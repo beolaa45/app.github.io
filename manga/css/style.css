@@ -24,7 +24,8 @@ body {
     margin-top: 1.5rem;
 }
 
-.add {
+.add:link,
+.add:visited {
     
     color: white;
     background-color: #28a745;
@@ -32,6 +33,12 @@ body {
     font-size: 1.6rem;
     line-height: 1.5;
     border-radius: .25rem;
+}
+
+.add:hover,
+.add:active {
+    color: white;
+    background-color: #218d3a;
 }
 .add i {
     font-size: 2rem;
@@ -59,6 +66,10 @@ table .thead-dark th {
 table tbody tr:nth-of-type(odd) {
     background-color: rgba(0,0,0,.05);
     border-top: 1px solid #dee2e6;
+}
+
+table tbody tr:hover {
+    background-color: rgba(0,0,0,.05);
 }
 table tbody tr td {
     color: black;
